@@ -76,6 +76,44 @@ high-current power path, `GND` for logic (tied together at one star point).
 - 1x4 header (Connectors_SignalConnectors, `384471-E`) for CANH/CANL/GND/+VBUS (or unpowered,
   TBD) bus connector.
 
+## ESP32-WROOM-32E pin map
+
+| Pad | Name | Assignment |
+|---|---|---|
+| 1 | GND | GND |
+| 2 | 3V3 | +3V3_MCU |
+| 3 | EN | EN (pull-up + RESET button) |
+| 4 | SENSOR_VP (ADC1_CH0) | INA240 OUT (DC-bus current) |
+| 5 | SENSOR_VN (ADC1_CH3) | TMP235 OUT (temperature) |
+| 6 | IO34 (ADC1_CH6, in-only) | SOC (DRV8323 phase-C current sense) |
+| 7 | IO35 (ADC1_CH7, in-only) | spare (no_connect) |
+| 8 | IO32 (ADC1_CH4) | SOA (DRV8323 phase-A current sense) |
+| 9 | IO33 (ADC1_CH5) | SOB (DRV8323 phase-B current sense) |
+| 10 | IO25 | EXP1 (expansion header — encoder/hall A) |
+| 11 | IO26 | EXP2 (encoder/hall B) |
+| 12 | IO27 | EXP3 (encoder/hall Z) |
+| 13 | IO14 | ENABLE (DRV8323) |
+| 14 | IO12 (MTDI, strap) | spare (no_connect — avoid driving at boot) |
+| 15 | GND | GND |
+| 16 | IO13 | nSLEEP (DRV8323) |
+| 17–22 | NC ×6 | no_connect (internal SPI flash, not led out) |
+| 23 | IO15 (MTDO, strap) | nFAULT (DRV8323, pull-up — matches safe strap default) |
+| 24 | IO2 (strap, don't-care in SPI boot mode) | CAL (DRV8323) |
+| 25 | IO0 (strap) | BOOT button + pull-up |
+| 26 | IO4 | spare (no_connect) |
+| 27 | IO16 | spare (no_connect) |
+| 28 | IO17 | spare (no_connect) |
+| 29 | IO5 (VSPICS0) | nSCS → DRV8323 SPI |
+| 30 | IO18 (VSPICLK) | SCLK → DRV8323 SPI |
+| 31 | IO19 (VSPIQ/MISO) | SDO ← DRV8323 SPI |
+| 32 | NC | no_connect |
+| 33 | IO21 | CAN_TX → SN65HVD230 |
+| 34 | RXD0 (GPIO3) | UART0 RX (header + control link) |
+| 35 | TXD0 (GPIO1) | UART0 TX (header + control link) |
+| 36 | IO22 | CAN_RX ← SN65HVD230 |
+| 37 | IO23 (VSPID/MOSI) | SDI → DRV8323 SPI |
+| 38 | GND | GND |
+
 ## Deviations / notes flagged to the user
 - **Power symbols vs. global labels**: the design rules say power rails should use KiCad power
   symbols (GND, etc.) and only signal nets use global labels. Stock KiCad power symbols only
