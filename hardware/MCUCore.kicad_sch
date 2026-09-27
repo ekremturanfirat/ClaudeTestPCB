@@ -3922,16 +3922,6 @@
 		)
 		(uuid "876d6baa-5664-4b3e-b8b9-1a365e89b222")
 	)
-	(global_label "nSLEEP"
-		(at 116.83999999999999 110.49 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7764ee35-027e-4875-99bc-b4ac23ad97d6")
-	)
 	(global_label "nFAULT"
 		(at 142.23999999999998 72.39 0)
 		(effects
@@ -3941,16 +3931,6 @@
 			(justify left)
 		)
 		(uuid "800666e7-8025-49fe-9087-5b2c89a23be4")
-	)
-	(global_label "CAL"
-		(at 142.23999999999998 74.93 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "bea3d922-2bc8-447c-9aff-a41d3cf523e2")
 	)
 	(label "BOOT"
 		(at 142.23999999999998 77.47 0)
@@ -4057,10 +4037,6 @@
 		(uuid "1b60e287-80bc-42e5-b080-22ea7861936d")
 	)
 	(no_connect
-		(at 116.83999999999999 107.95)
-		(uuid "d1789829-ba4c-43a6-b494-54e969879ae4")
-	)
-	(no_connect
 		(at 142.23999999999998 113.03)
 		(uuid "55dcdfae-5e76-490a-9897-0a2f11937543")
 	)
@@ -4083,18 +4059,6 @@
 	(no_connect
 		(at 142.23999999999998 125.72999999999999)
 		(uuid "51bd4f2b-cf3c-491f-9f90-74ffd9cabb59")
-	)
-	(no_connect
-		(at 142.23999999999998 80.00999999999999)
-		(uuid "bcf74f96-e574-47f2-858f-6aa34210ebd7")
-	)
-	(no_connect
-		(at 142.23999999999998 82.55)
-		(uuid "dd38fb3c-0cdd-490d-95ad-cdbbfbe7ff0b")
-	)
-	(no_connect
-		(at 142.23999999999998 85.09)
-		(uuid "15cbcd47-ca52-4de3-84dd-494bc78834d0")
 	)
 	(no_connect
 		(at 142.23999999999998 128.27)
@@ -4347,6 +4311,70 @@
 			(justify left)
 		)
 		(uuid "598fcadb-b1d3-4bca-8372-969db28c68b7")
+	)
+	(no_connect
+		(at 116.83999999999999 90.17)
+		(uuid "893ecec8-ff70-4d90-917c-53e65c7a10d5")
+	)
+	(global_label "INHA"
+		(at 116.83999999999999 110.49 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "23f8be87-4ac0-42c0-ad45-f2f8a7745cc2")
+	)
+	(global_label "INLB"
+		(at 116.83999999999999 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "aaf2c1f7-47ed-4cd5-962a-96775fa583e3")
+	)
+	(global_label "INLA"
+		(at 142.23999999999998 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3128b850-23aa-4cec-8a7d-837eb197e4dc")
+	)
+	(global_label "INHC"
+		(at 142.23999999999998 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e40bb744-d50c-4098-913e-1b268163ef45")
+	)
+	(global_label "INLC"
+		(at 142.23999999999998 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "76f37ac3-453e-41aa-b213-f559c294e944")
+	)
+	(global_label "INHB"
+		(at 142.23999999999998 80.00999999999999 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c1d54957-c80f-46d7-84e0-359ed14daf7b")
 	)
 	(sheet_instances
 		(path "/"

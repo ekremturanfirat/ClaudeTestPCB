@@ -67,15 +67,36 @@ the input connector).
 - 1x4 header (Connectors_SignalConnectors, `2147210040`) for UART0 (TX0/RX0/GND/3V3) — doubles
   as the programming header and the runtime UART control/telemetry link.
 
-### Gate Drive
-- U: **DRV8323RSRGZT** (MotorDrivers_BLDC) — 48-pin, integrated 3× current-shunt amps + internal
-  buck (buck left **unused/shut down**; DVDD fed from +3V3_MCU instead, so driver logic and MCU
-  share one clean 3.3V rail — simpler than running two independent 3.3V rails).
-- Bootstrap caps (CPH/CPL charge pump, one per half-bridge bootstrap SHx) — ceramic, from
-  Capacitors_Ceramics_SurfaceMounts (values per DRV8323 datasheet reference design, TBD at
-  placement).
-- SPI (SCLK/SDI/SDO/nSCS) + nFAULT + ENABLE + nSLEEP to ESP32 GPIOs (global labels).
+### Gate Drive — as built (GateDrive.kicad_sch), wired per the real TI DRV8323R datasheet
+(SLVSDJ3D, fetched directly — this is a single-charge-pump architecture, **not**
+per-phase bootstrap capacitors; that assumption in the original plan was wrong)
+
+- U6: **DRV8323RSRGZT** (= DRV8323R, RGZ 48-pin VQFN, SPI variant). DVDD is the chip's
+  own internal 3.3V logic LDO **output** (not something you feed externally) — just
+  decoupled with C27=1µF to AGND, left otherwise unconnected. The digital I/O (SPI +
+  PWM pins) are DVDD-referenced, which is compatible with the ESP32's 3.3V logic
+  directly.
+- Charge pump (shared across all 3 high sides — no per-phase bootstrap caps needed):
+  C23=47nF/100V between CPH/CPL, C24=1µF between VCP and +VBUS_PROT.
+- VM decoupling: C25=100nF + C26=10µF/75V across VM/PGND. VDRAIN tied to +VBUS_PROT
+  (common high-side drain sense node).
+- VREF: self-generated reference, C28=100nF decouple to AGND only.
+- Optional integrated 600mA buck (VIN/SW/CB/FB) **disabled** — nSHD tied directly to
+  GND (it has an internal pull-up, so floating would enable it; must be actively
+  pulled low), VIN/SW/CB/FB left no_connect.
+- CAL tied directly to GND (auto offset calibration also runs automatically; the
+  dedicated pin is only needed for manual re-trigger, not implemented here to save a
+  GPIO — see the MCU pin-map correction below).
+- 6× hardware PWM pins (INHA/INLA/INHB/INLB/INHC/INLC) to ESP32 GPIOs — **these are
+  required even on the SPI variant** (SPI is config/telemetry only, PWM switching is
+  always via these dedicated pins) — each with its own 10kΩ pull-down so gates default
+  off before the MCU's firmware configures its GPIOs.
+- ENABLE: 10kΩ pull-down (defaults to sleep/safe) + ESP32 GPIO (global label).
+- SPI (SCLK/SDI/SDO/nSCS) to ESP32 GPIOs; SDO (open-drain) gets its own 10kΩ pull-up
+  to +3V3_MCU.
+- nFAULT → ESP32 GPIO (pull-up already placed on the MCU Core sheet, shared net).
 - SOA/SOB/SOC (per-phase current-sense amp outputs) → ESP32 ADC-capable GPIOs.
+- SPA/SNA/SPB/SNB/SPC/SNC + GHx/SHx/GLx → Power Stage sheet (global labels).
 
 ### Power Stage
 - Q1–Q6: **NTMFS006N08MC** (80V, 82A, 6mΩ) — 3× half-bridges (2 FETs each), driven by DRV8323's
@@ -108,23 +129,23 @@ the input connector).
 | 4 | SENSOR_VP (ADC1_CH0) | INA240 OUT (DC-bus current) |
 | 5 | SENSOR_VN (ADC1_CH3) | TMP235 OUT (temperature) |
 | 6 | IO34 (ADC1_CH6, in-only) | SOC (DRV8323 phase-C current sense) |
-| 7 | IO35 (ADC1_CH7, in-only) | spare (no_connect) |
+| 7 | IO35 (ADC1_CH7, in-only) | spare (no_connect — input-only pin, can't drive a PWM output) |
 | 8 | IO32 (ADC1_CH4) | SOA (DRV8323 phase-A current sense) |
 | 9 | IO33 (ADC1_CH5) | SOB (DRV8323 phase-B current sense) |
 | 10 | IO25 | EXP1 (expansion header — encoder/hall A) |
 | 11 | IO26 | EXP2 (encoder/hall B) |
 | 12 | IO27 | EXP3 (encoder/hall Z) |
 | 13 | IO14 | ENABLE (DRV8323) |
-| 14 | IO12 (MTDI, strap) | spare (no_connect — avoid driving at boot) |
+| 14 | IO12 (MTDI, strap) | INLB → DRV8323 PWM (safe: DRV8323 input is high-Z, doesn't disturb the boot-strap read) |
 | 15 | GND | GND |
-| 16 | IO13 | nSLEEP (DRV8323) |
+| 16 | IO13 | INHA → DRV8323 PWM |
 | 17–22 | NC ×6 | no_connect (internal SPI flash, not led out) |
 | 23 | IO15 (MTDO, strap) | nFAULT (DRV8323, pull-up — matches safe strap default) |
-| 24 | IO2 (strap, don't-care in SPI boot mode) | CAL (DRV8323) |
+| 24 | IO2 (strap, don't-care in SPI boot mode) | INLA → DRV8323 PWM |
 | 25 | IO0 (strap) | BOOT button + pull-up |
-| 26 | IO4 | spare (no_connect) |
-| 27 | IO16 | spare (no_connect) |
-| 28 | IO17 | spare (no_connect) |
+| 26 | IO4 | INHB → DRV8323 PWM |
+| 27 | IO16 | INHC → DRV8323 PWM |
+| 28 | IO17 | INLC → DRV8323 PWM |
 | 29 | IO5 (VSPICS0) | nSCS → DRV8323 SPI |
 | 30 | IO18 (VSPICLK) | SCLK → DRV8323 SPI |
 | 31 | IO19 (VSPIQ/MISO) | SDO ← DRV8323 SPI |
@@ -135,6 +156,22 @@ the input connector).
 | 36 | IO22 | CAN_RX ← SN65HVD230 |
 | 37 | IO23 (VSPID/MOSI) | SDI → DRV8323 SPI |
 | 38 | GND | GND |
+
+## Correction after reading the real DRV8323R datasheet (TI SLVSDJ3D)
+
+The initial MCU pin map (above, now corrected) was wrong in two ways, caught only after
+fetching the actual DRV8323R datasheet before wiring Gate Drive:
+- **DRV8323R has no separate "nSLEEP" pin.** `ENABLE` alone controls sleep (low = sleep).
+  What I'd labeled `nSLEEP` on IO13 was fictitious; IO13 is reassigned to `INHA`.
+- **DRV8323R needs 6 direct hardware PWM pins** (INHA/INLA/INHB/INLB/INHC/INLC) —
+  separate from SPI, and required even on the "S" (SPI) variant, since SPI is only for
+  configuration/telemetry, not per-cycle switching. I'd completely missed these in the
+  first pass. Freed up by tying `CAL` directly to GND instead of routing it to a
+  dedicated MCU pin (auto-offset-calibration also runs automatically per the datasheet;
+  a hardware CAL pulse is an optional extra, not required), and reassigning the
+  now-nonexistent-nSLEEP pin. All 6 PWM pins get their own 10kΩ pull-down (Gate Drive
+  sheet) so the driver's gate inputs default low/safe before the MCU's firmware
+  configures its GPIOs as outputs.
 
 ## Deviations / notes flagged to the user
 - **Power symbols vs. global labels**: the design rules say power rails should use KiCad power
