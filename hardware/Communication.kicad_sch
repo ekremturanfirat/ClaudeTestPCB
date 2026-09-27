@@ -1318,7 +1318,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
 			(at 65.735 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -1397,7 +1397,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Diodes_TVSDiodes:0603_Small"
 			(at 110.49 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -1476,7 +1476,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Diodes_TVSDiodes:0603_Small"
 			(at 110.49 54.61 0)
 			(hide yes)
 			(show_name no)

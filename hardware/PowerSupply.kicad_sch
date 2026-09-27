@@ -9614,7 +9614,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
 			(at 147.015 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -9695,7 +9695,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
 			(at 139.395 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -9776,7 +9776,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
 			(at 147.015 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -9855,7 +9855,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 130.556 61.976 90)
 			(hide yes)
 			(show_name no)
@@ -9934,7 +9934,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 139.446 61.976 90)
 			(hide yes)
 			(show_name no)
@@ -10013,7 +10013,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 147.066 61.976 90)
 			(hide yes)
 			(show_name no)
@@ -10092,7 +10092,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 130.556 30.226 90)
 			(hide yes)
 			(show_name no)
@@ -10173,7 +10173,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
 			(at 139.395 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -10252,7 +10252,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 130.556 37.846 90)
 			(hide yes)
 			(show_name no)
@@ -10331,7 +10331,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 139.446 37.846 90)
 			(hide yes)
 			(show_name no)
@@ -10410,7 +10410,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 130.556 54.356 90)
 			(hide yes)
 			(show_name no)
@@ -10489,7 +10489,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 139.446 54.356 90)
 			(hide yes)
 			(show_name no)
@@ -10570,7 +10570,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
 			(at 130.505 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -10651,7 +10651,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
 			(at 147.015 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -10832,7 +10832,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0805_Medium"
 			(at 80.975 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -10913,7 +10913,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
 			(at 88.595 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -10992,7 +10992,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 88.646 111.506 90)
 			(hide yes)
 			(show_name no)
@@ -11071,7 +11071,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 130.556 96.266 90)
 			(hide yes)
 			(show_name no)
@@ -11150,7 +11150,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 130.556 103.886 90)
 			(hide yes)
 			(show_name no)
@@ -11229,7 +11229,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
 			(at 101.346 87.376 90)
 			(hide yes)
 			(show_name no)
@@ -11310,7 +11310,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
 			(at 112.725 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -11389,7 +11389,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Inductors_SurfaceMounts:6x6mm"
 			(at 121.92 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -11470,7 +11470,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:1210_Medium"
 			(at 139.395 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -11551,7 +11551,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:1210_Medium"
 			(at 147.015 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -11714,7 +11714,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
 			(at 155.905 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -11795,7 +11795,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0805_Medium"
 			(at 172.415 86.36 0)
 			(hide yes)
 			(show_name no)

@@ -1091,7 +1091,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
 			(at 101.295 38.1 0)
 			(hide yes)
 			(show_name no)

@@ -218,6 +218,47 @@ fetching the actual DRV8323R datasheet before wiring Gate Drive:
   sheet) so the driver's gate inputs default low/safe before the MCU's firmware
   configures its GPIOs as outputs.
 
+## PCB layout status (in progress, NOT fabrication-ready)
+
+Board: 100 x 115mm, 2-layer, 1mm corner radius, 4x M3 NPTH mounting holes (8mm inset
+from each edge). All 55 schematic components synced to the board with real
+footprints (every passive got an explicit footprint assignment — the library leaves
+these blank by design for multi-package parts, so this required a full pass of
+`batch_edit_schematic_components` per sheet before the PCB sync would pick them up).
+
+**Done:**
+- Board outline, stackup (2-layer), design rules (0.2mm clearance/track, 0.6mm/0.3mm
+  via, matching the design-rules skill's 1oz-copper defaults)
+- Initial placement via force-directed auto-placement (`suggest_placement`), with
+  connectors/ESP32/mounting holes locked as anchors; iterated a few rounds to fix
+  boundary violations
+- Copper pours: solid GND on both layers, plus dedicated higher-priority pours for
+  VIN_RAW, +VBUS, +VBUS_EFUSE_OUT, +VBUS_PROT, and +5V_LOGIC in their component
+  clusters (so those rails don't need hand-routing pad-by-pad)
+- Direct 2mm-wide traces for the three phase-output connections (J5→Q3, J6→Q5,
+  J7→Q7 — the SHA/SHB/SHC switch nodes)
+
+**Not done / left for a follow-up session:**
+- **Freerouting (autorouter) isn't available in this environment** (Java 8 present,
+  needs Java 21; no jar installed) — the remaining ~50 signal-level nets (SPI, PWM,
+  CAN, UART, ADC sense lines, I2C-ish eFuse config lines, expansion header) are
+  still ratsnest/unrouted. Either install Freerouting (Java 21 + freerouting.jar)
+  and re-run autoroute, or route them by hand in KiCad.
+- **Placement isn't fully refined**: `run_drc` currently reports 732 violations,
+  the large majority being clearance/solder-mask-bridge/shorting-item errors from
+  ~20 remaining courtyard overlaps (auto-placement got the board to a reasonable
+  starting layout but needs a manual nudge-parts-apart pass in KiCad's PCB editor —
+  typically a 15-30 minute task, well-suited to interactive placement since it's
+  about visual judgment, not something worth more blind automated iteration).
+- Silkscreen refinement (reference designator overlaps — `text_height`/`silk_overlap`/
+  `silk_over_copper` warnings), fiducials, board info/logo/QR code, and the final
+  gerber/drill/BOM/position-file export are all **not started**.
+
+**Bottom line: the schematic is complete, correct, and ERC-clean; the PCB is a solid,
+real starting layout (correct footprints, stackup, pours, critical nets) but needs
+a further placement/routing/DRC-cleanup pass before it's ready to send to
+fabrication.**
+
 ## Deviations / notes flagged to the user
 - **Power symbols vs. global labels**: the design rules say power rails should use KiCad power
   symbols (GND, etc.) and only signal nets use global labels. Stock KiCad power symbols only
