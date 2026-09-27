@@ -98,14 +98,21 @@ per-phase bootstrap capacitors; that assumption in the original plan was wrong)
 - SOA/SOB/SOC (per-phase current-sense amp outputs) → ESP32 ADC-capable GPIOs.
 - SPA/SNA/SPB/SNB/SPC/SNC + GHx/SHx/GLx → Power Stage sheet (global labels).
 
-### Power Stage
-- Q1–Q6: **NTMFS006N08MC** (80V, 82A, 6mΩ) — 3× half-bridges (2 FETs each), driven by DRV8323's
-  GHx/GLx/SHx.
-- 3× phase shunts: **2 mOhm 1Watt** (Resistors_ShuntResistors), Kelvin-connected into DRV8323's
-  SPx/SNx pins (`LAYOUT: Kelvin connection` note required on schematic).
-- **TMP235A4DCKR** (Sensors_Temperature) near the FET cluster for thermal monitoring.
-- 3× phase output terminals: **7770** (M3, 15A) screw terminals.
-- Local bulk + decoupling ceramics across VM/PGND at the half-bridges (hot loop, `LAYOUT` note).
+### Power Stage — as built (PowerStage.kicad_sch)
+- Q2–Q7: **NTMFS006N08MC** (80V, 82A, 6mΩ) — 3× half-bridges (2 FETs each: Q2/Q3=A,
+  Q4/Q5=B, Q6/Q7=C), D/S/G wired to +VBUS_PROT / SHx / GHx,GLx per DRV8323.
+- RS1/RS2/RS3: **2 mOhm 1Watt** (Resistors_ShuntResistors) — real 4-terminal Kelvin
+  shunt symbols (2 force pads + 2 sense pads sharing pin numbers 1/1 and 2/2 — another
+  vendor-symbol quirk like DRV8323's, but this one's *intentional*: it's how a real
+  Kelvin shunt part is modeled). SPx/SNx → DRV8323's current-sense pins; the SNx/GND
+  merge point is the single physical tie between the Kelvin sense net and the ground
+  plane.
+- U8: **TMP235A4DCKR** (Sensors_Temperature) — VDD/GND to rails, VOUT → `TEMP_SENSE`
+  (shared net with MCU Core's SENSOR_VN ADC input).
+- J5/J6/J7: **7770** (M3, 15A) screw terminals — phase A/B/C motor outputs, tied to
+  each half-bridge's SHx (switch node).
+- C29/C30 (10µF/75V) + C31/C32 (100µF Al-polymer): hot-loop + DC-bus bulk decoupling
+  across +VBUS_PROT/GND, distributed near the half-bridges (`LAYOUT` note).
 
 ### Current Sensing (DC bus, independent of per-phase sensing)
 - DC-bus shunt: **5 mOhm** (Resistors_ShuntResistors), in series with +VBUS after the eFuse.
