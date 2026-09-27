@@ -14,8 +14,8 @@ KiCad project for a 3-phase brushless motor ESC.
 - [x] ESP32-WROOM-32E symbol/footprint added to PowerLabKiCadLibraries (PR: odtu/PowerLabKiCadLibraries#2, pending merge)
 - [x] KiCad 10 project scaffolded (`hardware/ESC3Phase.kicad_pro`)
 - [x] Schematic (power supply, MCU core, gate drive, power stage, current sensing, communication) — see [hardware/ARCHITECTURE.md](hardware/ARCHITECTURE.md)
-- [~] PCB layout — in progress, see [hardware/ARCHITECTURE.md](hardware/ARCHITECTURE.md#pcb-layout-status-in-progress-not-fabrication-ready) (outline/stackup/mounting holes/all footprints placed/GND+power pours/phase-output traces done; ~50 signal nets still unrouted, 21 courtyard overlaps to resolve, no autorouter available in this environment)
-- [ ] DRC / ERC clean, fab outputs — not yet: 732 DRC violations remain (469 errors / 263 warnings)
+- [~] PCB layout — in progress, see [hardware/ARCHITECTURE.md](hardware/ARCHITECTURE.md#pcb-layout-status-in-progress-not-fabrication-ready) (outline/stackup/mounting holes/all footprints placed/copper pours/every net fully routed — 0 real courtyard overlaps, 0 unconnected nets; traces are direct point-to-point, not yet routed around existing copper)
+- [ ] DRC / ERC clean, fab outputs — not yet: 826 DRC violations remain (mostly clearance/crossing from unrouted-around-copper traces; no autorouter available in this environment to fix automatically)
 
 ## Layout
 - `hardware/` — KiCad project

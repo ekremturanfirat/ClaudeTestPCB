@@ -163,6 +163,28 @@ not introduced by this design — worth reporting/fixing upstream):
 3. `TMP235A4DCKR` (temperature sensor): all three pins (VDD/GND/**VOUT**) are typed
    `input` in the symbol — VOUT should be `output`. Harmless for schematic capture but
    trips ERC's "undriven net" check; worked around with a PWR_FLAG on `TEMP_SENSE`.
+4. `8-PowerTDFN(5x6mm)` (used by Q1–Q7, all phase/reverse-polarity MOSFETs): the
+   footprint's overall bounding box, as reported by the PCB API, is both larger than
+   and offset from its own pads (confirmed on Q1: pads span x[39.667, 45.667], the
+   reported "raw" bbox spans x[43.0065, 52.167] — a range that doesn't even fully
+   contain the pads). This makes `check_courtyard_overlaps` flag phantom overlaps
+   with nearby passives (Q1 vs R13/R15/C20 in this design) that don't correspond to
+   any real pad or copper collision — confirmed directly by comparing `pads_bbox` for
+   each pair (they clear by 0.3mm+ every time). Likely an oversized/misplaced graphic
+   on the footprint's F.Fab or assembly-drawing layer. Treat `check_courtyard_overlaps`
+   results for this footprint as informative, not authoritative — verify against
+   `pads_bbox` or KiCad's own 3D/2D view before treating a flagged pair as real.
+5. `2 mOhm 1Watt` / `5 mOhm ` (shunt resistors) footprint only exposes **2** physical
+   copper pads, but the schematic symbol has **4** pins (force+/force−/sense+/sense−).
+   KiCad's pin-to-pad mapping collapses force+ and sense+ onto the same pad (and
+   likewise for the minus side), which is fine for force+ (`SPA`/`SPB`/`SPC`) since
+   that pad carries the real net — but it means the sense pins (`SNA`/`SNB`/`SNC`)
+   end up with **no footprint pad at all** anywhere on the board except the DRV8323's
+   own pin. There is nothing to route them to: true 4-wire Kelvin sensing isn't
+   physically realizable with this footprint. `SNA`/`SNB`/`SNC` are left unrouted
+   for this reason — not an oversight. Fixing this for real needs either a shunt
+   footprint with separate Kelvin tap pads, or accepting 2-wire (non-Kelvin) sensing
+   by tying `SNx` to the shunt's low-side pad in the schematic instead.
 
 ## ESP32-WROOM-32E pin map
 
@@ -229,35 +251,50 @@ these blank by design for multi-package parts, so this required a full pass of
 **Done:**
 - Board outline, stackup (2-layer), design rules (0.2mm clearance/track, 0.6mm/0.3mm
   via, matching the design-rules skill's 1oz-copper defaults)
-- Initial placement via force-directed auto-placement (`suggest_placement`), with
-  connectors/ESP32/mounting holes locked as anchors; iterated a few rounds to fix
-  boundary violations
+- Placement: force-directed auto-placement (`suggest_placement`) for the initial
+  layout, followed by a manual cleanup pass. Real courtyard/pad overlaps went from
+  44 down to 0 (verified pad-by-pad); 5 residual flags on the Q1 MOSFET footprint
+  are a vendor-footprint bounding-box artifact — the real copper pads clear their
+  neighbors by 0.3mm+, confirmed by comparing `pads_bbox` directly (see "Vendor
+  library defects" below). The 4 mounting holes' oversized reference/value text
+  (a `MountingHole_3.2mm` library quirk that put the string "MountingHole_3.2mm"
+  literally off the board edge) was hidden.
 - Copper pours: solid GND on both layers, plus dedicated higher-priority pours for
-  VIN_RAW, +VBUS, +VBUS_EFUSE_OUT, +VBUS_PROT, and +5V_LOGIC in their component
-  clusters (so those rails don't need hand-routing pad-by-pad)
-- Direct 2mm-wide traces for the three phase-output connections (J5→Q3, J6→Q5,
-  J7→Q7 — the SHA/SHB/SHC switch nodes)
+  VIN_RAW, +VBUS, +VBUS_EFUSE_OUT, +VBUS_PROT, +5V_LOGIC, and +3V3_MCU in their
+  component clusters (so those rails don't need hand-routing pad-by-pad)
+- **Full net connectivity: every net on the board is now routed** — the 3 phase-output
+  traces (2mm wide), all 6 PWM gate-drive lines + pulldowns, ENABLE/nFAULT/EN, the
+  full SPI bus (SCLK/SDI/SDO/nSCS) and CAN (CAN_TX/RX, CANH/CANL + ESD diodes) and
+  UART (TXD0/RXD0) links, the 3 ADC current-sense lines (SOA/SOB/SOC) + IBUS_SENSE +
+  TEMP_SENSE, the buck converter's FB/PG/RT/BOOT/SW network, all 9 gate-driver eFuse
+  config lines, the charge-pump network (CP_CPH/CPL/VCP), VREF/DVDD decoupling, BOOT
+  strap, REVPOL_GATE, and the 3-pin expansion header (EXP1-3). `run_drc` confirms
+  zero "unconnected items" — the ratsnest is fully resolved.
 
 **Not done / left for a follow-up session:**
-- **Freerouting (autorouter) isn't available in this environment** (Java 8 present,
-  needs Java 21; no jar installed) — the remaining ~50 signal-level nets (SPI, PWM,
-  CAN, UART, ADC sense lines, I2C-ish eFuse config lines, expansion header) are
-  still ratsnest/unrouted. Either install Freerouting (Java 21 + freerouting.jar)
-  and re-run autoroute, or route them by hand in KiCad.
-- **Placement isn't fully refined**: `run_drc` currently reports 732 violations,
-  the large majority being clearance/solder-mask-bridge/shorting-item errors from
-  ~20 remaining courtyard overlaps (auto-placement got the board to a reasonable
-  starting layout but needs a manual nudge-parts-apart pass in KiCad's PCB editor —
-  typically a 15-30 minute task, well-suited to interactive placement since it's
-  about visual judgment, not something worth more blind automated iteration).
-- Silkscreen refinement (reference designator overlaps — `text_height`/`silk_overlap`/
-  `silk_over_copper` warnings), fiducials, board info/logo/QR code, and the final
+- **The new traces are NOT DRC-clean.** They were routed as direct point-to-point
+  segments (via `route_pad_to_pad`/`route_trace`) without an autorouter — Freerouting
+  is still unavailable in this environment (Java 8 present, needs Java 21; no jar
+  installed) — so straight-line traces frequently cut across existing copper pours,
+  other traces, and pads without respecting clearance. `run_drc` now reports 826
+  violations (was 732 before this pass), dominated by `clearance` (332),
+  `solder_mask_bridge` (214), `silk_over_copper` (71), `shorting_items` (60), and
+  `tracks_crossing` (44). **Net-list completeness went from ~50 unrouted nets to 0;
+  DRC cleanliness is the opposite trade — it got worse, because there's now much more
+  copper on the board and none of it dodges the pours.** This is real, necessary
+  follow-up work: either install Freerouting and re-run autoroute (it rips up and
+  redoes bad routing, unlike the direct-trace approach used here), or manually
+  rip up and re-route each flagged segment in KiCad's interactive router, which
+  natively avoids existing copper.
+- Silkscreen refinement (reference designator overlaps — `text_height`/`silk_overlap`
+  warnings), fiducials, board info/logo/QR code, ground stitching vias, and the final
   gerber/drill/BOM/position-file export are all **not started**.
 
-**Bottom line: the schematic is complete, correct, and ERC-clean; the PCB is a solid,
-real starting layout (correct footprints, stackup, pours, critical nets) but needs
-a further placement/routing/DRC-cleanup pass before it's ready to send to
-fabrication.**
+**Bottom line: the schematic is complete, correct, and ERC-clean. The PCB now has
+correct footprints, stackup, pours, zero real placement collisions, and a fully
+connected net-list — but the traces themselves are not yet DRC-clean (826
+violations, almost all clearance/crossing from unrouted-around-copper straight
+lines) and it is not ready to send to fabrication.**
 
 ## Deviations / notes flagged to the user
 - **Power symbols vs. global labels**: the design rules say power rails should use KiCad power
