@@ -1,0 +1,23 @@
+(kicad_sch
+	(version 20260101)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid e28ad77e-eee8-4da9-a82f-57fba8403d74)
+	(paper "A4")
+
+  (title_block
+    (title "${PROJECT_NAME}")
+    (date "2026-09-27")
+    (rev "A")
+    (company "METU PowerLab")
+    (comment 1 "Designer: ${DESIGNER}")
+    (comment 2 "Project No: ${PROJECTNUMBER}")
+  )
+
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
