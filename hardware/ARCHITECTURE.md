@@ -20,21 +20,43 @@ odtu/PowerLabKiCadLibraries#2.
 
 ## Component selections (with rationale)
 
-### Power Supply
-| Part | Library | Role |
-|---|---|---|
-| 7770 (M3, 15A) ×2 | Connectors_ScrewTerminals | VIN+, GND input terminals |
-| SMBJ48CA-13-F | Diodes_TVSDiodes | VBUS transient/surge protection (48V standoff, safely above 36V max, ~77V clamp) |
-| LM5050-1 | CircuitProtections_IdealDiodes | OR-ing/ideal-diode controller driving an external FET → reverse-polarity protection (low loss vs. a series diode) |
-| NTMFS006N08MC | Transistors_MOSFETs | Reverse-polarity series FET (80V, 82A, 6mΩ — same part reused from Power Stage BOM line) |
-| PTPS16890VMAR (TI TPS1689x) | CircuitProtections_eFuses | Input eFuse/hot-swap: 20A, 9–80V — inrush limiting + hardware overcurrent/short-circuit protection independent of firmware |
-| 100µF Al-polymer ×2–3 | Capacitors_AluminumPolymers_ThroughHoles | DC bus bulk capacitance |
-| LMR38020FSDDAR | Regulators_BuckConverters | VBUS (12–36V) → +5V_LOGIC, 2A (4.2–80V in, handles ESP32 WiFi current bursts + CAN txcvr + driver logic) |
-| 6.8µH | Inductors_SurfaceMounts | LMR38020 buck inductor |
-| NCP1117ST33T3G | Regulators_LDOs | +5V_LOGIC → +3V3_MCU (linear, quiet rail for MCU/CAN/driver logic) |
+### Power Supply — as built (schematic-verified, PowerSupply.kicad_sch)
 
-Rails: `+VBUS` (post-eFuse, 12–36V) → `+5V_LOGIC` → `+3V3_MCU`. `PGND` used for the
-high-current power path, `GND` for logic (tied together at one star point).
+Rail naming: `VIN_RAW` (raw connector input) → `+VBUS` (post reverse-polarity FET,
+pre-eFuse) → `+VBUS_PROT` (post-eFuse; feeds Gate Drive/Power Stage VM) → `+5V_LOGIC`
+(post-buck) → `+3V3_MCU` (post-LDO). `GND` is common throughout (single star point at
+the input connector).
+
+| Ref | Part | Library | Role / value notes |
+|---|---|---|---|
+| J3, J4 | 7770 (M3, 15A) | Connectors_ScrewTerminals | VIN_RAW+, GND input terminals (one pole each) |
+| D1 | SMBJ48CA-13-F | Diodes_TVSDiodes | VIN_RAW transient/surge protection (48V standoff, ~77V clamp) |
+| U2 | LM5050-1 | CircuitProtections_IdealDiodes | High-side N-ch ORing/ideal-diode controller → reverse-polarity block |
+| Q1 | NTMFS006N08MC | Transistors_MOSFETs | Reverse-polarity series FET, D=VIN_RAW, S=+VBUS, G=U2.GATE (80V/82A/6mΩ, shared BOM line with Power Stage) |
+| U3 | PTPS16890VMAR (TI TPS1689x eFuse) | CircuitProtections_eFuses | +VBUS→+VBUS_PROT, 20A/9–80V. **Fully wired per the real TI TPS1689 datasheet** (SLVSHO1A, fetched directly), standalone/non-parallel config: R4=120Ω/C10=100nF (VDD R-C filter — datasheet spec is 150Ω/0.22µF, substituted to nearest library values), R5=866kΩ/R6=118kΩ (EN/UVLO divider, trips ≈10.0V, formula-derived) + C11=100pF noise cap, C12=1nF (IREF), C13=10nF (DVDT, placeholder — tune per Eq.16/17 against actual bulk C once inrush target is set), C14=1nF (TEMP), R7=1.2kΩ (ILIM) + R8=3kΩ (IMON) + C15=22pF → sets circuit-breaker OCP ≈18.3A (formula-derived, library's nearest values to the datasheet-recommended 1.24k/3.4k), R9=10kΩ pulldown (AUX), R10/R11=10kΩ pull-ups to +3V3_MCU (SDA/SCL, PMBus unused), ADDR0/ADDR1/SWEN/WP#→GND direct (standalone/address-0/PMBus-write-disabled), FLT/PGOOD left unconnected (no external pull-up available pre-buck without exceeding their 6V abs-max if pulled to +VBUS_PROT) |
+| C16/C17 | 4.7µF / 100nF | Capacitors_Ceramics_SurfaceMounts | eFuse/buck input bypass |
+| U4 | LMR38020FSDDAR | Regulators_BuckConverters | +VBUS_PROT→+5V_LOGIC, 2A. **Per TI datasheet (SNVSC40E)**: EN tied directly to VIN (precision-enable, "do not float" but explicitly may tie to VIN), R12=22.1kΩ RT (≈1.1MHz switching — nearest library value to the table's 1MHz/25.5kΩ row), R13=88.7kΩ/R14=22.1kΩ FB divider (gives 5.01V, computed from VREF=1V), C18=100nF BOOT-to-SW (16V+ rating), R15=100kΩ PG pull-up to +5V_LOGIC |
+| L1 | 6.8µH | Inductors_SurfaceMounts | Buck inductor (matches the datasheet's own 1MHz/24V/5V design-table row) |
+| C19/C20 | 22µF ×2 | Capacitors_Ceramics_SurfaceMounts | Buck output caps (datasheet table: 2×22µF nominal) |
+| U5 | NCP1117ST33T3G | Regulators_LDOs | +5V_LOGIC→+3V3_MCU, standard 3-pin LDO app circuit |
+| C21/C22 | 1µF / 10µF | Capacitors_Ceramics_SurfaceMounts | LDO input/output caps |
+| #FLG1–4 | power:PWR_FLAG | (stock KiCad, annotation-only) | ERC power-source markers on VIN_RAW/+VBUS/EFUSE_VDD/GND — these pass-through/sense-only nets have no pin typed `power_out` in this sheet, which otherwise trips ERC's "undriven power net" check even though they're genuinely driven in the real circuit |
+
+**Flagged for the user / future review:**
+- eFuse VDD R-C filter (120Ω/100nF) and DVDT cap (10nF) are the closest available
+  library values / a placeholder pending a defined inrush-current target — not exact
+  datasheet values (150Ω/0.22µF was requested but isn't in the Resistors/Capacitors
+  library).
+- Two residual ERC items on `PowerSupply.kicad_sch` after a full pass: (1) U3's two
+  `OUT` pins (7/8) both tied to +VBUS_PROT trips "power output tied to power output" —
+  expected/harmless, this is the datasheet's own recommended parallel-pin connection;
+  (2) one more `Output`/`Power output` pairing on pin 2 (IMON) I could not fully
+  root-cause in the time available — worth a look in KiCad's ERC dialog directly.
+- The vendor's own `PTPS16890VMAR` symbol (in PowerLabKiCadLibraries) has a real
+  authoring defect: pin 20 is defined **twice** (once named `SWEN`, once named `WP#`,
+  at two different physical locations) and pin 21 (`WP#`'s real datasheet pin number)
+  doesn't exist in the symbol at all. Worth reporting upstream; I worked around it here
+  by labeling both physical pin-20 instances to GND directly by position.
 
 ### MCU Core
 - U: **ESP32-WROOM-32E** (METUPowerLab_Microcontrollers_ESP32, pending PR merge). No external
