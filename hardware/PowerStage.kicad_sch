@@ -1,1233 +1,18 @@
 (kicad_sch
-	(version 20260101)
+	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid ca73365a-f995-45d9-ac55-18c98119c2ec)
+	(uuid "cf03cb7c-77dc-4e52-9722-69fabdfc41c4")
 	(paper "A4")
 	(title_block
-		(title "${PROJECT_NAME}")
+		(title "Power Stage")
 		(date "2026-09-27")
-		(rev "A")
+		(rev "B")
 		(company "METU PowerLab")
-		(comment 1 "Designer: ${DESIGNER}")
-		(comment 2 "Project No: ${PROJECTNUMBER}")
+		(comment 2 "Designer: ${DESIGNER}")
+		(comment 3 "Project No: ${PROJECTNUMBER}")
 	)
 	(lib_symbols
-		(symbol "METUPowerLab_Transistors_MOSFETs:NTMFS006N08MC"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 4.318 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "NTMFS006N08MC"
-				(at 15.494 2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "METUPowerLab_Transistors_MOSFETs:8-PowerTDFN(5x6mm)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ntmfs006n08mc-d.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "N-CH MOSFET 80V 82A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer" "onsemi"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer Number" "NTMFS006N08MC"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Type" "N-Channel"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "VDS" "80V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ID" "82A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "RDSon" "6 mOhm"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "VGS" "20V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Operating Temperature" "-55°C up to 150°C (TJ)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mounting Type" "Surface Mount"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Package" "8-PowerTDFN(5x6)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Digi-Key Number" "488-NTMFS006N08MCCT-ND"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mouser Number" "863-NTMFS006N08MC"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Farnell Number" "3528503"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "NTMFS006N08MC_0_1"
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "NTMFS006N08MC_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "METUPowerLab_Resistors_ShuntResistors:2 mOhm 1Watt"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 0 4.445 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "2 mOhm"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-pa0100_2512_51_rohs.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "1W ±1% 0805"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer" "YAGEO"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer Number" "PA0805FRE870R002L"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Tolerance" "±1%"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Operating Temperature" "-55°C ~ 155°C"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Package" "0805 (2012 Metric)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mounting Type" "Surface Mount"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Digi-Key Number" "13-PA0805FRE870R002LCT-ND"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "METUPowerLab_Resistors_ShuntResistors:0805_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "2 mOhm 1Watt_0_1"
-				(rectangle
-					(start -2.54 1.27)
-					(end 2.54 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "2 mOhm 1Watt_1_1"
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -2.54 -2.54 90)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -2.54 90)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "METUPowerLab_Connectors_ScrewTerminals:7770"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "7770"
-				(at 0 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "METUPowerLab_Connectors_ScrewTerminals:7770"
-				(at 1.27 6.985 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.molex.com/en-us/products/part-detail/2157601002?display=pdf"
-				(at 1.27 6.985 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "M3 15A"
-				(at 1.27 6.985 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer" "Keystone Electronics"
-				(at 1.27 6.985 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer Number" "7770"
-				(at 1.27 6.985 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Number of Pins" "2"
-				(at 2.54 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mounting Type" "Through Hole"
-				(at 1.27 6.985 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Current Rating" "13A"
-				(at 1.27 6.985 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mouser Number" "534-7770"
-				(at 1.27 6.985 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Digi-Key Number" "36-7770-ND"
-				(at 1.27 6.985 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "7770_0_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 2.54)
-					(radius 0.635)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "7770_1_1"
-				(pin bidirectional line
-					(at 5.08 2.54 180)
-					(length 4.445)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "METUPowerLab_Sensors_Temperature:TMP235A4DCKR"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 0.508 10.414 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TMP235A4DCKR"
-				(at 7.366 8.636 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "METUPowerLab_Sensors_Temperature:SC-70-5"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftmp235"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Analog Temperature Sensor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer" "Texas Instruments"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer Number" "TMP235A4DCKR"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sensor Type" "Analog"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Output Type" "Analog Voltage"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sensing Temperature Range" "-40°C up to 150°C"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply Voltage Rating" "2.3V up to 5.5V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Accuracy" "±1°C"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Operating Temperature" "-50°C up to 150°C (TA)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mounting Type" "Surface Mount"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Package" "SC-70-5"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Digi-Key Number" "296-50016-1-ND"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mouser Number" "TMP235A4DCKR"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TMP235A4DCKR_1_1"
-				(rectangle
-					(start 0 7.62)
-					(end 15.24 0)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin input line
-					(at -2.54 5.08 0)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 7.62 -2.54 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 17.78 5.08 180)
-					(length 2.54)
-					(name "VOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:10 µF 75V"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "10 µF"
-				(at 0.635 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_automotive_general_en.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Ceramic SMD Cap 1210"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer Number" "CGA6P1X7R1N106K250AC"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer" "TDK Corporation"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Tolerance" "±10%"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Voltage Rating" "75V"
-				(at 2.54 -4.572 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Operating Temperature" "-55°C up to 85°C"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Package" "1210 (3225Metric)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Digi-Key Number" "1276-1871-1-ND"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mouser Number" "810-CGA6P1X7R1N106K2"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Farnell Number" "3416429"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Özdisan Number" "CGA6P1X7R1N106K250AC"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mounting Type" "Surface Mount"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "10 µF 75V_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "10 µF 75V_1_1"
-				(pin passive line
-					(at 0 5.08 270)
-					(length 4.064)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 4.064)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "METUPowerLab_Capacitors_AluminumPolymers_ThroughHoles:100 µF"
 			(pin_numbers
 				(hide yes)
@@ -1238,8 +23,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "C"
 				(at 2.54 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1249,6 +38,8 @@
 			)
 			(property "Value" "100 µF"
 				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1258,60 +49,74 @@
 			)
 			(property "Footprint" "METUPowerLab_Capacitors_AluminumPolymers_ThroughHoles:8.00x13.50mm"
 				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05Y105KP6VPN"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Alum Poly Cap 8.00*13.50mm"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Manufacturer Number" "107AVG063MFBJ"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Manufacturer" "Cornell Dubilier Knowles"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Tolerance" "±20%"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Voltage Rating" "63V"
 				(at 2.54 -4.572 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1320,56 +125,68 @@
 			)
 			(property "Operating Temperature" "-55°C up to 125°C"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Package" "8.00*13.50mm"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Digi-Key Number" "1572-1656-ND"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Mouser Number" "598-107AVG063MFBJ"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "cap capacitor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "C_*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "100 µF_0_1"
@@ -1426,7 +243,7 @@
 				(pin passive line
 					(at 0 5.08 270)
 					(length 4.064)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1444,7 +261,7 @@
 				(pin passive line
 					(at 0 -5.08 90)
 					(length 4.064)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1462,8 +279,283 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:PWR_FLAG"
-			(power)
+		(symbol "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:100 nF"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "100 nF"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-250V_24.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Ceramic SMD Cap 0603"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Number" "CC0603KRX7R7BB104"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "YAGEO"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Tolerance" "±10%"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Voltage Rating" "16V"
+				(at 2.54 -4.572 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Operating Temperature" "-55°C up to 125°C"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Package" "0603 (1608 Metric)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Digi-Key Number" "311-1088-1-ND"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser Number" "603-CC603KRX7R7BB104"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Farnell Number" "2408501"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Özdisan Number" "CC0603KRX7R7BB104"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mounting Type" "Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "100 nF_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "100 nF_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 4.064)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 4.064)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "METUPowerLab_Schematic_PowerSymbols:+V_RAIL"
+			(power global)
 			(pin_numbers
 				(hide yes)
 			)
@@ -1472,19 +564,25 @@
 				(hide yes)
 			)
 			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
+			(in_bom no)
+			(on_board no)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Value" "PWR_FLAG"
+			(property "Value" "+V_RAIL"
 				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1493,45 +591,91 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
+			(property "Description" "Positive supply power symbol, set Value to the rail name (e.g. +3V3_MCU)"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "ki_keywords" "flag power"
+			(property "ki_keywords" "power flag supply rail vcc vdd"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
+			(symbol "+V_RAIL_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+V_RAIL_1_1"
+				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1547,10 +691,91 @@
 					)
 				)
 			)
-			(symbol "PWR_FLAG_0_1"
+			(embedded_fonts no)
+		)
+		(symbol "METUPowerLab_Schematic_PowerSymbols:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board no)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Ground power symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "power flag ground gnd"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
 					)
 					(stroke
 						(width 0)
@@ -1561,42 +786,1103 @@
 					)
 				)
 			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "METUPowerLab_Sensors_Temperature:TMP235A4DCKR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0.508 10.414 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TMP235A4DCKR"
+				(at 7.366 8.636 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "METUPowerLab_Sensors_Temperature:SC-70-5"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftmp235"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Analog Temperature Sensor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Texas Instruments"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Number" "TMP235A4DCKR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sensor Type" "Analog"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Output Type" "Analog Voltage"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sensing Temperature Range" "-40°C up to 150°C"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Supply Voltage Rating" "2.3V up to 5.5V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Accuracy" "±1°C"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Operating Temperature" "-50°C up to 150°C (TA)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mounting Type" "Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Package" "SC-70-5"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Digi-Key Number" "296-50016-1-ND"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser Number" "TMP235A4DCKR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TMP235A4DCKR_1_1"
+				(rectangle
+					(start 0 7.62)
+					(end 15.24 0)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_in line
+					(at 7.62 -2.54 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 5.08 180)
+					(length 2.54)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 5.08 0)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "METUPowerLab_TestPoints_SurfaceMounts:TestPoint_Pad"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 1.27 3.302 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TestPoint_Pad"
+				(at 1.27 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Bare copper SMD test pad"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mounting Type" "Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp probe pad"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "METUPowerLab_TestPoints_SurfaceMounts:Pad_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_Pad_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_Pad_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
 			(embedded_fonts no)
 		)
 	)
+	(text "LAYOUT: C56/C57 between the half bridges, on the +VBUS_PROT / GND pours.\nLAYOUT: U8 close to the low-side MOSFETs (hottest parts), away from the shunts."
+		(exclude_from_sim no)
+		(at 12.7 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "54628db5-911f-46ca-b272-81acfa041837")
+	)
+	(wire
+		(pts
+			(xy 213.36 119.38) (xy 213.36 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0012bdf5-3ec7-4da1-a279-c777e716c57f")
+	)
+	(wire
+		(pts
+			(xy 231.14 55.88) (xy 231.14 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "028ddf27-cd6f-4f52-9e31-9890484b3162")
+	)
+	(wire
+		(pts
+			(xy 139.7 81.28) (xy 147.32 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13173e9b-1505-43cd-8924-a7e28438e317")
+	)
+	(wire
+		(pts
+			(xy 139.7 86.36) (xy 147.32 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13f8fd65-0836-4619-84bf-eccbd1e32f35")
+	)
+	(wire
+		(pts
+			(xy 101.6 119.38) (xy 93.98 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "164fe9df-a2c2-4697-81dc-77b3166cad29")
+	)
+	(wire
+		(pts
+			(xy 139.7 48.26) (xy 147.32 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1723355b-8fdf-4838-9460-ff91d2176ab1")
+	)
+	(wire
+		(pts
+			(xy 101.6 81.28) (xy 93.98 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c7358dd-6192-4630-b292-09e43f6714cd")
+	)
+	(wire
+		(pts
+			(xy 185.42 119.38) (xy 185.42 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2837e016-17eb-4ad8-859a-24c73e837e5a")
+	)
+	(wire
+		(pts
+			(xy 243.84 152.4) (xy 243.84 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c8a04f5-1afe-412d-b1b2-ab4a3cf6fc9c")
+	)
+	(wire
+		(pts
+			(xy 139.7 124.46) (xy 147.32 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3812d141-5de5-4d91-891d-7054c28baae5")
+	)
+	(wire
+		(pts
+			(xy 139.7 50.8) (xy 147.32 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ed7969d-3509-4f8f-b4c5-d89b228a2229")
+	)
+	(wire
+		(pts
+			(xy 101.6 43.18) (xy 93.98 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48907458-3c15-4120-ba5c-e8b2965eda93")
+	)
+	(wire
+		(pts
+			(xy 231.14 66.04) (xy 231.14 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d5e082f-bb81-462a-8cf2-f34cd4e51408")
+	)
+	(wire
+		(pts
+			(xy 218.44 152.4) (xy 218.44 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52c7f191-9768-4091-aa33-680fad2801bf")
+	)
+	(wire
+		(pts
+			(xy 205.74 66.04) (xy 205.74 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55233d79-b369-4bb1-a9b1-7248a98e69b8")
+	)
+	(wire
+		(pts
+			(xy 101.6 86.36) (xy 93.98 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70628bfd-2186-44e2-80c4-a7b724957257")
+	)
+	(wire
+		(pts
+			(xy 101.6 48.26) (xy 93.98 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91292ead-7718-4757-8fdb-43b441cd5172")
+	)
+	(wire
+		(pts
+			(xy 185.42 129.54) (xy 185.42 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1047430-186f-4812-bf57-a3ae230e7e6b")
+	)
+	(wire
+		(pts
+			(xy 101.6 124.46) (xy 93.98 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac172eee-01a4-4453-b678-e5820700fd41")
+	)
+	(wire
+		(pts
+			(xy 139.7 88.9) (xy 147.32 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac90a7d0-e8c0-4408-96ad-d7645868966d")
+	)
+	(wire
+		(pts
+			(xy 218.44 154.94) (xy 210.82 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af22e464-867b-4e48-9f3a-e7efa6f026a8")
+	)
+	(wire
+		(pts
+			(xy 139.7 43.18) (xy 147.32 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c23cf471-6377-41ca-ba4b-d5bc0e26b037")
+	)
+	(wire
+		(pts
+			(xy 223.52 111.76) (xy 228.6 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db2ac6cb-e00f-4a57-818a-e869e3b175ed")
+	)
+	(wire
+		(pts
+			(xy 203.2 111.76) (xy 200.66 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db33fbfc-571a-4c68-821c-8a30c8ff0bc4")
+	)
+	(wire
+		(pts
+			(xy 139.7 119.38) (xy 147.32 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db55864c-69d7-4afe-a577-100f45bf1412")
+	)
+	(wire
+		(pts
+			(xy 205.74 55.88) (xy 205.74 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5606185-2753-42b7-bb4f-cfd289dbeebb")
+	)
+	(wire
+		(pts
+			(xy 139.7 127) (xy 147.32 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f15007b2-5113-4b94-b437-7d4cad33a14f")
+	)
+	(global_label "GHA"
+		(shape passive)
+		(at 93.98 43.18 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "19a1f0ce-4ee6-4f25-a33b-c78736da691b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.98 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "PHASE_C"
+		(shape passive)
+		(at 147.32 119.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2e95ebae-a835-4ee2-bbd5-f36346b5a444")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "PHASE_B"
+		(shape passive)
+		(at 147.32 81.28 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "358f4f9d-22c8-4380-bd5a-8a72911d5438")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "GHB"
+		(shape passive)
+		(at 93.98 81.28 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4c54ef2b-4e25-43d0-96a3-ad84ea46273a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.98 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "ISENSE_C_N"
+		(shape passive)
+		(at 147.32 127 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "62394d9b-ee59-4f39-bd09-bb13f25a7eb7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "TEMP_SENSE"
+		(shape output)
+		(at 228.6 111.76 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6bb19d97-fd64-4222-89d7-4e8d78b9226a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 228.6 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "GHC"
+		(shape passive)
+		(at 93.98 119.38 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6c92ab30-4535-4d32-8e9f-c0bdffa4add7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "PHASE_A"
+		(shape passive)
+		(at 147.32 43.18 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7176f702-f735-4e08-a296-81c8e7ce555f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ISENSE_B_P"
+		(shape passive)
+		(at 147.32 86.36 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8034c529-6fe7-4de2-9c1f-e1ad3b97bf0b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ISENSE_C_P"
+		(shape passive)
+		(at 147.32 124.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "86a6bfdd-a03e-4772-b553-29d295de92a0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "GLA"
+		(shape passive)
+		(at 93.98 48.26 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b4655cba-4749-464c-ac3a-b23c21ac8071")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.98 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "GLC"
+		(shape passive)
+		(at 93.98 124.46 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c57c5b06-12d8-4301-b158-10e4af82e65e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.98 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "ISENSE_A_P"
+		(shape passive)
+		(at 147.32 48.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "caea7bdd-7def-4427-85d1-5360571afd3f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ISENSE_A_N"
+		(shape passive)
+		(at 147.32 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d2bd60d6-d2aa-4ca3-b6f9-561f9744fd61")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ISENSE_B_N"
+		(shape passive)
+		(at 147.32 88.9 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "de3dbfed-06dc-4aaf-a432-c74e2e2f6a80")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "GLB"
+		(shape passive)
+		(at 93.98 86.36 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ef51c80e-3f6d-42b5-a3fb-8cefb7b8b448")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.98 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(symbol
-		(lib_id "METUPowerLab_Transistors_MOSFETs:NTMFS006N08MC")
-		(at 59.69 39.37 0)
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:GND")
+		(at 231.14 68.58 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "9660d4cb-9296-4bb1-9be8-f3bbbb9e1c73")
-		(property "Reference" "Q2"
-			(at 64.008 43.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Phase A high-side"
-			(at 75.184 41.402 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Transistors_MOSFETs:8-PowerTDFN(5x6mm)"
-			(at 59.69 39.37 0)
+		(uuid "07e828db-ef29-47bd-a3a3-0a74daec8390")
+		(property "Reference" "#PWR604"
+			(at 231.14 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1606,8 +1892,18 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ntmfs006n08mc-d.pdf"
-			(at 59.69 39.37 0)
+		(property "Value" "GND"
+			(at 231.14 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 231.14 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1617,8 +1913,19 @@
 				)
 			)
 		)
-		(property "Description" "N-CH MOSFET 80V 82A"
-			(at 59.69 39.37 0)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 231.14 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground power symbol"
+			(at 231.14 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1629,56 +1936,30 @@
 			)
 		)
 		(pin "1"
-			(uuid "a7b53a12-faa6-4be6-a44c-aa8829e8e8bf")
-		)
-		(pin "2"
-			(uuid "cfe1e0a3-da6e-4207-9a33-9d43d8a14350")
-		)
-		(pin "3"
-			(uuid "1292dfe9-85a4-4cde-8acb-afb4c93d5d93")
+			(uuid "857e59d7-5133-41e8-a631-f494e5378d14")
 		)
 		(instances
 			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "Q2")
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "#PWR604")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "METUPowerLab_Transistors_MOSFETs:NTMFS006N08MC")
-		(at 59.69 54.61 0)
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:+V_RAIL")
+		(at 200.66 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "87bde473-c38a-44e4-a6a6-6c2e1bfbcfe8")
-		(property "Reference" "Q3"
-			(at 64.008 58.42 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Phase A low-side"
-			(at 75.184 56.642 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Transistors_MOSFETs:8-PowerTDFN(5x6mm)"
-			(at 59.69 54.61 0)
+		(uuid "2394816b-9ca4-4d7b-8a39-5f157226569c")
+		(property "Reference" "#PWR605"
+			(at 200.66 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1688,8 +1969,18 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ntmfs006n08mc-d.pdf"
-			(at 59.69 54.61 0)
+		(property "Value" "+3V3_A"
+			(at 200.66 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1699,8 +1990,19 @@
 				)
 			)
 		)
-		(property "Description" "N-CH MOSFET 80V 82A"
-			(at 59.69 54.61 0)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 200.66 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Positive supply power symbol, set Value to the rail name (e.g. +3V3_MCU)"
+			(at 200.66 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1711,811 +2013,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "7bc6c93f-23ef-4f54-a555-7abdea70dbed")
-		)
-		(pin "2"
-			(uuid "70ba66c1-dadd-4ef2-963c-39ac9e02720c")
-		)
-		(pin "3"
-			(uuid "0c3ebda5-d852-48cd-8d4b-54c5a37064e6")
+			(uuid "bc2fa328-4bc9-4afc-8be2-0860898c9c10")
 		)
 		(instances
 			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Resistors_ShuntResistors:2 mOhm 1Watt")
-		(at 59.69 68.58 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "84b37b77-c527-4761-a266-c63d65be8d42")
-		(property "Reference" "RS1"
-			(at 59.69 73.025 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Phase A shunt"
-			(at 59.69 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Resistors_ShuntResistors:2010"
-			(at 59.69 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-pa0100_2512_51_rohs.pdf"
-			(at 59.69 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1W ±1% 0805"
-			(at 59.69 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "42676ff0-17c6-4930-9e59-5c84ebdea30f")
-		)
-		(pin "2"
-			(uuid "e0da2425-1eee-4de8-a042-138d5ea8fee1")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "RS1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Transistors_MOSFETs:NTMFS006N08MC")
-		(at 100.33 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c0cdc03c-d877-434b-9992-b0eaa7df915c")
-		(property "Reference" "Q4"
-			(at 104.648 43.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Phase B high-side"
-			(at 115.824 41.402 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Transistors_MOSFETs:8-PowerTDFN(5x6mm)"
-			(at 100.33 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ntmfs006n08mc-d.pdf"
-			(at 100.33 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-CH MOSFET 80V 82A"
-			(at 100.33 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "be189aae-ed76-45b5-86fd-fb0bf2c936ad")
-		)
-		(pin "2"
-			(uuid "722287b0-c177-4352-a70b-88638759ca96")
-		)
-		(pin "3"
-			(uuid "5a292e6f-031c-4e7c-9495-31126d069480")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "Q4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Transistors_MOSFETs:NTMFS006N08MC")
-		(at 100.33 54.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d8c3fd73-d506-4290-b5a7-3e309f13cbca")
-		(property "Reference" "Q5"
-			(at 104.648 58.42 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Phase B low-side"
-			(at 115.824 56.642 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Transistors_MOSFETs:8-PowerTDFN(5x6mm)"
-			(at 100.33 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ntmfs006n08mc-d.pdf"
-			(at 100.33 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-CH MOSFET 80V 82A"
-			(at 100.33 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2befa10c-a8d0-4ab3-986d-8b63aaa4d8a0")
-		)
-		(pin "2"
-			(uuid "0ddfe6e8-fe83-4a7c-a2bf-98538e730202")
-		)
-		(pin "3"
-			(uuid "dcb15f88-39c9-4a85-8979-639521b78047")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "Q5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Resistors_ShuntResistors:2 mOhm 1Watt")
-		(at 100.33 68.58 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4440cbf2-0494-4692-a94d-78b2b52748fd")
-		(property "Reference" "RS2"
-			(at 100.33 73.025 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Phase B shunt"
-			(at 100.33 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Resistors_ShuntResistors:2010"
-			(at 100.33 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-pa0100_2512_51_rohs.pdf"
-			(at 100.33 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1W ±1% 0805"
-			(at 100.33 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d04f5432-8196-40fc-b4f4-60cf2cd01b7b")
-		)
-		(pin "2"
-			(uuid "7b47cc42-98ef-4a49-bcd9-62d8ea2eaf39")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "RS2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Transistors_MOSFETs:NTMFS006N08MC")
-		(at 139.7 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5167e557-97a3-41ae-be54-3e41bb1b0e6b")
-		(property "Reference" "Q6"
-			(at 144.018 43.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Phase C high-side"
-			(at 155.194 41.402 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Transistors_MOSFETs:8-PowerTDFN(5x6mm)"
-			(at 139.7 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ntmfs006n08mc-d.pdf"
-			(at 139.7 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-CH MOSFET 80V 82A"
-			(at 139.7 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b449cb5b-40c2-4d5e-a5fa-9805cb80a183")
-		)
-		(pin "2"
-			(uuid "479b1ac8-82a2-4108-a1c5-9a493852fbbc")
-		)
-		(pin "3"
-			(uuid "698b4490-a728-491c-b140-922d1771b80e")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "Q6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Transistors_MOSFETs:NTMFS006N08MC")
-		(at 139.7 54.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "59eda625-a595-487e-952f-210aa449e7bc")
-		(property "Reference" "Q7"
-			(at 144.018 58.42 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Phase C low-side"
-			(at 155.194 56.642 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Transistors_MOSFETs:8-PowerTDFN(5x6mm)"
-			(at 139.7 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ntmfs006n08mc-d.pdf"
-			(at 139.7 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-CH MOSFET 80V 82A"
-			(at 139.7 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fa8c31f0-fc7e-47c0-9d54-8903ec74bb52")
-		)
-		(pin "2"
-			(uuid "6b261b8a-5566-42d4-beb5-a82a0c8494de")
-		)
-		(pin "3"
-			(uuid "a26dd1e9-c45a-4c5f-b809-4093523eed8b")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "Q7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Resistors_ShuntResistors:2 mOhm 1Watt")
-		(at 139.7 68.58 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0a9d63ba-e266-427b-a54f-9283d1420e69")
-		(property "Reference" "RS3"
-			(at 139.7 73.025 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Phase C shunt"
-			(at 139.7 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Resistors_ShuntResistors:2010"
-			(at 139.7 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-pa0100_2512_51_rohs.pdf"
-			(at 139.7 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1W ±1% 0805"
-			(at 139.7 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c31115da-8d49-4c93-9b7d-e20b89df288a")
-		)
-		(pin "2"
-			(uuid "3b627394-672f-4be1-8cdb-51c8d069635e")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "RS3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Connectors_ScrewTerminals:7770")
-		(at 59.69 25.4 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "cb1dae40-1faa-46c5-be5f-bac57df78e6f")
-		(property "Reference" "J5"
-			(at 59.69 30.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PHASE_A"
-			(at 59.69 24.13 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Connectors_ScrewTerminals:7770"
-			(at 60.96 32.385 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail/2157601002?display=pdf"
-			(at 60.96 32.385 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "M3 15A"
-			(at 60.96 32.385 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0b92925c-41dd-4c2f-a0b1-53ff90cf21df")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "J5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Connectors_ScrewTerminals:7770")
-		(at 100.33 25.4 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0e60d7c3-0a8c-4b0f-8efe-1f5b46d006a2")
-		(property "Reference" "J6"
-			(at 100.33 30.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PHASE_B"
-			(at 100.33 24.13 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Connectors_ScrewTerminals:7770"
-			(at 101.6 32.385 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail/2157601002?display=pdf"
-			(at 101.6 32.385 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "M3 15A"
-			(at 101.6 32.385 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e1acb8bd-8864-4373-a557-dfee2ad2cdc6")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Connectors_ScrewTerminals:7770")
-		(at 139.7 25.4 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "93ae91bc-6978-4651-b572-8dbce1ef9ce4")
-		(property "Reference" "J7"
-			(at 139.7 30.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PHASE_C"
-			(at 139.7 24.13 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Connectors_ScrewTerminals:7770"
-			(at 140.97 32.385 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail/2157601002?display=pdf"
-			(at 140.97 32.385 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "M3 15A"
-			(at 140.97 32.385 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8c9bead3-2eef-472b-be41-2f25d2453c7c")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "J7")
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "#PWR605")
 					(unit 1)
 				)
 			)
@@ -2523,7 +2026,7 @@
 	)
 	(symbol
 		(lib_id "METUPowerLab_Sensors_Temperature:TMP235A4DCKR")
-		(at 100.33 85.09 0)
+		(at 205.74 116.84 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2531,29 +2034,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a03e6088-30c3-40b4-b0a7-5bb8743bc778")
+		(uuid "37e1e568-12bc-4b4e-bf6b-4a551775823d")
 		(property "Reference" "U8"
-			(at 100.838 95.504 0)
+			(at 205.74 106.045 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "TMP235A4DCKR"
-			(at 107.696 93.726 0)
+			(at 205.74 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "METUPowerLab_Sensors_Temperature:SC-70-5"
-			(at 100.33 85.09 0)
+			(at 205.74 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2564,7 +2069,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftmp235"
-			(at 100.33 85.09 0)
+			(at 205.74 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2575,7 +2080,139 @@
 			)
 		)
 		(property "Description" "Analog Temperature Sensor"
-			(at 100.33 85.09 0)
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Number" "TMP235A4DCKR"
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sensor Type" "Analog"
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Output Type" "Analog Voltage"
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sensing Temperature Range" "-40°C up to 150°C"
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supply Voltage Rating" "2.3V up to 5.5V"
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Accuracy" "±1°C"
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Operating Temperature" "-50°C up to 150°C (TA)"
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SC-70-5"
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digi-Key Number" "296-50016-1-ND"
+			(at 205.74 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Number" "TMP235A4DCKR"
+			(at 205.74 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2586,17 +2223,17 @@
 			)
 		)
 		(pin "2"
-			(uuid "befca97a-5659-44d1-9c15-cb81613ab6d0")
+			(uuid "3e411af2-9583-4486-ab65-40f88803951c")
 		)
 		(pin "3"
-			(uuid "4a48912e-fd40-48f7-ba68-3fb5d8f907aa")
+			(uuid "cb39c4b8-5ab4-4e3f-b653-a6e4388e7da2")
 		)
 		(pin "4"
-			(uuid "5102ea99-8161-4051-9587-d6fd6037fa49")
+			(uuid "79b57ca6-c0ed-41e0-b062-b3701e6c20cc")
 		)
 		(instances
 			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
 					(reference "U8")
 					(unit 1)
 				)
@@ -2604,40 +2241,18 @@
 		)
 	)
 	(symbol
-		(lib_id "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:10 µF 75V")
-		(at 80.01 33.02 0)
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:+V_RAIL")
+		(at 205.74 53.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ff1e0744-0366-4a7d-9df9-a9c4533f6185")
-		(property "Reference" "C29"
-			(at 80.645 35.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Hot-loop bulk"
-			(at 80.645 30.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:2220"
-			(at 80.975 29.21 0)
+		(uuid "3b11764c-5e26-4ff2-994c-10f9ce8cc58a")
+		(property "Reference" "#PWR601"
+			(at 205.74 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2647,791 +2262,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_automotive_general_en.pdf"
-			(at 80.01 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Ceramic SMD Cap 1210"
-			(at 80.01 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "93df8ba7-ff4b-48d2-9d03-facfd7621556")
-		)
-		(pin "2"
-			(uuid "7af91d86-e32f-475a-876f-151931c35c08")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "C29")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:10 µF 75V")
-		(at 119.38 33.02 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c8bef328-2162-46e5-b70f-f5b4a158b395")
-		(property "Reference" "C30"
-			(at 120.015 35.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Hot-loop bulk"
-			(at 120.015 30.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:2220"
-			(at 120.345 29.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_automotive_general_en.pdf"
-			(at 119.38 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Ceramic SMD Cap 1210"
-			(at 119.38 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "59a4bc97-7319-4556-b20b-1b6f8aa57ad0")
-		)
-		(pin "2"
-			(uuid "757c96b4-d4e1-4498-9ea5-8d38f2a75613")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "C30")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Capacitors_AluminumPolymers_ThroughHoles:100 µF")
-		(at 30.48 33.02 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1c68a878-a576-4285-a91d-7845ca1026a3")
-		(property "Reference" "C31"
-			(at 33.02 34.925 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "DC bus bulk"
-			(at 31.115 30.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Capacitors_AluminumPolymers_ThroughHoles:8.00x13.50mm"
-			(at 31.445 29.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05Y105KP6VPN"
-			(at 30.48 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Alum Poly Cap 8.00*13.50mm"
-			(at 30.48 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4a421bcc-2615-4f91-9ace-11865cdcbecb")
-		)
-		(pin "2"
-			(uuid "a507e88e-880e-44f4-bc2b-41c3db661c28")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "C31")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "METUPowerLab_Capacitors_AluminumPolymers_ThroughHoles:100 µF")
-		(at 30.48 44.45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5b177f25-0f59-4a48-ada1-75a0d7bdcf5d")
-		(property "Reference" "C32"
-			(at 33.02 46.355 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "DC bus bulk"
-			(at 31.115 41.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "METUPowerLab_Capacitors_AluminumPolymers_ThroughHoles:8.00x13.50mm"
-			(at 31.445 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05Y105KP6VPN"
-			(at 30.48 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Alum Poly Cap 8.00*13.50mm"
-			(at 30.48 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7a82203d-a1b5-4c23-9dc1-b23fbf7f875e")
-		)
-		(pin "2"
-			(uuid "50ee1eda-fb3d-4d3d-bcbc-1cf1edf20423")
-		)
-		(instances
-			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "C32")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "SHA"
-		(at 64.77 22.86 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "01266f4c-732f-40a1-9257-2de50708a08f")
-	)
-	(global_label "SHB"
-		(at 105.41 22.86 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "79dd6cc3-6af8-4ecb-abc6-811e6a418331")
-	)
-	(global_label "SHC"
-		(at 144.78 22.86 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a62ccc10-e254-4c15-af22-862018a520b5")
-	)
-	(global_label "+VBUS_PROT"
-		(at 62.23 34.29 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "779ff224-fe94-4d53-b5f6-2e8a5a9145d7")
-	)
-	(global_label "SHA"
-		(at 62.23 44.449999999999996 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "cd190ed7-19e7-4140-bf6b-ca20bc96aab7")
-	)
-	(global_label "GHA"
-		(at 54.61 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "feab706a-31a3-4d81-9a81-6f6518647a7e")
-	)
-	(global_label "SHA"
-		(at 62.23 49.53 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e7590c10-5a30-4824-bcb7-ea425c3028d1")
-	)
-	(global_label "SPA"
-		(at 62.23 59.69 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0b36852d-0557-4678-9dfb-f0eb26f35a41")
-	)
-	(global_label "GLA"
-		(at 54.61 54.61 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9659b0a2-7f96-43e0-98a2-f45405a3a9a6")
-	)
-	(global_label "SPA"
-		(at 54.61 68.58 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1ef775fe-3b04-4c7d-aaef-60c95d8b952d")
-	)
-	(global_label "SNA"
-		(at 64.77 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5e0fdd46-91c0-4844-b98f-ecc77a96fd56")
-	)
-	(global_label "GND"
-		(at 64.77 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e37fd8bd-9c15-4899-a46c-8175c5877b20")
-	)
-	(global_label "+VBUS_PROT"
-		(at 102.87 34.29 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "93cd61cd-014d-4451-9b92-9a7517b78f68")
-	)
-	(global_label "SHB"
-		(at 102.87 44.449999999999996 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "575818ea-4fd1-4708-8f80-df3224ec4ce7")
-	)
-	(global_label "GHB"
-		(at 95.25 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "800c6eff-3231-4de5-b438-171011bf4449")
-	)
-	(global_label "SHB"
-		(at 102.87 49.53 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2f0a6119-7165-4f38-8b06-37a26cc85b90")
-	)
-	(global_label "SPB"
-		(at 102.87 59.69 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0e149682-6a98-429b-9753-7663ac4d36d3")
-	)
-	(global_label "GLB"
-		(at 95.25 54.61 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f230ed8a-8dd9-4e48-92ef-dc5f926dcb45")
-	)
-	(global_label "SPB"
-		(at 95.25 68.58 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "66d27f3c-61a4-400a-8b88-4acf85bdc20a")
-	)
-	(global_label "SNB"
-		(at 105.41 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8297bb2e-119b-4a7f-b363-f3d622424b38")
-	)
-	(global_label "+VBUS_PROT"
-		(at 142.23999999999998 34.29 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "655eaddf-a6e2-4b10-8c0d-94d178978754")
-	)
-	(global_label "SHC"
-		(at 142.23999999999998 44.449999999999996 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7ba16576-923e-4d79-8393-42daf5151f0e")
-	)
-	(global_label "GHC"
-		(at 134.61999999999998 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7da2c364-4d38-4116-af33-53089e3dd7ef")
-	)
-	(global_label "SHC"
-		(at 142.23999999999998 49.53 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e5193b76-af28-4246-84be-13643829e74c")
-	)
-	(global_label "SPC"
-		(at 142.23999999999998 59.69 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0a343a4b-560a-48cd-8019-bad055e070b7")
-	)
-	(global_label "GLC"
-		(at 134.61999999999998 54.61 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c86704b8-fac5-4651-bc12-f9690461ab5f")
-	)
-	(global_label "SPC"
-		(at 134.61999999999998 68.58 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1c77b7f3-09e4-447a-b1b9-972caa1886df")
-	)
-	(global_label "SNC"
-		(at 144.78 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "544c815c-96f2-4cbc-aac6-96b9ed4801d7")
-	)
-	(global_label "GND"
-		(at 144.78 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "814f4bc6-a29f-4f1d-ae6e-e071c16d416b")
-	)
-	(global_label "+3V3_MCU"
-		(at 97.78999999999999 80.01 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0afd3d58-2f34-423e-bbbb-39583ca44a55")
-	)
-	(global_label "GND"
-		(at 107.95 87.63000000000001 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "43dddedb-f0b1-4f38-a6f4-6c2b23439bd8")
-	)
-	(global_label "TEMP_SENSE"
-		(at 118.11 80.01 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "506b3650-c0f9-4952-a8e2-8d2f7d088b5c")
-	)
-	(global_label "+VBUS_PROT"
-		(at 80.01 27.940000000000005 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "36c29c12-018a-4dda-b25f-6f601f7c666e")
-	)
-	(global_label "GND"
-		(at 80.01 38.1 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "27787bc1-fb1e-4254-99f2-7a85ccf37ed8")
-	)
-	(global_label "+VBUS_PROT"
-		(at 119.38 27.940000000000005 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e20a030b-974c-46cc-a8b7-4d0b9e1420c5")
-	)
-	(global_label "GND"
-		(at 119.38 38.1 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2dea4d0d-c1d3-4092-87bd-bb275c361179")
-	)
-	(global_label "+VBUS_PROT"
-		(at 30.48 27.940000000000005 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c366d1dc-7ec3-4994-b9ba-d7e6af314bcc")
-	)
-	(global_label "GND"
-		(at 30.48 38.1 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5598addf-86ae-4d36-881c-d4dd87c87079")
-	)
-	(global_label "+VBUS_PROT"
-		(at 30.48 39.370000000000005 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f16daca7-519d-4da7-8cb8-2d47f0b34c16")
-	)
-	(global_label "GND"
-		(at 30.48 49.53 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6def10d7-2c66-4338-bc31-eee8a4c9a4a9")
-	)
-	(text "LAYOUT: Kelvin connection - route SPx/SNx as dedicated sense traces directly to each shunt pad, no shared copper with the power path\nLAYOUT: C29/C30/C31/C32 directly across VM/PGND at the half-bridges (hot loop, keep loop area minimal)\nLAYOUT: Q2-Q7 phase current per §3.3 (this design's ~5-10A target) - size PHASE_A/B/C and +VBUS_PROT copper accordingly\nLAYOUT: Place U8 (TMP235) thermally close to the FET cluster"
-		(exclude_from_sim no)
-		(at 30 15 0)
-		(effects
-			(font
-				(size 1.3 1.3)
-			)
-			(justify left bottom)
-		)
-		(uuid "2a8eedb4-b8be-4c5e-b689-51e8d675223c")
-	)
-	(global_label "SPA"
-		(at 57.15 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "992b02d6-ddf5-476f-b0f7-e61e45e1d86c")
-	)
-	(global_label "SNA"
-		(at 62.23 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "43bf3a37-0fae-4871-aba2-53ff251a3409")
-	)
-	(global_label "SPB"
-		(at 97.79 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9cd25b95-301e-4a7c-b10e-7c3c83e2dfb3")
-	)
-	(global_label "SNB"
-		(at 102.87 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d57533de-5e6a-481f-a9bd-222b83f88690")
-	)
-	(global_label "SPC"
-		(at 137.16 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d275a7f0-dcfc-4aaa-b5a0-b8db704d9852")
-	)
-	(global_label "SNC"
-		(at 142.24 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c5b9341e-b2df-45c3-8630-c633fcda9236")
-	)
-	(global_label "GND"
-		(at 105.41 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "aa573e78-3637-4fe5-afb5-7469a710e7ff")
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 100.33 77.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9cd44e92-175f-4839-8aed-3964c209daa3")
-		(property "Reference" "#FLG7"
-			(at 100.33 79.375 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 100.33 81.28 0)
+		(property "Value" "+VBUS_PROT"
+			(at 205.74 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3441,7 +2273,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 100.33 77.47 0)
+			(at 205.74 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3451,8 +2283,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 100.33 77.47 0)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 205.74 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3462,8 +2294,8 @@
 				)
 			)
 		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 100.33 77.47 0)
+		(property "Description" "Positive supply power symbol, set Value to the rail name (e.g. +3V3_MCU)"
+			(at 205.74 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3474,30 +2306,1560 @@
 			)
 		)
 		(pin "1"
-			(uuid "9fe1701f-9429-4c53-8ae5-51cee06db768")
+			(uuid "4e714cec-5c8e-4a5d-a1f4-513fe3f8c32c")
 		)
 		(instances
 			(project "ESC3Phase"
-				(path "/ca73365a-f995-45d9-ac55-18c98119c2ec"
-					(reference "#FLG7")
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "#PWR601")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(global_label "TEMP_SENSE"
-		(at 100.33 77.47 270)
-		(effects
-			(font
-				(size 1.27 1.27)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:GND")
+		(at 205.74 68.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4e7c1a17-0a9c-41d1-b439-cc5f1a9188b9")
+		(property "Reference" "#PWR602"
+			(at 205.74 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify right)
 		)
-		(uuid "4d348369-1c8c-499d-a402-957b90421c30")
+		(property "Value" "GND"
+			(at 205.74 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 205.74 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 205.74 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground power symbol"
+			(at 205.74 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1a16c146-4fe6-48d9-82ce-b8c912bccde8")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "#PWR602")
+					(unit 1)
+				)
+			)
+		)
 	)
-	(sheet_instances
-		(path "/"
-			(page "1")
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:GND")
+		(at 185.42 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5185620d-507f-4756-8f64-370aea9f2651")
+		(property "Reference" "#PWR608"
+			(at 185.42 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 185.42 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 185.42 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground power symbol"
+			(at 185.42 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c529a9cc-2009-4a84-8585-a5241ced1d20")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "#PWR608")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_TestPoints_SurfaceMounts:TestPoint_Pad")
+		(at 243.84 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5b2ec726-e868-4826-bce3-e78296f4ccc4")
+		(property "Reference" "TP51"
+			(at 246.38 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 246.38 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "METUPowerLab_TestPoints_SurfaceMounts:Pad_D1.5mm"
+			(at 243.84 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 243.84 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Bare copper SMD test pad"
+			(at 243.84 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 243.84 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3aefe43d-2ac0-4a9d-a77c-356752b62808")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "TP51")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:+V_RAIL")
+		(at 185.42 116.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6890602f-f732-4917-9ba9-130b568c525e")
+		(property "Reference" "#PWR607"
+			(at 185.42 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3_A"
+			(at 185.42 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 185.42 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Positive supply power symbol, set Value to the rail name (e.g. +3V3_MCU)"
+			(at 185.42 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "058a774d-aab2-4b23-ab71-7fe664bdf88f")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "#PWR607")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:100 nF")
+		(at 185.42 124.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6a8fc451-9d74-4502-8bd8-9bd20d4f50dd")
+		(property "Reference" "C58"
+			(at 187.96 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100 nF"
+			(at 187.96 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-250V_24.pdf"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ceramic SMD Cap 0603"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Number" "CC0603KRX7R7BB104"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "±10%"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "16V"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Operating Temperature" "-55°C up to 125°C"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0603 (1608 Metric)"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digi-Key Number" "311-1088-1-ND"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Number" "603-CC603KRX7R7BB104"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Farnell Number" "2408501"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Özdisan Number" "CC0603KRX7R7BB104"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 185.42 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f999c268-19ea-499a-a850-91eb1bce9e2d")
+		)
+		(pin "2"
+			(uuid "de0c7b79-f276-472a-a61b-bc08fe28fc27")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "C58")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:+V_RAIL")
+		(at 210.82 154.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "712e8466-8740-41e0-99e0-c3e6299923f6")
+		(property "Reference" "#PWR609"
+			(at 210.82 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+VBUS_PROT"
+			(at 210.82 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 210.82 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 210.82 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Positive supply power symbol, set Value to the rail name (e.g. +3V3_MCU)"
+			(at 210.82 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "435dcb70-06f5-4628-8439-53162fc97317")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "#PWR609")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:+V_RAIL")
+		(at 231.14 53.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8fa4deea-32f0-48c2-ae92-c3e8ce45e9e1")
+		(property "Reference" "#PWR603"
+			(at 231.14 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+VBUS_PROT"
+			(at 231.14 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 231.14 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 231.14 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Positive supply power symbol, set Value to the rail name (e.g. +3V3_MCU)"
+			(at 231.14 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c6d4e502-f0b9-4781-b403-cb4f67fbf9ec")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "#PWR603")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:GND")
+		(at 213.36 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b3a3b4e0-8263-43c1-9de8-2b2236269dd9")
+		(property "Reference" "#PWR606"
+			(at 213.36 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 213.36 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 213.36 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 213.36 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground power symbol"
+			(at 213.36 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9f0c8c51-34e1-4359-b0a5-971dfab60700")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "#PWR606")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_TestPoints_SurfaceMounts:TestPoint_Pad")
+		(at 218.44 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c6566b71-6cc5-41b0-b588-eedd1d9389e8")
+		(property "Reference" "TP50"
+			(at 220.98 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+VBUS_PROT"
+			(at 220.98 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "METUPowerLab_TestPoints_SurfaceMounts:Pad_D1.5mm"
+			(at 218.44 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 218.44 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Bare copper SMD test pad"
+			(at 218.44 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 218.44 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f99734f4-d726-40c4-965d-44652dc2fbe9")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "TP50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:GND")
+		(at 243.84 154.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d2691e76-aeac-4c9f-932b-19bf975b250f")
+		(property "Reference" "#PWR610"
+			(at 243.84 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 243.84 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 243.84 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 243.84 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground power symbol"
+			(at 243.84 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "13524774-fa14-4a98-be55-57975a21de3b")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "#PWR610")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Capacitors_AluminumPolymers_ThroughHoles:100 µF")
+		(at 205.74 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "deb24eac-40a6-42cf-99b1-d642f0de56f1")
+		(property "Reference" "C56"
+			(at 208.28 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100 µF 63V"
+			(at 208.28 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "METUPowerLab_Capacitors_AluminumPolymers_ThroughHoles:8.00x13.50mm"
+			(at 205.74 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05Y105KP6VPN"
+			(at 205.74 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Alum Poly Cap 8.00*13.50mm"
+			(at 205.74 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Number" "107AVG063MFBJ"
+			(at 205.74 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Cornell Dubilier Knowles"
+			(at 205.74 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "±20%"
+			(at 205.74 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "63V"
+			(at 205.74 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Operating Temperature" "-55°C up to 125°C"
+			(at 205.74 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "8.00*13.50mm"
+			(at 205.74 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digi-Key Number" "1572-1656-ND"
+			(at 205.74 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Number" "598-107AVG063MFBJ"
+			(at 205.74 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2e5946e6-a75f-47c7-825f-fc8d55de94b2")
+		)
+		(pin "2"
+			(uuid "9b43699f-238e-4c99-bae7-a8d05ec5375a")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "C56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Capacitors_AluminumPolymers_ThroughHoles:100 µF")
+		(at 231.14 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ee2b29b1-3e90-46b4-98db-254c30a0cdc0")
+		(property "Reference" "C57"
+			(at 233.68 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100 µF 63V"
+			(at 233.68 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "METUPowerLab_Capacitors_AluminumPolymers_ThroughHoles:8.00x13.50mm"
+			(at 231.14 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05Y105KP6VPN"
+			(at 231.14 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Alum Poly Cap 8.00*13.50mm"
+			(at 231.14 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Number" "107AVG063MFBJ"
+			(at 231.14 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Cornell Dubilier Knowles"
+			(at 231.14 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "±20%"
+			(at 231.14 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "63V"
+			(at 231.14 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Operating Temperature" "-55°C up to 125°C"
+			(at 231.14 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "8.00*13.50mm"
+			(at 231.14 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digi-Key Number" "1572-1656-ND"
+			(at 231.14 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Number" "598-107AVG063MFBJ"
+			(at 231.14 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b1c09ded-d5fd-4b22-97f8-61f1ffb33712")
+		)
+		(pin "2"
+			(uuid "b7d6ba37-bd1b-4013-9478-7671f68023f9")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(reference "C57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 40.64)
+		(size 38.1 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "50e3d450-d458-4de6-862f-83a5f3b2f172")
+		(property "Sheetname" "Half Bridge A"
+			(at 101.6 39.9288 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "HalfBridge.kicad_sch"
+			(at 101.6 56.4642 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "GH" input
+			(at 101.6 43.18 180)
+			(uuid "74915efa-75d0-439a-af57-68d5d34a005d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GL" input
+			(at 101.6 48.26 180)
+			(uuid "f3efecde-944f-4c5f-9ae7-0e76744b0d71")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SH" bidirectional
+			(at 139.7 43.18 0)
+			(uuid "c205095c-a315-4492-b4cd-75c3493c413a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SP" passive
+			(at 139.7 48.26 0)
+			(uuid "71dc0976-16c3-4f9c-ad6c-e6bd63dd8001")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SN" passive
+			(at 139.7 50.8 0)
+			(uuid "e80cba13-eeba-4e2d-96cb-b491785c6084")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 116.84)
+		(size 38.1 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "5298da95-a245-445f-af76-ff50ab07f470")
+		(property "Sheetname" "Half Bridge C"
+			(at 101.6 116.1288 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "HalfBridge.kicad_sch"
+			(at 101.6 132.6642 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "GH" input
+			(at 101.6 119.38 180)
+			(uuid "aef48853-7c43-4028-b5c9-ec78dde90494")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GL" input
+			(at 101.6 124.46 180)
+			(uuid "3a55ec92-05ae-428d-8e8e-5746c2b52616")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SH" bidirectional
+			(at 139.7 119.38 0)
+			(uuid "97770f62-9888-47ec-bc71-9ec74639c030")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SP" passive
+			(at 139.7 124.46 0)
+			(uuid "3047e157-878d-4a5e-ad41-79826295c505")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SN" passive
+			(at 139.7 127 0)
+			(uuid "f3691081-a8e4-4b83-8609-629ed18ac371")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 78.74)
+		(size 38.1 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "cd6f54a5-fcbb-49e1-9540-d817a9288536")
+		(property "Sheetname" "Half Bridge B"
+			(at 101.6 78.0288 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "HalfBridge.kicad_sch"
+			(at 101.6 94.5642 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "GH" input
+			(at 101.6 81.28 180)
+			(uuid "62aba0c0-8e57-4f5d-952b-4142b917481f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GL" input
+			(at 101.6 86.36 180)
+			(uuid "9b657351-341a-42fb-9bc2-007686339c18")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SH" bidirectional
+			(at 139.7 81.28 0)
+			(uuid "393bf619-7554-4687-8e52-f7ee7e2bf40d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SP" passive
+			(at 139.7 86.36 0)
+			(uuid "3ecb84c9-35b9-4313-9526-cd9ff9447b5c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SN" passive
+			(at 139.7 88.9 0)
+			(uuid "bc97f8a2-9f43-49f2-a83f-3695c71cd635")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305"
+					(page "9")
+				)
+			)
 		)
 	)
 )

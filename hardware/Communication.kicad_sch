@@ -1,359 +1,18 @@
 (kicad_sch
-	(version 20260101)
+	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid ab49aace-8f2e-4d86-bd76-0fdbb03ceb47)
+	(uuid "dedc1963-3883-4333-8a90-f295e43f2f92")
 	(paper "A4")
 	(title_block
-		(title "${PROJECT_NAME}")
+		(title "Communication")
 		(date "2026-09-27")
-		(rev "A")
+		(rev "B")
 		(company "METU PowerLab")
-		(comment 1 "Designer: ${DESIGNER}")
-		(comment 2 "Project No: ${PROJECTNUMBER}")
+		(comment 2 "Designer: ${DESIGNER}")
+		(comment 3 "Project No: ${PROJECTNUMBER}")
 	)
 	(lib_symbols
-		(symbol "METUPowerLab_Interfaces_CANBusBridges:SN65HVD230DR"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 0.635 24.13 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SN65HVD230DR"
-				(at 7.62 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "METUPowerLab_Interfaces_CANBusBridges:8-SOIC"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn65hvd230"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "1/1 CAN Transceiver"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Protocol" "CANbus"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Number of Drivers/Receivers" "1/1"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Duplex" "Half"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Receiver Hysteresis" "100 mV"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Data Rate" "1Mbps"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Voltage Rating" "3V up to 3.6V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Operating Temperature" "-40°C up to 85°C"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mounting Type" "Surface Mount"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Package" "8-SOIC"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer" "Texas Instruments"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer Number" "SN65HVD230DR"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Özdisan Number" "SN65HVD230DR"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Digi-Key Number" "296-11654-1-ND"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Farnell Number" "3124671"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mouser Number" "595-SN65HVD230DR"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SN65HVD230DR_1_1"
-				(rectangle
-					(start 0 22.86)
-					(end 15.24 0)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin power_in line
-					(at -5.08 20.32 0)
-					(length 5.08)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at -5.08 17.78 0)
-					(length 5.08)
-					(name "VREF"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -5.08 12.7 0)
-					(length 5.08)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -5.08 10.16 0)
-					(length 5.08)
-					(name "R"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 5.08)
-					(name "RS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -5.08 2.54 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 20.32 12.7 180)
-					(length 5.08)
-					(name "CANH"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 20.32 10.16 180)
-					(length 5.08)
-					(name "CANL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:100 nF"
 			(pin_numbers
 				(hide yes)
@@ -364,8 +23,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "C"
 				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -375,6 +38,8 @@
 			)
 			(property "Value" "100 nF"
 				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -384,60 +49,74 @@
 			)
 			(property "Footprint" ""
 				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-250V_24.pdf"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Ceramic SMD Cap 0603"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Manufacturer Number" "CC0603KRX7R7BB104"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Manufacturer" "YAGEO"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Tolerance" "±10%"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Voltage Rating" "16V"
 				(at 2.54 -4.572 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -446,83 +125,101 @@
 			)
 			(property "Operating Temperature" "-55°C up to 125°C"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Package" "0603 (1608 Metric)"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Digi-Key Number" "311-1088-1-ND"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Mouser Number" "603-CC603KRX7R7BB104"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Farnell Number" "2408501"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Özdisan Number" "CC0603KRX7R7BB104"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Mounting Type" "Surface Mount"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "cap capacitor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "C_*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "100 nF_0_1"
@@ -555,7 +252,7 @@
 				(pin passive line
 					(at 0 5.08 270)
 					(length 4.064)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -573,7 +270,7 @@
 				(pin passive line
 					(at 0 -5.08 90)
 					(length 4.064)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -591,201 +288,222 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "METUPowerLab_Diodes_TVSDiodes:SP0115-01UTG"
+		(symbol "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:4.7 nF"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(hide yes)
+				(offset 0.254)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.286 0)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "SP0115-01UTG"
-				(at 0 -2.032 0)
+			(property "Value" "4.7 nF"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.littelfuse.com/assetdocs/littelfuse-tvs-diode-array-sp0115-01utg-datasheet?assetguid=b9213e0e-abb5-4c77-a3ab-3b75bd5c10d6"
+			(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM188R72A472KA37-01.pdf"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Description" "TVS Diode 0603"
+			(property "Description" "Ceramic SMD Cap 0603"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Manufacturer" "Littelfuse Inc."
+			(property "Manufacturer Number" "GCM188R72A472KA37D"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Manufacturer Number" "SP0115-01UTG"
+			(property "Manufacturer" "Murata Electronics"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Bidirectional Channels" "1"
+			(property "Tolerance" "±10%"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Reverse Standoff Voltage" "1V (Max)"
-				(at 0 0 0)
+			(property "Voltage Rating" "100V"
+				(at 2.54 -4.572 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Breakdown Voltage" "1.4V"
+			(property "Operating Temperature" "-55°C up to 125°C"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
-				)
-			)
-			(property "Clamping Voltage" "8.9V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Current - Peak Pulse(10/1000µs)" "12A(8/20µs)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Power" "-"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Capacitance @ Frequency" "1pF @ 1MHz"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Operating Temperature" "-40°C up to 125°C (TJ)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mounting Type" "Surface Mount"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
 				)
 			)
 			(property "Package" "0603 (1608 Metric)"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Digi-Key Number" "18-SP0115-01UTGCT-ND"
+			(property "Digi-Key Number" "490-4930-1-ND"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Mouser Number" "576-SP0115-01UTG"
+			(property "Mouser Number" "81-GCM188R72A472K37D"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "METUPowerLab_Diodes_TVSDiodes:0603_*"
+			(property "Farnell Number" "4326627"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(symbol "SP0115-01UTG_0_1"
+			(property "Özdisan Number" "GCM188R72A472KA37D"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mounting Type" "Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "4.7 nF_0_1"
 				(polyline
 					(pts
-						(xy 0 0.762) (xy -0.254 1.016)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
-						(width 0)
+						(width 0.508)
 						(type default)
 					)
 					(fill
@@ -794,46 +512,10 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0.762) (xy 0 -0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy -1.27 0.762) (xy -1.27 -0.762) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 1.27 -0.762) (xy 1.27 0.762) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 -1.016) (xy 0 -0.762)
-					)
-					(stroke
-						(width 0)
+						(width 0.508)
 						(type default)
 					)
 					(fill
@@ -841,11 +523,11 @@
 					)
 				)
 			)
-			(symbol "SP0115-01UTG_1_1"
+			(symbol "4.7 nF_1_1"
 				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "1"
+					(at 0 5.08 270)
+					(length 4.064)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -861,9 +543,9 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 0 180)
-					(length 3.81)
-					(name "2"
+					(at 0 -5.08 90)
+					(length 4.064)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -885,8 +567,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
 				(at 0 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -895,6 +581,8 @@
 			)
 			(property "Value" "1x4"
 				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -903,137 +591,167 @@
 			)
 			(property "Footprint" "METUPowerLab_Connectors_SignalConnectors:384471-E"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=erni-maxibridge-2.54mm-connectors-ds&DocType=Data+Sheet&DocLang=English&DocFormat=pdf&PartCntxt=384471-E"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "1x4"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Manufacturer" "TE Connectivity Erni"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Manufacturer Number" "384471-E"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Contact Type" "Male Pin"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Number of Positions" "4"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Number of Rows" "1"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Mounting Type" "Surface Mount, Right Angle"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Operating Temperature" "-55°C up to 150°C"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Current Rating" "12A per Contact"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Voltage Rating" "-"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Farnell Number" "4060713"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Mouser Number" "305-384471"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Digi-Key Number" "2684-384471-ECT-ND"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "384471-E_0_1"
@@ -1187,10 +905,1984 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "METUPowerLab_Diodes_TVSDiodes:CDSOD323-T24SC"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.286 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CDSOD323-T24SC"
+				(at 0 -2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "METUPowerLab_Diodes_TVSDiodes:SOD-323"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.bourns.com/docs/Product-Datasheets/CDSOD323-TxxSC.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "TVS Diode SOD-323"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Diodes Incorporated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Number" "CDSOD323-T24SC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Bidirectional Channels" "1"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Reverse Standoff Voltage" "24V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Breakdown Voltage" "26.7V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Clamping Voltage" "46.2V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Current - Peak Pulse(10/1000µs)" "9A (8/20µs)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Power" "400W"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Capacitance @ Frequency" "-"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Operating Temperature" "-55°C up to 150°C (TJ)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mounting Type" "Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Package" "SOD-323"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Digi-Key Number" "CDSOD323-T24SCCT-ND"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser Number" "652-CDSOD323-T24SC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Farnell Number" "2341950"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CDSOD323-T24SC_0_1"
+				(polyline
+					(pts
+						(xy 0 0.762) (xy -0.254 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy -1.27 0.762) (xy -1.27 -0.762) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 1.27 -0.762) (xy 1.27 0.762) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 -1.016) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CDSOD323-T24SC_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "METUPowerLab_Interfaces_CANBusBridges:SN65HVD230DR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0.635 24.13 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SN65HVD230DR"
+				(at 7.62 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "METUPowerLab_Interfaces_CANBusBridges:8-SOIC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn65hvd230"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "1/1 CAN Transceiver"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Protocol" "CANbus"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Number of Drivers/Receivers" "1/1"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Duplex" "Half"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Receiver Hysteresis" "100 mV"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Data Rate" "1Mbps"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Voltage Rating" "3V up to 3.6V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Operating Temperature" "-40°C up to 85°C"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mounting Type" "Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Package" "8-SOIC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Texas Instruments"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Number" "SN65HVD230DR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Özdisan Number" "SN65HVD230DR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Digi-Key Number" "296-11654-1-ND"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Farnell Number" "3124671"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser Number" "595-SN65HVD230DR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SN65HVD230DR_1_1"
+				(rectangle
+					(start 0 22.86)
+					(end 15.24 0)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin bidirectional line
+					(at -5.08 12.7 0)
+					(length 5.08)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -5.08 2.54 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -5.08 20.32 0)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -5.08 10.16 0)
+					(length 5.08)
+					(name "R"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -5.08 17.78 0)
+					(length 5.08)
+					(name "VREF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 10.16 180)
+					(length 5.08)
+					(name "CANL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 12.7 180)
+					(length 5.08)
+					(name "CANH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 5.08)
+					(name "RS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "METUPowerLab_Resistors_ChipResistors:56 Ohm"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "56 Ohm"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.016 -0.254 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "0603 - 1/10W - ±1%"
+				(at 0 -4.826 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Stackpole Electronics Inc"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Number" "RMCF0603FT56R0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Tolerance" "±1%"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Power" "1/10W"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mounting Type" "Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Operating Temperature" "-55°C up to 155°C"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Package" "0603 (1608 Metric)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser Number" "708-RMCF0603FT56R0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Digi-Key Number" "RMCF0603FT56R0CT-ND"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "METUPowerLab_Resistors_ChipResistors:0603_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "56 Ohm_0_1"
+				(polyline
+					(pts
+						(xy -2.286 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 0) (xy -1.905 1.016) (xy -1.524 0) (xy -1.143 -1.016) (xy -0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 0) (xy -0.381 1.016) (xy 0 0) (xy 0.381 -1.016) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0) (xy 1.143 1.016) (xy 1.524 0) (xy 1.905 -1.016) (xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "56 Ohm_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "METUPowerLab_Schematic_PowerSymbols:+V_RAIL"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board no)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+V_RAIL"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Positive supply power symbol, set Value to the rail name (e.g. +3V3_MCU)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "power flag supply rail vcc vdd"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+V_RAIL_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+V_RAIL_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "METUPowerLab_Schematic_PowerSymbols:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board no)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Ground power symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "power flag ground gnd"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "METUPowerLab_TestPoints_SurfaceMounts:TestPoint_Pad"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 1.27 3.302 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TestPoint_Pad"
+				(at 1.27 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Bare copper SMD test pad"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mounting Type" "Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp probe pad"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "METUPowerLab_TestPoints_SurfaceMounts:Pad_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_Pad_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_Pad_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "LAYOUT: C60 right at U10 VCC pin.\nLAYOUT: CANH/CANL as a tightly coupled pair to J8, same layer, no stubs.\nLAYOUT: D60/D61 at the connector, short path to GND. R60/R61/C61 near J8."
+		(exclude_from_sim no)
+		(at 12.7 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "c8d82f04-f8ec-401d-80c0-6725232fe05a")
+	)
+	(junction
+		(at 91.44 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1516c686-ba8e-433a-94b2-f00bb31eeda5")
+	)
+	(junction
+		(at 238.76 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "78462b08-6013-4392-b262-1bdd18d3d17a")
+	)
+	(junction
+		(at 238.76 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a27f15e0-d526-47e8-b9ee-c0d478d665e5")
+	)
+	(no_connect
+		(at 96.52 88.9)
+		(uuid "64a557c1-8545-4ceb-a4ac-d0954521e192")
+	)
+	(wire
+		(pts
+			(xy 238.76 96.52) (xy 238.76 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02e7d82f-78da-4c6b-8239-15ce002731d6")
+	)
+	(wire
+		(pts
+			(xy 160.02 81.28) (xy 160.02 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05a4b527-572a-4141-aabe-ef254d9c4142")
+	)
+	(wire
+		(pts
+			(xy 190.5 127) (xy 193.04 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "078dd597-a662-41bb-a70d-aff28bb146e9")
+	)
+	(wire
+		(pts
+			(xy 233.68 99.06) (xy 238.76 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f1e63cc-64a4-4991-9845-14a87a041dfe")
+	)
+	(wire
+		(pts
+			(xy 185.42 81.28) (xy 187.96 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2428a0c6-1200-4e67-ac44-32f98cc356bf")
+	)
+	(wire
+		(pts
+			(xy 96.52 93.98) (xy 91.44 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "320cdee2-aaa7-487b-acb0-98ce3ff73383")
+	)
+	(wire
+		(pts
+			(xy 96.52 86.36) (xy 91.44 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3280a2d3-3055-4ed7-ac68-094655962fcd")
+	)
+	(wire
+		(pts
+			(xy 233.68 91.44) (xy 238.76 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35bcb441-35a3-4cf6-a918-0ab4e0551172")
+	)
+	(wire
+		(pts
+			(xy 91.44 101.6) (xy 91.44 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3674e309-2ddb-498a-8fb9-2d84205c8000")
+	)
+	(wire
+		(pts
+			(xy 121.92 93.98) (xy 132.08 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "368bf2ca-f870-4a6c-a4bb-6c69e0480883")
+	)
+	(wire
+		(pts
+			(xy 160.02 109.22) (xy 162.56 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4252aac5-8454-4ae1-b538-154477aa9663")
+	)
+	(wire
+		(pts
+			(xy 96.52 96.52) (xy 91.44 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49122b21-4df9-4afa-9f32-72d7fa9843e1")
+	)
+	(wire
+		(pts
+			(xy 190.5 129.54) (xy 190.5 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53e9c4b9-d61f-4f6b-b943-72fc5bb3e898")
+	)
+	(wire
+		(pts
+			(xy 233.68 93.98) (xy 238.76 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57b64ec9-e50e-4733-8498-7c03df36af05")
+	)
+	(wire
+		(pts
+			(xy 50.8 50.8) (xy 50.8 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60684e86-99db-40fd-a4da-e991cedb7ebd")
+	)
+	(wire
+		(pts
+			(xy 241.3 149.86) (xy 238.76 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6534ab71-f429-459c-a56d-593c4906cc43")
+	)
+	(wire
+		(pts
+			(xy 241.3 147.32) (xy 241.3 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67648b0a-2f3a-44ad-ad19-641741483573")
+	)
+	(wire
+		(pts
+			(xy 160.02 129.54) (xy 160.02 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b7afb91-3769-4c36-95cf-679835b33380")
+	)
+	(wire
+		(pts
+			(xy 190.5 139.7) (xy 190.5 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70616644-ced7-44fe-929b-64d7645aef75")
+	)
+	(wire
+		(pts
+			(xy 215.9 149.86) (xy 213.36 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "903c7eb4-ec85-45c3-9b07-89221e65e48a")
+	)
+	(wire
+		(pts
+			(xy 160.02 96.52) (xy 160.02 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90d17f65-bc66-40ec-9eff-7279d569e457")
+	)
+	(wire
+		(pts
+			(xy 121.92 96.52) (xy 132.08 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92709ec6-f9a0-43fd-8750-c5156c3f9afc")
+	)
+	(wire
+		(pts
+			(xy 160.02 68.58) (xy 162.56 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0bfef8a-e696-4225-9838-3e1652937f61")
+	)
+	(wire
+		(pts
+			(xy 160.02 83.82) (xy 162.56 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a17a8271-4607-476e-854a-ae06b90fb400")
+	)
+	(wire
+		(pts
+			(xy 185.42 93.98) (xy 185.42 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad4238c6-41f1-4d2a-962d-755ad96019b1")
+	)
+	(wire
+		(pts
+			(xy 160.02 93.98) (xy 162.56 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b23c6d9b-4ace-45de-908a-b0ac7214bdb4")
+	)
+	(wire
+		(pts
+			(xy 96.52 101.6) (xy 91.44 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba719e63-832f-4649-a1a9-52c1d614b32b")
+	)
+	(wire
+		(pts
+			(xy 185.42 83.82) (xy 185.42 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf37df75-ae2c-426e-b13a-7025285a4778")
+	)
+	(wire
+		(pts
+			(xy 215.9 147.32) (xy 215.9 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4433cf0-a1e7-4f9e-a469-e5fefde3ff97")
+	)
+	(wire
+		(pts
+			(xy 233.68 104.14) (xy 238.76 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5212b3f-8991-42da-b1f0-00c253298920")
+	)
+	(wire
+		(pts
+			(xy 50.8 60.96) (xy 50.8 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d91e18f4-a2ed-4456-bf31-912ef2204b2a")
+	)
+	(wire
+		(pts
+			(xy 160.02 106.68) (xy 160.02 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc420a30-69c0-436c-ac1d-5c400767e818")
+	)
+	(wire
+		(pts
+			(xy 160.02 139.7) (xy 160.02 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb2e4252-d12d-468c-b231-4ff21d15bc9b")
+	)
+	(wire
+		(pts
+			(xy 160.02 71.12) (xy 160.02 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f01c9a61-e09e-4b2d-9ec4-42f06f87683f")
+	)
+	(wire
+		(pts
+			(xy 160.02 127) (xy 162.56 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5b15ecd-0299-404e-8b1b-09571c054362")
+	)
+	(wire
+		(pts
+			(xy 96.52 104.14) (xy 91.44 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f81c3082-f500-4a57-97dd-8ed2ce5c12d7")
+	)
+	(wire
+		(pts
+			(xy 233.68 96.52) (xy 238.76 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "faf1c13a-ab55-423b-be0a-f6afa8148474")
+	)
+	(label "CAN_SPLIT"
+		(at 187.96 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0109dee7-b415-47ff-8b68-f541ae49be65")
+	)
+	(label "CANL"
+		(at 193.04 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "30ad3de6-644a-4d4b-835c-88838ba4c247")
+	)
+	(label "CANH"
+		(at 132.08 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "411ad836-ae83-43d2-a828-7d63ce5594ad")
+	)
+	(label "CANH"
+		(at 162.56 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "458d4a6d-56e2-49cc-ad98-452d59c51400")
+	)
+	(label "CANL"
+		(at 238.76 149.86 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4dfa5f06-cce3-43e5-a102-ec61a59f9cc6")
+	)
+	(label "CAN_SPLIT"
+		(at 162.56 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "50315ab6-05f0-4288-ae94-56ea3e8fafa4")
+	)
+	(label "CANH"
+		(at 238.76 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "77ab2204-5d29-4975-91f9-2047a8ae337f")
+	)
+	(label "CANH"
+		(at 162.56 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7f53e6b4-922d-48ca-a15f-4f632484e341")
+	)
+	(label "CANL"
+		(at 132.08 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8cba5529-779e-42d1-8bce-60cbb938e8d5")
+	)
+	(label "CANL"
+		(at 238.76 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9243c39c-c318-4de6-b319-d10cc6271bec")
+	)
+	(label "CANL"
+		(at 162.56 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a739e688-8a04-4ce1-ae8a-f419732221b4")
+	)
+	(label "CANH"
+		(at 213.36 149.86 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "aa4810e8-02cd-49b2-8102-60dd0dc49118")
+	)
+	(label "CAN_SPLIT"
+		(at 162.56 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f250dc63-bc0a-46d1-9d2b-dc8b2d2c5481")
+	)
+	(global_label "CAN_RX"
+		(shape output)
+		(at 91.44 96.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0507a11a-76d1-44c2-a632-14deb4faf805")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 91.44 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "CAN_TX"
+		(shape input)
+		(at 91.44 93.98 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b0b20ab1-0109-44e3-a44d-d54156733a33")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 91.44 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 	)
 	(symbol
-		(lib_id "METUPowerLab_Interfaces_CANBusBridges:SN65HVD230DR")
-		(at 80.01 49.53 0)
+		(lib_id "METUPowerLab_Diodes_TVSDiodes:CDSOD323-T24SC")
+		(at 160.02 134.62 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1198,29 +2890,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "85ee6d7b-28fb-4d88-8994-a655fc24a327")
-		(property "Reference" "U10"
-			(at 80.645 73.66 0)
+		(uuid "0569bdf1-4557-4514-ba76-3b80a42606fc")
+		(property "Reference" "D60"
+			(at 162.56 133.35 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "SN65HVD230DR"
-			(at 87.63 48.26 0)
+		(property "Value" "CDSOD323-T24SC"
+			(at 162.56 135.89 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "METUPowerLab_Interfaces_CANBusBridges:8-SOIC"
-			(at 80.01 49.53 0)
+		(property "Footprint" "METUPowerLab_Diodes_TVSDiodes:SOD-323"
+			(at 160.02 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1230,8 +2924,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn65hvd230"
-			(at 80.01 49.53 0)
+		(property "Datasheet" "https://www.bourns.com/docs/Product-Datasheets/CDSOD323-TxxSC.pdf"
+			(at 160.02 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1241,8 +2935,173 @@
 				)
 			)
 		)
-		(property "Description" "1/1 CAN Transceiver"
-			(at 80.01 49.53 0)
+		(property "Description" "TVS Diode SOD-323"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Number" "CDSOD323-T24SC"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Bidirectional Channels" "1"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Reverse Standoff Voltage" "24V"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Breakdown Voltage" "26.7V"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Clamping Voltage" "46.2V"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Current - Peak Pulse(10/1000µs)" "9A (8/20µs)"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power" "400W"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Capacitance @ Frequency" "-"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Operating Temperature" "-55°C up to 150°C (TJ)"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SOD-323"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digi-Key Number" "CDSOD323-T24SCCT-ND"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Number" "652-CDSOD323-T24SC"
+			(at 160.02 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Farnell Number" "2341950"
+			(at 160.02 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1253,41 +3112,100 @@
 			)
 		)
 		(pin "1"
-			(uuid "9a188596-b2c3-4eac-945a-39f17189ee33")
+			(uuid "68ef7fd4-6098-4d42-8d9d-d90fb86956d1")
 		)
 		(pin "2"
-			(uuid "835e58dd-c050-4b9e-8da6-45edb595ff10")
-		)
-		(pin "3"
-			(uuid "9ebba72f-f398-4161-b5d4-44bb6d788151")
-		)
-		(pin "4"
-			(uuid "8948c988-cec3-4d6e-b5e7-8dd8769f53ba")
-		)
-		(pin "5"
-			(uuid "b95c56c3-57d7-4113-b96e-b0544e4c98c0")
-		)
-		(pin "6"
-			(uuid "6ececc15-4b1d-404e-bb1d-5e111b9c6862")
-		)
-		(pin "7"
-			(uuid "397dabf4-9c31-4ec1-94e6-efd83bcbf63f")
-		)
-		(pin "8"
-			(uuid "b361a0b4-21f8-4db6-aa3d-db2a37b21809")
+			(uuid "ff4007d0-1383-4746-a0bc-cc0771e802b0")
 		)
 		(instances
 			(project "ESC3Phase"
-				(path "/ab49aace-8f2e-4d86-bd76-0fdbb03ceb47"
-					(reference "U10")
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "D60")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:100 nF")
-		(at 64.77 39.37 0)
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:+V_RAIL")
+		(at 91.44 86.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "073ed3c4-70bd-4567-8820-167b6322ffd4")
+		(property "Reference" "#PWR701"
+			(at 91.44 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3_MCU"
+			(at 91.44 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 91.44 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Positive supply power symbol, set Value to the rail name (e.g. +3V3_MCU)"
+			(at 91.44 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "07c75896-7f99-4517-9da4-1daf96940643")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "#PWR701")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Diodes_TVSDiodes:CDSOD323-T24SC")
+		(at 190.5 134.62 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1295,9 +3213,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "53075ae7-1d4c-4f4a-98f6-16619707d948")
-		(property "Reference" "C34"
-			(at 65.405 41.91 0)
+		(uuid "14096202-dd0d-463e-bd99-49f220911fb9")
+		(property "Reference" "D61"
+			(at 193.04 133.35 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1307,8 +3225,497 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CAN txcvr decouple"
-			(at 65.405 36.83 0)
+		(property "Value" "CDSOD323-T24SC"
+			(at 193.04 135.89 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "METUPowerLab_Diodes_TVSDiodes:SOD-323"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.bourns.com/docs/Product-Datasheets/CDSOD323-TxxSC.pdf"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "TVS Diode SOD-323"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Number" "CDSOD323-T24SC"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Bidirectional Channels" "1"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Reverse Standoff Voltage" "24V"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Breakdown Voltage" "26.7V"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Clamping Voltage" "46.2V"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Current - Peak Pulse(10/1000µs)" "9A (8/20µs)"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power" "400W"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Capacitance @ Frequency" "-"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Operating Temperature" "-55°C up to 150°C (TJ)"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SOD-323"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digi-Key Number" "CDSOD323-T24SCCT-ND"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Number" "652-CDSOD323-T24SC"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Farnell Number" "2341950"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bbc59d5b-10fe-4ff3-8ba6-d0654a55df14")
+		)
+		(pin "2"
+			(uuid "790e15cc-86c9-40e4-ac88-189e7ef6842e")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "D61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:+V_RAIL")
+		(at 50.8 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "361ce306-d272-4708-98ca-9e9c9621e9be")
+		(property "Reference" "#PWR703"
+			(at 50.8 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3_MCU"
+			(at 50.8 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 50.8 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Positive supply power symbol, set Value to the rail name (e.g. +3V3_MCU)"
+			(at 50.8 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "31838398-25ad-4945-926b-f30197d1abe7")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "#PWR703")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:GND")
+		(at 160.02 142.24 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3a029c2c-3a15-4275-bb78-9634c6676539")
+		(property "Reference" "#PWR706"
+			(at 160.02 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 160.02 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground power symbol"
+			(at 160.02 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "23b264eb-0357-408f-955b-8058c560402f")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "#PWR706")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_TestPoints_SurfaceMounts:TestPoint_Pad")
+		(at 215.9 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4db5a4ab-e023-482a-aa2b-f8ee2df34331")
+		(property "Reference" "TP60"
+			(at 218.44 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CANH"
+			(at 218.44 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "METUPowerLab_TestPoints_SurfaceMounts:Pad_D1.5mm"
+			(at 215.9 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 215.9 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Bare copper SMD test pad"
+			(at 215.9 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 215.9 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "87cba9e4-388e-4d58-bf2b-8b1f2ba31c26")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "TP60")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:4.7 nF")
+		(at 185.42 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4f9d1960-78f7-4e6e-9f3d-1c4f55d4d877")
+		(property "Reference" "C61"
+			(at 187.96 87.63 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7 nF"
+			(at 187.96 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1319,7 +3726,7 @@
 			)
 		)
 		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
-			(at 65.735 35.56 0)
+			(at 185.42 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1329,8 +3736,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-250V_24.pdf"
-			(at 64.77 39.37 0)
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM188R72A472KA37-01.pdf"
+			(at 185.42 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1341,7 +3748,128 @@
 			)
 		)
 		(property "Description" "Ceramic SMD Cap 0603"
-			(at 64.77 39.37 0)
+			(at 185.42 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Number" "GCM188R72A472KA37D"
+			(at 185.42 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 185.42 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "±10%"
+			(at 185.42 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "100V"
+			(at 185.42 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Operating Temperature" "-55°C up to 125°C"
+			(at 185.42 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0603 (1608 Metric)"
+			(at 185.42 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digi-Key Number" "490-4930-1-ND"
+			(at 185.42 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Number" "81-GCM188R72A472K37D"
+			(at 185.42 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Farnell Number" "4326627"
+			(at 185.42 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Özdisan Number" "GCM188R72A472KA37D"
+			(at 185.42 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 185.42 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1352,23 +3880,343 @@
 			)
 		)
 		(pin "1"
-			(uuid "25aec85e-ff55-47e5-9ceb-93679304ad7d")
+			(uuid "aa21055d-390e-41a4-bdff-d7c4afddbddf")
 		)
 		(pin "2"
-			(uuid "8cee61ce-83ac-4afc-abdf-842560d96e2c")
+			(uuid "3703a28b-581b-47fe-8e95-2d1f9c667a04")
 		)
 		(instances
 			(project "ESC3Phase"
-				(path "/ab49aace-8f2e-4d86-bd76-0fdbb03ceb47"
-					(reference "C34")
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "C61")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "METUPowerLab_Diodes_TVSDiodes:SP0115-01UTG")
-		(at 110.49 39.37 0)
+		(lib_id "METUPowerLab_TestPoints_SurfaceMounts:TestPoint_Pad")
+		(at 241.3 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5c37c822-a77d-41b4-9538-a331254e8f2d")
+		(property "Reference" "TP61"
+			(at 243.84 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CANL"
+			(at 243.84 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "METUPowerLab_TestPoints_SurfaceMounts:Pad_D1.5mm"
+			(at 241.3 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 241.3 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Bare copper SMD test pad"
+			(at 241.3 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 241.3 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e556eb1f-6927-49f3-87ce-9897526059dc")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "TP61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:GND")
+		(at 50.8 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6e23a67a-d3c5-4e74-b63d-21b527847998")
+		(property "Reference" "#PWR704"
+			(at 50.8 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 50.8 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 50.8 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground power symbol"
+			(at 50.8 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "15268c34-a9a2-4fdb-9702-98bbb55786b7")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "#PWR704")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:GND")
+		(at 185.42 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "81e1870d-b988-48f6-9f52-ff20ebab2f09")
+		(property "Reference" "#PWR705"
+			(at 185.42 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 185.42 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 185.42 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground power symbol"
+			(at 185.42 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "caa78238-43e5-4d51-81a7-fc08e3ac4d64")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "#PWR705")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:GND")
+		(at 238.76 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "866670f5-59c7-42fc-ab16-fe9caf6afb15")
+		(property "Reference" "#PWR708"
+			(at 238.76 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 238.76 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 238.76 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground power symbol"
+			(at 238.76 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bae25028-54d2-4dee-a411-fa166835688a")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "#PWR708")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Resistors_ChipResistors:56 Ohm")
+		(at 160.02 101.6 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1376,29 +4224,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "fd46c75f-ec1d-41f0-8616-9c8b1e0d9264")
-		(property "Reference" "D2"
-			(at 110.49 41.656 0)
+		(uuid "b348a8ff-f673-4f29-817f-cae2fbc4b8cd")
+		(property "Reference" "R61"
+			(at 162.56 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "CANH ESD"
-			(at 110.49 37.338 0)
+		(property "Value" "56 Ohm"
+			(at 162.56 102.87 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "METUPowerLab_Diodes_TVSDiodes:0603_Small"
-			(at 110.49 39.37 0)
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
+			(at 160.02 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1408,8 +4258,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.littelfuse.com/assetdocs/littelfuse-tvs-diode-array-sp0115-01utg-datasheet?assetguid=b9213e0e-abb5-4c77-a3ab-3b75bd5c10d6"
-			(at 110.49 39.37 0)
+		(property "Datasheet" "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf"
+			(at 160.02 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1419,8 +4269,107 @@
 				)
 			)
 		)
-		(property "Description" "TVS Diode 0603"
-			(at 110.49 39.37 0)
+		(property "Description" "0603 - 1/10W - ±1%"
+			(at 160.02 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Stackpole Electronics Inc"
+			(at 160.02 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Number" "RMCF0603FT56R0"
+			(at 160.02 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "±1%"
+			(at 160.02 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power" "1/10W"
+			(at 160.02 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 160.02 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Operating Temperature" "-55°C up to 155°C"
+			(at 160.02 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0603 (1608 Metric)"
+			(at 160.02 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Number" "708-RMCF0603FT56R0"
+			(at 160.02 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digi-Key Number" "RMCF0603FT56R0CT-ND"
+			(at 160.02 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1431,23 +4380,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "77dcdd45-5157-4033-8614-e7e906e4c14f")
+			(uuid "5dcf5b7d-f6ed-4d6b-a9ff-489a54ba800b")
 		)
 		(pin "2"
-			(uuid "1ebea60c-2479-4683-8f17-9d4ccdf3bd8f")
+			(uuid "991fda27-cd43-4e35-83cf-4de8e9ac62ec")
 		)
 		(instances
 			(project "ESC3Phase"
-				(path "/ab49aace-8f2e-4d86-bd76-0fdbb03ceb47"
-					(reference "D2")
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "R61")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "METUPowerLab_Diodes_TVSDiodes:SP0115-01UTG")
-		(at 110.49 54.61 0)
+		(lib_id "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:100 nF")
+		(at 50.8 55.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1455,29 +4404,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f87b4675-4abb-48d3-a94d-e61f51333125")
-		(property "Reference" "D3"
-			(at 110.49 56.896 0)
+		(uuid "cf4bd7a7-a3f9-4bf3-b075-1445e9eb40fa")
+		(property "Reference" "C60"
+			(at 53.34 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "CANL ESD"
-			(at 110.49 52.578 0)
+		(property "Value" "100 nF"
+			(at 53.34 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "METUPowerLab_Diodes_TVSDiodes:0603_Small"
-			(at 110.49 54.61 0)
+		(property "Footprint" "METUPowerLab_Capacitors_Ceramics_SurfaceMounts:0603_Medium"
+			(at 50.8 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1487,8 +4438,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.littelfuse.com/assetdocs/littelfuse-tvs-diode-array-sp0115-01utg-datasheet?assetguid=b9213e0e-abb5-4c77-a3ab-3b75bd5c10d6"
-			(at 110.49 54.61 0)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-250V_24.pdf"
+			(at 50.8 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1498,8 +4449,129 @@
 				)
 			)
 		)
-		(property "Description" "TVS Diode 0603"
-			(at 110.49 54.61 0)
+		(property "Description" "Ceramic SMD Cap 0603"
+			(at 50.8 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Number" "CC0603KRX7R7BB104"
+			(at 50.8 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 50.8 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "±10%"
+			(at 50.8 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "16V"
+			(at 50.8 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Operating Temperature" "-55°C up to 125°C"
+			(at 50.8 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0603 (1608 Metric)"
+			(at 50.8 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digi-Key Number" "311-1088-1-ND"
+			(at 50.8 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Number" "603-CC603KRX7R7BB104"
+			(at 50.8 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Farnell Number" "2408501"
+			(at 50.8 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Özdisan Number" "CC0603KRX7R7BB104"
+			(at 50.8 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 50.8 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1510,15 +4582,92 @@
 			)
 		)
 		(pin "1"
-			(uuid "76a178de-ce89-4907-949d-4aad57bb7d99")
+			(uuid "0a9c76ea-a244-4eae-9819-23413662bdcd")
 		)
 		(pin "2"
-			(uuid "9892e3b4-5b0c-4c14-afbd-ba494d3e37d2")
+			(uuid "0b305f09-f8c8-4537-bd21-0cce3db78873")
 		)
 		(instances
 			(project "ESC3Phase"
-				(path "/ab49aace-8f2e-4d86-bd76-0fdbb03ceb47"
-					(reference "D3")
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "C60")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:GND")
+		(at 190.5 142.24 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d8aa26c8-10f8-40ca-bec3-68e84e885242")
+		(property "Reference" "#PWR707"
+			(at 190.5 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 190.5 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 190.5 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 190.5 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground power symbol"
+			(at 190.5 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ba977be9-b14e-4b7f-b4f5-5ff8446b7bc7")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "#PWR707")
 					(unit 1)
 				)
 			)
@@ -1526,7 +4675,7 @@
 	)
 	(symbol
 		(lib_id "METUPowerLab_Connectors_SignalConnectors:384471-E")
-		(at 129.54 48.26 0)
+		(at 228.6 99.06 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1534,29 +4683,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e5376c14-f57f-42bf-8500-9543bca7b149")
+		(uuid "dea777f3-4bd8-4880-8475-6917b6d366e0")
 		(property "Reference" "J8"
-			(at 129.54 58.42 0)
+			(at 227.33 86.995 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "CAN_BUS"
-			(at 129.54 45.72 0)
+		(property "Value" "CAN"
+			(at 227.33 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "METUPowerLab_Connectors_SignalConnectors:384471-E"
-			(at 129.54 48.26 0)
+			(at 228.6 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1567,7 +4718,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=erni-maxibridge-2.54mm-connectors-ds&DocType=Data+Sheet&DocLang=English&DocFormat=pdf&PartCntxt=384471-E"
-			(at 129.54 48.26 0)
+			(at 228.6 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1578,7 +4729,139 @@
 			)
 		)
 		(property "Description" "1x4"
-			(at 129.54 48.26 0)
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TE Connectivity Erni"
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Number" "384471-E"
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Contact Type" "Male Pin"
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Number of Positions" "4"
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Number of Rows" "1"
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount, Right Angle"
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Operating Temperature" "-55°C up to 150°C"
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Current Rating" "12A per Contact"
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "-"
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Farnell Number" "4060713"
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Number" "305-384471"
+			(at 228.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digi-Key Number" "2684-384471-ECT-ND"
+			(at 228.6 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1589,210 +4872,548 @@
 			)
 		)
 		(pin "1"
-			(uuid "7d979943-83c4-4f12-8210-5b1750a2a31b")
+			(uuid "cb7523d2-3bd1-43ea-8db6-d39c68797b30")
 		)
 		(pin "2"
-			(uuid "760f45a2-09c9-42ee-8e26-83ca8063709b")
+			(uuid "974fabfc-1d43-4089-ba49-06c3a2cbbfe6")
 		)
 		(pin "3"
-			(uuid "705f9581-10fe-4485-a38f-616c8871576f")
+			(uuid "91051681-4db4-4c0d-b2ed-d094b4ced8cd")
 		)
 		(pin "4"
-			(uuid "13d3b433-0d0c-4e64-9e9d-7979eddb7e01")
+			(uuid "d9db658b-15b6-49f6-9e61-2a3fbf5cd790")
 		)
 		(pin "Shield"
-			(uuid "1ae567fb-0160-4cd2-ad58-7a1423b734fe")
+			(uuid "905d9b06-8f00-472e-bdbc-b8c7238d5d08")
 		)
 		(instances
 			(project "ESC3Phase"
-				(path "/ab49aace-8f2e-4d86-bd76-0fdbb03ceb47"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
 					(reference "J8")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(global_label "CAN_TX"
-		(at 74.93 36.83 180)
-		(effects
-			(font
-				(size 1.27 1.27)
+	(symbol
+		(lib_id "METUPowerLab_Resistors_ChipResistors:56 Ohm")
+		(at 160.02 76.2 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e60f2639-7c5c-4ff0-bf06-5c8213683f6d")
+		(property "Reference" "R60"
+			(at 162.56 74.93 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
-			(justify right)
 		)
-		(uuid "c54fb62f-ec03-45fc-b3e2-58e63de331c3")
-	)
-	(global_label "GND"
-		(at 74.93 46.99 180)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Value" "56 Ohm"
+			(at 162.56 77.47 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
-			(justify right)
 		)
-		(uuid "6513447d-f667-4adc-b4be-b43713cbf37a")
-	)
-	(global_label "+3V3_MCU"
-		(at 74.93 29.21 180)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Footprint" "METUPowerLab_Resistors_ChipResistors:0603_Medium"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify right)
 		)
-		(uuid "03db0c33-0cd3-40fa-b309-0409b3795165")
-	)
-	(global_label "CAN_RX"
-		(at 74.93 39.370000000000005 180)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Datasheet" "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify right)
 		)
-		(uuid "09d29bf9-d8e3-4fd1-bd27-75578645d044")
-	)
-	(no_connect
-		(at 74.93 31.75)
-		(uuid "6a151ab0-c1d7-4129-b623-4d8b4a60ae23")
-	)
-	(label "CANL"
-		(at 100.33000000000001 39.370000000000005 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Description" "0603 - 1/10W - ±1%"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left bottom)
 		)
-		(uuid "e1788ea7-9eec-48e6-860d-e8c73a130238")
-	)
-	(label "CANH"
-		(at 100.33000000000001 36.83 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Manufacturer" "Stackpole Electronics Inc"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left bottom)
 		)
-		(uuid "f891ea61-9de3-4833-a5da-9cbdb353c8a2")
-	)
-	(global_label "GND"
-		(at 74.93 44.45 180)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Manufacturer Number" "RMCF0603FT56R0"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify right)
 		)
-		(uuid "789d8a01-81d5-4151-a79a-335425c3d401")
-	)
-	(global_label "+3V3_MCU"
-		(at 64.77 34.29 90)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Tolerance" "±1%"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left)
 		)
-		(uuid "015643ee-c541-4102-bf62-4da35ad9e1ae")
-	)
-	(global_label "GND"
-		(at 64.77 44.449999999999996 270)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Power" "1/10W"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify right)
 		)
-		(uuid "e8cfb464-86c9-4c84-a791-4fea6a2c8df9")
-	)
-	(label "CANH"
-		(at 105.41 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Mounting Type" "Surface Mount"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify right bottom)
 		)
-		(uuid "6418e360-4043-4a02-8c3d-f148d702a2cb")
-	)
-	(global_label "GND"
-		(at 115.57 39.37 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Operating Temperature" "-55°C up to 155°C"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left)
 		)
-		(uuid "a18caba4-d906-478b-958a-9aa7418c2b66")
-	)
-	(label "CANL"
-		(at 105.41 54.61 180)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Package" "0603 (1608 Metric)"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify right bottom)
 		)
-		(uuid "c7f15ad3-db3b-425d-b351-704088e48adf")
-	)
-	(global_label "GND"
-		(at 115.57 54.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Mouser Number" "708-RMCF0603FT56R0"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left)
 		)
-		(uuid "af7340e2-a369-4a24-90d4-4175685cceae")
-	)
-	(label "CANH"
-		(at 134.62 40.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Digi-Key Number" "RMCF0603FT56R0CT-ND"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left bottom)
 		)
-		(uuid "55f904eb-6649-4cc7-9324-c224868b79f9")
-	)
-	(label "CANL"
-		(at 134.62 43.18 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(pin "1"
+			(uuid "5f03e102-16c3-45df-8210-b8ea42ef760b")
+		)
+		(pin "2"
+			(uuid "bbee9255-024e-4290-91a8-98880e8cbfa3")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "R60")
+					(unit 1)
+				)
 			)
-			(justify left bottom)
 		)
-		(uuid "5f647a81-ab26-4c65-8302-cb72d58e6a7d")
 	)
-	(global_label "GND"
-		(at 134.62 45.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+	(symbol
+		(lib_id "METUPowerLab_Schematic_PowerSymbols:GND")
+		(at 91.44 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ec6acd15-6b0d-447b-9fd2-c3fafba73493")
+		(property "Reference" "#PWR702"
+			(at 91.44 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left)
 		)
-		(uuid "861c7d68-409a-43e7-82d8-38608d746d2c")
-	)
-	(global_label "+VBUS_PROT"
-		(at 134.62 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Value" "GND"
+			(at 91.44 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left)
 		)
-		(uuid "b82d1485-2e9e-45fd-9797-20bcf5bb3680")
+		(property "Footprint" ""
+			(at 91.44 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md"
+			(at 91.44 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground power symbol"
+			(at 91.44 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "27302dcb-8375-4c09-912e-7369a74a9c63")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "#PWR702")
+					(unit 1)
+				)
+			)
+		)
 	)
-	(no_connect
-		(at 134.62 53.339999999999996)
-		(uuid "c81c5e09-68bc-4272-9796-888ad28572c8")
-	)
-	(sheet_instances
-		(path "/"
-			(page "1")
+	(symbol
+		(lib_id "METUPowerLab_Interfaces_CANBusBridges:SN65HVD230DR")
+		(at 101.6 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f18ca4a8-f04a-4bb1-a89b-82e231de72a0")
+		(property "Reference" "U10"
+			(at 101.6 80.645 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SN65HVD230DR"
+			(at 101.6 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "METUPowerLab_Interfaces_CANBusBridges:8-SOIC"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn65hvd230"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1/1 CAN Transceiver"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Protocol" "CANbus"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Number of Drivers/Receivers" "1/1"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Duplex" "Half"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Receiver Hysteresis" "100 mV"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Data Rate" "1Mbps"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "3V up to 3.6V"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Operating Temperature" "-40°C up to 85°C"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mounting Type" "Surface Mount"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "8-SOIC"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Number" "SN65HVD230DR"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Özdisan Number" "SN65HVD230DR"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digi-Key Number" "296-11654-1-ND"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Farnell Number" "3124671"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Number" "595-SN65HVD230DR"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "adb459e4-b45b-44d9-9a8f-472b92c266ee")
+		)
+		(pin "2"
+			(uuid "46138496-1b35-4916-a79f-a39915f03b64")
+		)
+		(pin "3"
+			(uuid "0515d816-d359-4504-8511-bad0f6c18b7e")
+		)
+		(pin "4"
+			(uuid "37746180-9e29-4940-95b4-5f655d318641")
+		)
+		(pin "5"
+			(uuid "ed793182-0470-4a4d-9dc8-58a186786499")
+		)
+		(pin "6"
+			(uuid "fd135128-ca98-44d0-998a-dc2381ff14fc")
+		)
+		(pin "7"
+			(uuid "6422b785-c029-4c41-9051-7de92090edd3")
+		)
+		(pin "8"
+			(uuid "c344a695-7be8-4f55-a9f7-52483f9f8eb8")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64"
+					(reference "U10")
+					(unit 1)
+				)
+			)
 		)
 	)
 )

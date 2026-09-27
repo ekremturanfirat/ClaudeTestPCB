@@ -1,310 +1,140 @@
-# ESC3Phase — Architecture
+# ESC3Phase — Architecture (Rev B)
 
-3-phase BLDC/PMSM ESC. ESP32-WROOM-32E (soldered SMD, sensorless FOC capable via DRV8323's
-integrated current-shunt amplifiers). 12–36V DC input. ~5–10A continuous phase current target.
-Control/telemetry: UART (also doubles as the flashing/programming interface) + CAN (TWAI).
+3-phase BLDC/PMSM ESC with an ESP32-WROOM-32E soldered directly on the board. Input 12–36 V DC,
+5–10 A continuous phase current, UART + CAN. Designed to the
+[METU PowerLab PCB design rules](https://github.com/odtu/Powerlab/blob/master/KiCAD/PCB_DESIGN_RULES.md),
+parts only from [PowerLabKiCadLibraries](https://github.com/odtu/PowerLabKiCadLibraries) (additions in
+[PR #3](https://github.com/odtu/PowerLabKiCadLibraries/pull/3)).
 
-All parts below are from PowerLabKiCadLibraries (verified present in the installed 10.0
-3rdparty library) except the ESP32-WROOM-32E itself, which is pending merge as
-odtu/PowerLabKiCadLibraries#2.
+Rev A (first attempt) was withdrawn: its schematic had real net shorts (+5V_LOGIC merged with the 36 V bus,
+INHA and EFUSE_IMON merged with GND), did not follow the drawing rules, and had several datasheet errors
+(listed at the end). Rev B is a full rebuild.
+
+## Verification (kicad-cli 10.0.5)
+- **ERC: 0 errors.** 11 warnings, all `pin_to_pin` "Bidirectional and Power output": the library's connector
+  pins (J1, J2, J3, J4, J8) are typed `bidirectional` and sit on a net that has a `power_out` pin — a PWR_FLAG
+  (VIN_RAW, +3V3_MCU) or DRV8323 pin 45 (SW of the unused internal buck, tied to GND as TI requires).
+  Not a wiring fault; reported upstream as a library observation.
+- **Netlist check:** KiCad's exported netlist was compared net-by-net with the intended connections of every
+  pin: 79 nets, 0 shorts, 0 opens.
+- Every sheet was exported to PDF and reviewed visually.
 
 ## Sheets
-
-1. **Power Supply** — input protection + regulation
-2. **MCU Core** — ESP32-WROOM-32E + support circuitry
-3. **Gate Drive** — DRV8323RS 3-phase gate driver
-4. **Power Stage** — 6x half-bridge MOSFETs, phase shunts, bulk caps, phase outputs
-5. **Current Sensing** — DC-bus total current sense (separate from DRV8323's per-phase sense,
-   which lives on the Gate Drive/Power Stage sheets)
-6. **Communication** — CAN transceiver + connector, UART header
-
-## Component selections (with rationale)
-
-### Power Supply — as built (schematic-verified, PowerSupply.kicad_sch)
-
-Rail naming: `VIN_RAW` (raw connector input) → `+VBUS` (post reverse-polarity FET,
-pre-eFuse) → `+VBUS_PROT` (post-eFuse; feeds Gate Drive/Power Stage VM) → `+5V_LOGIC`
-(post-buck) → `+3V3_MCU` (post-LDO). `GND` is common throughout (single star point at
-the input connector).
-
-| Ref | Part | Library | Role / value notes |
-|---|---|---|---|
-| J3, J4 | 7770 (M3, 15A) | Connectors_ScrewTerminals | VIN_RAW+, GND input terminals (one pole each) |
-| D1 | SMBJ48CA-13-F | Diodes_TVSDiodes | VIN_RAW transient/surge protection (48V standoff, ~77V clamp) |
-| U2 | LM5050-1 | CircuitProtections_IdealDiodes | High-side N-ch ORing/ideal-diode controller → reverse-polarity block |
-| Q1 | NTMFS006N08MC | Transistors_MOSFETs | Reverse-polarity series FET, D=VIN_RAW, S=+VBUS, G=U2.GATE (80V/82A/6mΩ, shared BOM line with Power Stage) |
-| U3 | PTPS16890VMAR (TI TPS1689x eFuse) | CircuitProtections_eFuses | +VBUS→+VBUS_PROT, 20A/9–80V. **Fully wired per the real TI TPS1689 datasheet** (SLVSHO1A, fetched directly), standalone/non-parallel config: R4=120Ω/C10=100nF (VDD R-C filter — datasheet spec is 150Ω/0.22µF, substituted to nearest library values), R5=866kΩ/R6=118kΩ (EN/UVLO divider, trips ≈10.0V, formula-derived) + C11=100pF noise cap, C12=1nF (IREF), C13=10nF (DVDT, placeholder — tune per Eq.16/17 against actual bulk C once inrush target is set), C14=1nF (TEMP), R7=1.2kΩ (ILIM) + R8=3kΩ (IMON) + C15=22pF → sets circuit-breaker OCP ≈18.3A (formula-derived, library's nearest values to the datasheet-recommended 1.24k/3.4k), R9=10kΩ pulldown (AUX), R10/R11=10kΩ pull-ups to +3V3_MCU (SDA/SCL, PMBus unused), ADDR0/ADDR1/SWEN/WP#→GND direct (standalone/address-0/PMBus-write-disabled), FLT/PGOOD left unconnected (no external pull-up available pre-buck without exceeding their 6V abs-max if pulled to +VBUS_PROT) |
-| C16/C17 | 4.7µF / 100nF | Capacitors_Ceramics_SurfaceMounts | eFuse/buck input bypass |
-| U4 | LMR38020FSDDAR | Regulators_BuckConverters | +VBUS_PROT→+5V_LOGIC, 2A. **Per TI datasheet (SNVSC40E)**: EN tied directly to VIN (precision-enable, "do not float" but explicitly may tie to VIN), R12=22.1kΩ RT (≈1.1MHz switching — nearest library value to the table's 1MHz/25.5kΩ row), R13=88.7kΩ/R14=22.1kΩ FB divider (gives 5.01V, computed from VREF=1V), C18=100nF BOOT-to-SW (16V+ rating), R15=100kΩ PG pull-up to +5V_LOGIC |
-| L1 | 6.8µH | Inductors_SurfaceMounts | Buck inductor (matches the datasheet's own 1MHz/24V/5V design-table row) |
-| C19/C20 | 22µF ×2 | Capacitors_Ceramics_SurfaceMounts | Buck output caps (datasheet table: 2×22µF nominal) |
-| U5 | NCP1117ST33T3G | Regulators_LDOs | +5V_LOGIC→+3V3_MCU, standard 3-pin LDO app circuit |
-| C21/C22 | 1µF / 10µF | Capacitors_Ceramics_SurfaceMounts | LDO input/output caps |
-| #FLG1–4 | power:PWR_FLAG | (stock KiCad, annotation-only) | ERC power-source markers on VIN_RAW/+VBUS/EFUSE_VDD/GND — these pass-through/sense-only nets have no pin typed `power_out` in this sheet, which otherwise trips ERC's "undriven power net" check even though they're genuinely driven in the real circuit |
-
-**Flagged for the user / future review:**
-- eFuse VDD R-C filter (120Ω/100nF) and DVDT cap (10nF) are the closest available
-  library values / a placeholder pending a defined inrush-current target — not exact
-  datasheet values (150Ω/0.22µF was requested but isn't in the Resistors/Capacitors
-  library).
-- Two residual ERC items on `PowerSupply.kicad_sch` after a full pass: (1) U3's two
-  `OUT` pins (7/8) both tied to +VBUS_PROT trips "power output tied to power output" —
-  expected/harmless, this is the datasheet's own recommended parallel-pin connection;
-  (2) one more `Output`/`Power output` pairing on pin 2 (IMON) I could not fully
-  root-cause in the time available — worth a look in KiCad's ERC dialog directly.
-- The vendor's own `PTPS16890VMAR` symbol (in PowerLabKiCadLibraries) has a real
-  authoring defect: pin 20 is defined **twice** (once named `SWEN`, once named `WP#`,
-  at two different physical locations) and pin 21 (`WP#`'s real datasheet pin number)
-  doesn't exist in the symbol at all. Worth reporting upstream; I worked around it here
-  by labeling both physical pin-20 instances to GND directly by position.
-
-### MCU Core
-- U: **ESP32-WROOM-32E** (METUPowerLab_Microcontrollers_ESP32, pending PR merge). No external
-  crystal/flash/antenna needed — all integrated in the module.
-- Decoupling on 3V3/EN per module + LAYOUT notes.
-- EN pull-up + RESET tactile switch, GPIO0 pull-up + BOOT tactile switch (**TL6330AF200Q** ×2,
-  Switches_TactileSwitches) — manual flashing entry (no auto-DTR/RTS circuit; no onboard USB).
-- 1x4 header (Connectors_SignalConnectors, `2147210040`) for UART0 (TX0/RX0/GND/3V3) — doubles
-  as the programming header and the runtime UART control/telemetry link.
-
-### Gate Drive — as built (GateDrive.kicad_sch), wired per the real TI DRV8323R datasheet
-(SLVSDJ3D, fetched directly — this is a single-charge-pump architecture, **not**
-per-phase bootstrap capacitors; that assumption in the original plan was wrong)
-
-- U6: **DRV8323RSRGZT** (= DRV8323R, RGZ 48-pin VQFN, SPI variant). DVDD is the chip's
-  own internal 3.3V logic LDO **output** (not something you feed externally) — just
-  decoupled with C27=1µF to AGND, left otherwise unconnected. The digital I/O (SPI +
-  PWM pins) are DVDD-referenced, which is compatible with the ESP32's 3.3V logic
-  directly.
-- Charge pump (shared across all 3 high sides — no per-phase bootstrap caps needed):
-  C23=47nF/100V between CPH/CPL, C24=1µF between VCP and +VBUS_PROT.
-- VM decoupling: C25=100nF + C26=10µF/75V across VM/PGND. VDRAIN tied to +VBUS_PROT
-  (common high-side drain sense node).
-- VREF: self-generated reference, C28=100nF decouple to AGND only.
-- Optional integrated 600mA buck (VIN/SW/CB/FB) **disabled** — nSHD tied directly to
-  GND (it has an internal pull-up, so floating would enable it; must be actively
-  pulled low), VIN/SW/CB/FB left no_connect.
-- CAL tied directly to GND (auto offset calibration also runs automatically; the
-  dedicated pin is only needed for manual re-trigger, not implemented here to save a
-  GPIO — see the MCU pin-map correction below).
-- 6× hardware PWM pins (INHA/INLA/INHB/INLB/INHC/INLC) to ESP32 GPIOs — **these are
-  required even on the SPI variant** (SPI is config/telemetry only, PWM switching is
-  always via these dedicated pins) — each with its own 10kΩ pull-down so gates default
-  off before the MCU's firmware configures its GPIOs.
-- ENABLE: 10kΩ pull-down (defaults to sleep/safe) + ESP32 GPIO (global label).
-- SPI (SCLK/SDI/SDO/nSCS) to ESP32 GPIOs; SDO (open-drain) gets its own 10kΩ pull-up
-  to +3V3_MCU.
-- nFAULT → ESP32 GPIO (pull-up already placed on the MCU Core sheet, shared net).
-- SOA/SOB/SOC (per-phase current-sense amp outputs) → ESP32 ADC-capable GPIOs.
-- SPA/SNA/SPB/SNB/SPC/SNC + GHx/SHx/GLx → Power Stage sheet (global labels).
-
-### Power Stage — as built (PowerStage.kicad_sch)
-- Q2–Q7: **NTMFS006N08MC** (80V, 82A, 6mΩ) — 3× half-bridges (2 FETs each: Q2/Q3=A,
-  Q4/Q5=B, Q6/Q7=C), D/S/G wired to +VBUS_PROT / SHx / GHx,GLx per DRV8323.
-- RS1/RS2/RS3: **2 mOhm 1Watt** (Resistors_ShuntResistors) — real 4-terminal Kelvin
-  shunt symbols (2 force pads + 2 sense pads sharing pin numbers 1/1 and 2/2 — another
-  vendor-symbol quirk like DRV8323's, but this one's *intentional*: it's how a real
-  Kelvin shunt part is modeled). SPx/SNx → DRV8323's current-sense pins; the SNx/GND
-  merge point is the single physical tie between the Kelvin sense net and the ground
-  plane.
-- U8: **TMP235A4DCKR** (Sensors_Temperature) — VDD/GND to rails, VOUT → `TEMP_SENSE`
-  (shared net with MCU Core's SENSOR_VN ADC input).
-- J5/J6/J7: **7770** (M3, 15A) screw terminals — phase A/B/C motor outputs, tied to
-  each half-bridge's SHx (switch node).
-- C29/C30 (10µF/75V) + C31/C32 (100µF Al-polymer): hot-loop + DC-bus bulk decoupling
-  across +VBUS_PROT/GND, distributed near the half-bridges (`LAYOUT` note).
-
-### Current Sensing — as built (CurrentSensing.kicad_sch)
-- RS4: **5 mOhm** (Resistors_ShuntResistors, same real 4-terminal Kelvin part as the
-  phase shunts) in series in the DC bus: eFuse `OUT` → renamed net `+VBUS_EFUSE_OUT`
-  → RS4 → `+VBUS_PROT` (the net every other sheet already consumes). This required
-  renaming the eFuse's own OUT-pin labels on the Power Supply sheet from
-  `+VBUS_PROT` to `+VBUS_EFUSE_OUT` so the shunt sits properly in series.
-- U9: **INA240A4DR** (200V/V gain) — IN+/IN- across RS4, REF1/REF2 tied to GND
-  (unidirectional config — DC bus current only ever flows one way), powered from
-  +3V3_MCU, OUT → `IBUS_SENSE` (shared net with MCU Core's SENSOR_VP ADC input).
-
-### Communication — as built (Communication.kicad_sch)
-- U10: **SN65HVD230DR** (3.3V-native CAN transceiver) — D/R to ESP32 TWAI GPIOs
-  (CAN_TX/CAN_RX), RS tied directly to GND (max slew-rate/high-speed mode), VREF
-  left unconnected (not needed externally).
-- D2/D3: **SP0115-01UTG** (TVS, one per line) on CANH/CANL for ESD/bus-fault
-  protection.
-- J8: 1x4 header (Connectors_SignalConnectors, `384471-E`) — CANH/CANL/GND/
-  +VBUS_PROT (doubles as a shared power+data connector for daisy-chaining multiple
-  ESCs on one bus).
-
-## Final ERC status (whole-hierarchy, `ESC3Phase.kicad_sch`)
-
-3 errors remain, all the same benign/expected pattern (a net with two `power_out`- or
-`output`-typed pins tied together — always because a real datasheet-recommended
-parallel-pin connection, or a PWR_FLAG coexisting with a real driver): eFuse's two
-`OUT` pins, DRV8323's IMON-adjacent pin, and the `+5V_LOGIC` PWR_FLAG sitting on the
-same net as the buck inductor's real output. Remaining warnings are the intentional
-GND/Kelvin-sense net merges and a handful of "Bidirectional tied to Power output"
-notices inherent to half-bridge topology (a switch node is legitimately driven from
-both a FET's power path and treated as bidirectional by the gate driver's SHx pin
-type) — none of these represent a wiring defect.
-
-**8x PWR_FLAG markers** (`#FLG1`–`#FLG8`) are scattered across the sheets, one per
-net that has no `power_out`/`power_in`-satisfying driver pin *by ERC's pin-type
-bookkeeping* even though it's genuinely driven in the real circuit (pass-through FETs,
-shunts, self-referenced IC pins). This is standard KiCad practice for these topologies,
-not a design defect.
-
-**Vendor library defects found and worked around** (all in PowerLabKiCadLibraries,
-not introduced by this design — worth reporting/fixing upstream):
-1. `PTPS16890VMAR` (eFuse): pin 20 defined twice (`SWEN` and `WP#` at two different
-   physical locations); true pin 21 (`WP#`'s real datasheet number) doesn't exist.
-2. `2 mOhm 1Watt` / `5 mOhm ` (shunt resistors): this one is *correct*, not a bug —
-   real 4-terminal Kelvin parts, force and sense pads intentionally share pin
-   numbers 1/1 and 2/2 at different physical locations. Just needed a second label
-   pass per part, same mechanism as issue 1 but not an actual defect.
-3. `TMP235A4DCKR` (temperature sensor): all three pins (VDD/GND/**VOUT**) are typed
-   `input` in the symbol — VOUT should be `output`. Harmless for schematic capture but
-   trips ERC's "undriven net" check; worked around with a PWR_FLAG on `TEMP_SENSE`.
-4. `8-PowerTDFN(5x6mm)` (used by Q1–Q7, all phase/reverse-polarity MOSFETs): the
-   footprint's overall bounding box, as reported by the PCB API, is both larger than
-   and offset from its own pads (confirmed on Q1: pads span x[39.667, 45.667], the
-   reported "raw" bbox spans x[43.0065, 52.167] — a range that doesn't even fully
-   contain the pads). This makes `check_courtyard_overlaps` flag phantom overlaps
-   with nearby passives (Q1 vs R13/R15/C20 in this design) that don't correspond to
-   any real pad or copper collision — confirmed directly by comparing `pads_bbox` for
-   each pair (they clear by 0.3mm+ every time). Likely an oversized/misplaced graphic
-   on the footprint's F.Fab or assembly-drawing layer. Treat `check_courtyard_overlaps`
-   results for this footprint as informative, not authoritative — verify against
-   `pads_bbox` or KiCad's own 3D/2D view before treating a flagged pair as real.
-5. `2 mOhm 1Watt` / `5 mOhm ` (shunt resistors) footprint only exposes **2** physical
-   copper pads, but the schematic symbol has **4** pins (force+/force−/sense+/sense−).
-   KiCad's pin-to-pad mapping collapses force+ and sense+ onto the same pad (and
-   likewise for the minus side), which is fine for force+ (`SPA`/`SPB`/`SPC`) since
-   that pad carries the real net — but it means the sense pins (`SNA`/`SNB`/`SNC`)
-   end up with **no footprint pad at all** anywhere on the board except the DRV8323's
-   own pin. There is nothing to route them to: true 4-wire Kelvin sensing isn't
-   physically realizable with this footprint. `SNA`/`SNB`/`SNC` are left unrouted
-   for this reason — not an oversight. Fixing this for real needs either a shunt
-   footprint with separate Kelvin tap pads, or accepting 2-wire (non-Kelvin) sensing
-   by tying `SNx` to the shunt's low-side pad in the schematic instead.
-
-## ESP32-WROOM-32E pin map
-
-| Pad | Name | Assignment |
+| Page | Sheet | Content |
 |---|---|---|
-| 1 | GND | GND |
-| 2 | 3V3 | +3V3_MCU |
-| 3 | EN | EN (pull-up + RESET button) |
-| 4 | SENSOR_VP (ADC1_CH0) | INA240 OUT (DC-bus current) |
-| 5 | SENSOR_VN (ADC1_CH3) | TMP235 OUT (temperature) |
-| 6 | IO34 (ADC1_CH6, in-only) | SOC (DRV8323 phase-C current sense) |
-| 7 | IO35 (ADC1_CH7, in-only) | spare (no_connect — input-only pin, can't drive a PWM output) |
-| 8 | IO32 (ADC1_CH4) | SOA (DRV8323 phase-A current sense) |
-| 9 | IO33 (ADC1_CH5) | SOB (DRV8323 phase-B current sense) |
-| 10 | IO25 | EXP1 (expansion header — encoder/hall A) |
-| 11 | IO26 | EXP2 (encoder/hall B) |
-| 12 | IO27 | EXP3 (encoder/hall Z) |
-| 13 | IO14 | ENABLE (DRV8323) |
-| 14 | IO12 (MTDI, strap) | INLB → DRV8323 PWM (safe: DRV8323 input is high-Z, doesn't disturb the boot-strap read) |
-| 15 | GND | GND |
-| 16 | IO13 | INHA → DRV8323 PWM |
-| 17–22 | NC ×6 | no_connect (internal SPI flash, not led out) |
-| 23 | IO15 (MTDO, strap) | nFAULT (DRV8323, pull-up — matches safe strap default) |
-| 24 | IO2 (strap, don't-care in SPI boot mode) | INLA → DRV8323 PWM |
-| 25 | IO0 (strap) | BOOT button + pull-up |
-| 26 | IO4 | INHB → DRV8323 PWM |
-| 27 | IO16 | INHC → DRV8323 PWM |
-| 28 | IO17 | INLC → DRV8323 PWM |
-| 29 | IO5 (VSPICS0) | nSCS → DRV8323 SPI |
-| 30 | IO18 (VSPICLK) | SCLK → DRV8323 SPI |
-| 31 | IO19 (VSPIQ/MISO) | SDO ← DRV8323 SPI |
-| 32 | NC | no_connect |
-| 33 | IO21 | CAN_TX → SN65HVD230 |
-| 34 | RXD0 (GPIO3) | UART0 RX (header + control link) |
-| 35 | TXD0 (GPIO1) | UART0 TX (header + control link) |
-| 36 | IO22 | CAN_RX ← SN65HVD230 |
-| 37 | IO23 (VSPID/MOSI) | SDI → DRV8323 SPI |
-| 38 | GND | GND |
+| 1 | Overview (root) | specs, block diagram, revision history, sheet symbols |
+| 2 | Power Input & Protection | J3/J4, SMBJ36CA, LM74700-Q1 + Q1, TPS16890 eFuse |
+| 3 | Power Supply 3.3 V | LMR38020 buck, +3V3_MCU, ferrite-filtered +3V3_A, power LED |
+| 4 | DC-Bus Current Sensing | 5 mΩ shunt, net-tie Kelvin taps, INA240A1 |
+| 5 | MCU Core | ESP32-WROOM-32E, EN/BOOT, UART J1, expansion J2, status LED, ADC filters |
+| 6 | Gate Drive | DRV8323RS with charge pump, CSA reference, pull-ups/downs |
+| 7 | Power Stage | bulk caps, TMP235, 3× Half Bridge (one sub-sheet reused) |
+| 8–10 | Half Bridge A/B/C | 2× NTMFS006N08MC, 2 mΩ shunt, 2 net ties, phase terminal, hot-loop caps |
+| 11 | Communication | SN65HVD230, split termination, CAN ESD, J8 |
 
-## Correction after reading the real DRV8323R datasheet (TI SLVSDJ3D)
+## Rails
+`VIN_RAW` (connector) → `+VBUS` (after reverse-polarity FET) → `+VBUS_EFUSE` (eFuse out) → DC shunt →
+`+VBUS_PROT` (motor bus, DRV8323 VM, buck input) → `+3V3_MCU` (buck) → `+3V3_A` (ferrite-filtered: DRV8323
+VREF, INA240, TMP235). Single `GND`.
 
-The initial MCU pin map (above, now corrected) was wrong in two ways, caught only after
-fetching the actual DRV8323R datasheet before wiring Gate Drive:
-- **DRV8323R has no separate "nSLEEP" pin.** `ENABLE` alone controls sleep (low = sleep).
-  What I'd labeled `nSLEEP` on IO13 was fictitious; IO13 is reassigned to `INHA`.
-- **DRV8323R needs 6 direct hardware PWM pins** (INHA/INLA/INHB/INLB/INHC/INLC) —
-  separate from SPI, and required even on the "S" (SPI) variant, since SPI is only for
-  configuration/telemetry, not per-cycle switching. I'd completely missed these in the
-  first pass. Freed up by tying `CAL` directly to GND instead of routing it to a
-  dedicated MCU pin (auto-offset-calibration also runs automatically per the datasheet;
-  a hardware CAL pulse is an optional extra, not required), and reassigning the
-  now-nonexistent-nSLEEP pin. All 6 PWM pins get their own 10kΩ pull-down (Gate Drive
-  sheet) so the driver's gate inputs default low/safe before the MCU's firmware
-  configures its GPIOs as outputs.
+## Design details (datasheet references)
+### Power Input — TI SNOSD17G (LM74700-Q1), SLVSHO1A (TPS1689x), Diodes DS19002 (SMBJ)
+- **D10 SMBJ36CA:** 36 V standoff, 58.1 V clamp at 10.3 A. That stays below the 65 V limits of LM74700 ANODE
+  and DRV8323 VM. SMBJ48CA (77.4 V clamp) was too high.
+- **U2 LM74700-Q1 + Q1:** MOSFET source on the input (ANODE), drain on the output (CATHODE). EN is tied to
+  ANODE. C11 100 nF sits between VCAP and ANODE; it is rated 16 V because VCAP–ANODE ≤ 15 V.
+- **U3 TPS16890 eFuse** (standalone):
+  - VDD filter: R10 120 Ω + C14 100 nF/100 V. TI recommends 150 Ω / 0.22 µF; these are the nearest library values.
+  - UVLO: R11 866 k / R12 118 k → 10.1 V rising. The internal VIN_UV_FLT default of 10.66 V dominates.
+  - Circuit breaker: R17 IMON 3.65 k → IOCP = 1 V / (18.18 µA/A × 3.65 k) = 15.1 A (Eq. 4–6). C16 22 pF.
+  - ILIM: R18 1.33 k (Eq. 25, N = 1). IREF: C17 1 nF.
+  - dVdT: C18 100 nF → 0.5 V/ms, about 0.13 A inrush into ~250 µF, below the 0.5 A start-up limit.
+  - WP# → GND. ADDR0/ADDR1 open (address 0x40). SWEN, AUX, TEMP and NC left open.
+  - SDA/SCL and PGOOD pulled up to 3.3 V. FLT → `EFUSE_NFLT` → ESP32 IO35.
+  - The exposed pad is **IN**, not GND.
+- Residual risk: during a surge clamped at 58 V, EN/UVLO reaches about 7 V, above its 6 V absolute maximum
+  (surge only; no zener in the library).
 
-## PCB layout status (in progress, NOT fabrication-ready)
+### Power Supply — TI SNVSC40E (LMR38020)
+- **Output 3.3 V directly.** The Rev A 5 V rail and NCP1117 were removed: NCP1117 needs 33 mΩ–2.2 Ω output ESR,
+  which ceramic caps don't give.
+- FB divider 110 k / 47 k → 3.34 V (VFB = 1.0 V).
+- RT 54.9 k → about 480 kHz. At 36 V in, the on-time is 191 ns, above the 131 ns minimum.
+- L1 4.7 µH / 8.1 A (Isat 7.4 A), above the 3.8 A high-side current limit.
+- C23/C24 47 µF/25 V + 100 nF out; C20 4.7 µF/100 V + C21 100 nF/100 V in; CBOOT 100 nF.
+- EN tied to VIN. PG pulled up to 3.3 V (TP22).
 
-Board: 100 x 115mm, 2-layer, 1mm corner radius, 4x M3 NPTH mounting holes (8mm inset
-from each edge). All 55 schematic components synced to the board with real
-footprints (every passive got an explicit footprint assignment — the library leaves
-these blank by design for multi-package parts, so this required a full pass of
-`batch_edit_schematic_components` per sheet before the PCB sync would pick them up).
+### Current Sensing — TI SBOS662C (INA240)
+- R30 5 mΩ (VMP 2010) in the bus. INA240**A1** (20 V/V) → 100 mV/A, 1.5 V at 15 A.
+- A4 (200 V/V) would saturate at 3.1 A. REF1/REF2 go to GND (unidirectional).
+- Kelvin taps through net ties NT1/NT2.
 
-**Done:**
-- Board outline, stackup (2-layer), design rules (0.2mm clearance/track, 0.6mm/0.3mm
-  via, matching the design-rules skill's 1oz-copper defaults)
-- Placement: force-directed auto-placement (`suggest_placement`) for the initial
-  layout, followed by a manual cleanup pass. Real courtyard/pad overlaps went from
-  44 down to 0 (verified pad-by-pad); 5 residual flags on the Q1 MOSFET footprint
-  are a vendor-footprint bounding-box artifact — the real copper pads clear their
-  neighbors by 0.3mm+, confirmed by comparing `pads_bbox` directly (see "Vendor
-  library defects" below). The 4 mounting holes' oversized reference/value text
-  (a `MountingHole_3.2mm` library quirk that put the string "MountingHole_3.2mm"
-  literally off the board edge) was hidden.
-- Copper pours: solid GND on both layers, plus dedicated higher-priority pours for
-  VIN_RAW, +VBUS, +VBUS_EFUSE_OUT, +VBUS_PROT, +5V_LOGIC, and +3V3_MCU in their
-  component clusters (so those rails don't need hand-routing pad-by-pad)
-- **Full net connectivity: every net on the board is now routed** — the 3 phase-output
-  traces (2mm wide), all 6 PWM gate-drive lines + pulldowns, ENABLE/nFAULT/EN, the
-  full SPI bus (SCLK/SDI/SDO/nSCS) and CAN (CAN_TX/RX, CANH/CANL + ESD diodes) and
-  UART (TXD0/RXD0) links, the 3 ADC current-sense lines (SOA/SOB/SOC) + IBUS_SENSE +
-  TEMP_SENSE, the buck converter's FB/PG/RT/BOOT/SW network, all 9 gate-driver eFuse
-  config lines, the charge-pump network (CP_CPH/CPL/VCP), VREF/DVDD decoupling, BOOT
-  strap, REVPOL_GATE, and the 3-pin expansion header (EXP1-3). `run_drc` confirms
-  zero "unconnected items" — the ratsnest is fully resolved.
+### MCU Core — Espressif ESP32-WROOM-32E datasheet v2.1 + hardware design guidelines
+- 22 µF + 100 nF at 3V3. EN: 10 k / 1 µF plus the RESET button. IO0: 10 k pull-up plus the BOOT button.
+- ADC inputs are all on ADC1. Filters are 220 pF, because the INA240 and TMP235 allow at most 1 nF load.
+- Strapping pins:
+  - IO12 (MTDI) and IO2 carry PWM lines with 10 k pull-downs, so they read low at boot (3.3 V flash, download mode possible).
+  - IO5 has a 10 k pull-up on nSCS. The DRV8323 has an internal pull-down that would otherwise fight the strap.
+  - IO15 carries NFAULT with a pull-up (high = boot log enabled).
+- Module pin 39 (exposed GND pad) is included in the footprint.
 
-**Not done / left for a follow-up session:**
-- **The new traces are NOT DRC-clean.** They were routed as direct point-to-point
-  segments (via `route_pad_to_pad`/`route_trace`) without an autorouter — Freerouting
-  is still unavailable in this environment (Java 8 present, needs Java 21; no jar
-  installed) — so straight-line traces frequently cut across existing copper pours,
-  other traces, and pads without respecting clearance. `run_drc` now reports 826
-  violations (was 732 before this pass), dominated by `clearance` (332),
-  `solder_mask_bridge` (214), `silk_over_copper` (71), `shorting_items` (60), and
-  `tracks_crossing` (44). **Net-list completeness went from ~50 unrouted nets to 0;
-  DRC cleanliness is the opposite trade — it got worse, because there's now much more
-  copper on the board and none of it dodges the pours.** This is real, necessary
-  follow-up work: either install Freerouting and re-run autoroute (it rips up and
-  redoes bad routing, unlike the direct-trace approach used here), or manually
-  rip up and re-route each flagged segment in KiCad's interactive router, which
-  natively avoids existing copper.
-- Silkscreen refinement (reference designator overlaps — `text_height`/`silk_overlap`
-  warnings), fiducials, board info/logo/QR code, ground stitching vias, and the final
-  gerber/drill/BOM/position-file export are all **not started**.
+| Pin | Name | Net | | Pin | Name | Net |
+|---|---|---|---|---|---|---|
+| 2 | 3V3 | +3V3_MCU | | 23 | IO15 | NFAULT |
+| 3 | EN | EN | | 24 | IO2 | PWM_AL |
+| 4 | SENSOR_VP | IBUS_SENSE | | 25 | IO0 | BOOT |
+| 5 | SENSOR_VN | TEMP_SENSE | | 26 | IO4 | PWM_BH |
+| 6 | IO34 | ISENSE_C | | 27 | IO16 | PWM_CH |
+| 7 | IO35 | EFUSE_NFLT | | 28 | IO17 | PWM_CL |
+| 8 | IO32 | ISENSE_A | | 29 | IO5 | SPI_NSCS |
+| 9 | IO33 | ISENSE_B | | 30 | IO18 | SPI_SCLK |
+| 10 | IO25 | EXP1 | | 31 | IO19 | SPI_SDO |
+| 11 | IO26 | EXP2 | | 33 | IO21 | CAN_TX |
+| 12 | IO27 | LED_STATUS | | 34 | RXD0 | UART_RXD |
+| 13 | IO14 | DRV_ENABLE | | 35 | TXD0 | UART_TXD |
+| 14 | IO12 | PWM_BL | | 36 | IO22 | CAN_RX |
+| 16 | IO13 | PWM_AH | | 37 | IO23 | SPI_SDI |
+| 1, 15, 38, 39 | GND | GND | | 17–22, 32 | NC | not connected |
 
-**Bottom line: the schematic is complete, correct, and ERC-clean. The PCB now has
-correct footprints, stackup, pours, zero real placement collisions, and a fully
-connected net-list — but the traces themselves are not yet DRC-clean (826
-violations, almost all clearance/crossing from unrouted-around-copper straight
-lines) and it is not ready to send to fabrication.**
+### Gate Drive — TI SLVSDJ3D (DRV8323RS)
+- VM decoupling: 100 nF/100 V + 10 µF/100 V. VDRAIN → +VBUS_PROT.
+- Charge pump: CPH–CPL 47 nF/100 V; VCP–VM 1 µF.
+- DVDD: 1 µF only. It is an internal LDO output (30 mA max) and cannot supply anything else.
+- **VREF is an input.** It is driven from +3V3_A with 100 nF. Rev A left it floating.
+- The unused integrated buck (VIN, SW, CB, FB, nSHDN, BGND) is tied to GND (Table 9-3). CAL → GND
+  (calibration is done over SPI).
+- nFAULT and SDO are open-drain, with 10 k pull-ups. PWM inputs and ENABLE have 10 k pull-downs, so they
+  default off.
+- CSA: the default gain is 20 V/V. With 2 mΩ that gives ±0.6 V around VREF/2 at ±15 A, i.e. 1.05–2.25 V.
 
-## Deviations / notes flagged to the user
-- **Power symbols vs. global labels**: the design rules say power rails should use KiCad power
-  symbols (GND, etc.) and only signal nets use global labels. Stock KiCad power symbols only
-  cover generic names (`+3.3V`, `+5V`, `GND`); our rail names are domain-specific
-  (`+3V3_MCU`, `+5V_LOGIC`, `+VBUS`) per the naming rule. Rather than author new power-symbol
-  parts, I'm using **global labels** for the named rails (electrically identical — both are
-  hierarchy-wide nets) and the stock `power:GND` symbol for ground. Flagging this as a
-  pragmatic reading of the rule, not a silent substitution.
-- Inductor value (6.8µH) and bootstrap cap values are reasonable defaults pending a datasheet
-  cross-check against TI's LMR38020 / DRV8323 reference designs during placement.
-- ESP32-WROOM-32E symbol/footprint is pending PR merge (see PR #2) — using it locally already
-  since it's registered in the local KiCad 10 library path.
+### Power Stage / Half Bridge — onsemi NTMFS006N08MC
+- 80 V MOSFETs with 4.9 mΩ typical RDS(on). Gate drive is IDRIVE (no gate resistors).
+- Low-side shunt: 2 mΩ SSA2512. Kelvin sense goes through two net ties per phase to SPx/SNx.
+- Hot-loop caps per leg: 10 µF/100 V + 100 nF/100 V. Bulk: 2× 100 µF/63 V Al-polymer.
+- TMP235 near the power stage, 10 mV/°C.
+
+### Communication — TI SLOS346O (SN65HVD230)
+- RS → GND (high speed). VREF open.
+- Split termination 2× 56 Ω + 4.7 nF. For a multi-drop bus, mark R60/R61/C61 DNP on every node except the two ends.
+- ESD: CDSOD323-T24SC (24 V) per line. SP0115 (1 V working voltage) was unsuitable.
+- J8: 1 CANH, 2 CANL, 3–4 GND.
+
+## Rev A errors fixed in Rev B
+| Rev A | Problem | Rev B |
+|---|---|---|
+| Labels on pins, off-grid | real net shorts (+5V↔36 V bus, INHA↔GND, IMON↔GND) | wires + power symbols on the 2.54 mm grid, netlist check |
+| DRV8323 VREF floating | current-sense amplifiers can't work | VREF = +3V3_A |
+| DRV8323 buck pins NC | datasheet says tie to GND | tied to GND |
+| INA240A4 | saturates at 3.1 A | INA240A1 |
+| LM5050-1, FET reversed | not reverse-polarity protection | LM74700-Q1, source on input |
+| SMBJ48CA | 77 V clamp > 65 V limits | SMBJ36CA (58 V) |
+| eFuse VDD cap 16 V, pin 20/21 mix-up | over-voltage, wrong straps | 100 V cap, pins per SLVSHO1A |
+| NCP1117 + 5 V rail | unstable with ceramic output caps | buck makes 3.3 V directly |
+| 6.8 µH / 1.87 A inductor | below the 3.8 A current limit | 4.7 µH / 8.1 A |
+| 0805 shunt part on 2010 footprint | footprint/part mismatch, no Kelvin | 2512 part, net-tie Kelvin |
+| SP0115 on CAN | conducts at 1.4 V | 24 V TVS |
+| Descriptions in Value fields | breaks BOM, rule 1.8 | library values |
+
+## PCB
+Not started in Rev B yet (next step): fresh board from this netlist, placement per rule §3.2, pours for the
+power paths, Freerouting for signals, full DRC with kicad-cli.

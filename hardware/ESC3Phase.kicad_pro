@@ -373,7 +373,7 @@
   "text_variables": {
     "DESIGNER": "Ekrem Turan Firat",
     "PROJECTNUMBER": "ESC3PHASE-001",
-    "PROJECT_NAME": "3-Phase BLDC ESC (ESP32-WROOM-32E)"
+    "PROJECT_NAME": "3-Phase BLDC ESC"
   },
   "tuning_profiles": {
     "meta": {
