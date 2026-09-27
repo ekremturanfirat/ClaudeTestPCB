@@ -114,17 +114,55 @@ per-phase bootstrap capacitors; that assumption in the original plan was wrong)
 - C29/C30 (10µF/75V) + C31/C32 (100µF Al-polymer): hot-loop + DC-bus bulk decoupling
   across +VBUS_PROT/GND, distributed near the half-bridges (`LAYOUT` note).
 
-### Current Sensing (DC bus, independent of per-phase sensing)
-- DC-bus shunt: **5 mOhm** (Resistors_ShuntResistors), in series with +VBUS after the eFuse.
-- **INA240A4DR** (200V/V gain, enhanced PWM rejection) → ESP32 ADC — total input current for
-  telemetry/redundant protection alongside the eFuse's own hardware limit.
+### Current Sensing — as built (CurrentSensing.kicad_sch)
+- RS4: **5 mOhm** (Resistors_ShuntResistors, same real 4-terminal Kelvin part as the
+  phase shunts) in series in the DC bus: eFuse `OUT` → renamed net `+VBUS_EFUSE_OUT`
+  → RS4 → `+VBUS_PROT` (the net every other sheet already consumes). This required
+  renaming the eFuse's own OUT-pin labels on the Power Supply sheet from
+  `+VBUS_PROT` to `+VBUS_EFUSE_OUT` so the shunt sits properly in series.
+- U9: **INA240A4DR** (200V/V gain) — IN+/IN- across RS4, REF1/REF2 tied to GND
+  (unidirectional config — DC bus current only ever flows one way), powered from
+  +3V3_MCU, OUT → `IBUS_SENSE` (shared net with MCU Core's SENSOR_VP ADC input).
 
-### Communication
-- **SN65HVD230DR** (3.3V-native CAN transceiver) — TXD/RXD to ESP32 TWAI-capable GPIOs, CANH/CANL
-  to bus connector.
-- **SP0115-01UTG** (TVS diode array) on CANH/CANL for ESD/bus-fault protection.
-- 1x4 header (Connectors_SignalConnectors, `384471-E`) for CANH/CANL/GND/+VBUS (or unpowered,
-  TBD) bus connector.
+### Communication — as built (Communication.kicad_sch)
+- U10: **SN65HVD230DR** (3.3V-native CAN transceiver) — D/R to ESP32 TWAI GPIOs
+  (CAN_TX/CAN_RX), RS tied directly to GND (max slew-rate/high-speed mode), VREF
+  left unconnected (not needed externally).
+- D2/D3: **SP0115-01UTG** (TVS, one per line) on CANH/CANL for ESD/bus-fault
+  protection.
+- J8: 1x4 header (Connectors_SignalConnectors, `384471-E`) — CANH/CANL/GND/
+  +VBUS_PROT (doubles as a shared power+data connector for daisy-chaining multiple
+  ESCs on one bus).
+
+## Final ERC status (whole-hierarchy, `ESC3Phase.kicad_sch`)
+
+3 errors remain, all the same benign/expected pattern (a net with two `power_out`- or
+`output`-typed pins tied together — always because a real datasheet-recommended
+parallel-pin connection, or a PWR_FLAG coexisting with a real driver): eFuse's two
+`OUT` pins, DRV8323's IMON-adjacent pin, and the `+5V_LOGIC` PWR_FLAG sitting on the
+same net as the buck inductor's real output. Remaining warnings are the intentional
+GND/Kelvin-sense net merges and a handful of "Bidirectional tied to Power output"
+notices inherent to half-bridge topology (a switch node is legitimately driven from
+both a FET's power path and treated as bidirectional by the gate driver's SHx pin
+type) — none of these represent a wiring defect.
+
+**8x PWR_FLAG markers** (`#FLG1`–`#FLG8`) are scattered across the sheets, one per
+net that has no `power_out`/`power_in`-satisfying driver pin *by ERC's pin-type
+bookkeeping* even though it's genuinely driven in the real circuit (pass-through FETs,
+shunts, self-referenced IC pins). This is standard KiCad practice for these topologies,
+not a design defect.
+
+**Vendor library defects found and worked around** (all in PowerLabKiCadLibraries,
+not introduced by this design — worth reporting/fixing upstream):
+1. `PTPS16890VMAR` (eFuse): pin 20 defined twice (`SWEN` and `WP#` at two different
+   physical locations); true pin 21 (`WP#`'s real datasheet number) doesn't exist.
+2. `2 mOhm 1Watt` / `5 mOhm ` (shunt resistors): this one is *correct*, not a bug —
+   real 4-terminal Kelvin parts, force and sense pads intentionally share pin
+   numbers 1/1 and 2/2 at different physical locations. Just needed a second label
+   pass per part, same mechanism as issue 1 but not an actual defect.
+3. `TMP235A4DCKR` (temperature sensor): all three pins (VDD/GND/**VOUT**) are typed
+   `input` in the symbol — VOUT should be `output`. Harmless for schematic capture but
+   trips ERC's "undriven net" check; worked around with a PWR_FLAG on `TEMP_SENSE`.
 
 ## ESP32-WROOM-32E pin map
 

@@ -13,7 +13,7 @@ KiCad project for a 3-phase brushless motor ESC.
 - [x] GitHub repo created
 - [x] ESP32-WROOM-32E symbol/footprint added to PowerLabKiCadLibraries (PR: odtu/PowerLabKiCadLibraries#2, pending merge)
 - [x] KiCad 10 project scaffolded (`hardware/ESC3Phase.kicad_pro`)
-- [ ] Schematic (power supply, MCU core, gate drive, power stage, current sensing, communication)
+- [x] Schematic (power supply, MCU core, gate drive, power stage, current sensing, communication) — see [hardware/ARCHITECTURE.md](hardware/ARCHITECTURE.md)
 - [ ] PCB layout
 - [ ] DRC / ERC clean, fab outputs
 

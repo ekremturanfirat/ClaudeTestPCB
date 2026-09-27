@@ -12033,26 +12033,6 @@
 		)
 		(uuid "1efb66b6-d731-478d-bc35-0839b874e359")
 	)
-	(global_label "+VBUS_PROT"
-		(at 133.35 13.969999999999999 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "fa9e488f-e207-4ed7-939b-17485a446a86")
-	)
-	(global_label "+VBUS_PROT"
-		(at 133.35 16.509999999999998 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "94c7097f-bf1c-46e6-b75f-f2f4604e341a")
-	)
 	(label "EFUSE_VDD"
 		(at 95.25 34.29 180)
 		(effects
@@ -13178,6 +13158,113 @@
 			(justify right)
 		)
 		(uuid "a2517919-b347-430e-bd52-b9c77ea42082")
+	)
+	(global_label "+VBUS_EFUSE_OUT"
+		(at 133.35 13.969999999999999 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6d3cc30a-5fc4-47d4-8cd1-57f9c39de1f9")
+	)
+	(global_label "+VBUS_EFUSE_OUT"
+		(at 133.35 16.509999999999998 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "12999cc5-92c1-4759-9a6a-46f8c3b2caea")
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 160.02 30.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "95cef659-03ab-4725-82c8-9c414e773fff")
+		(property "Reference" "#FLG5"
+			(at 160.02 32.385 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 160.02 34.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 160.02 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "588fb3ac-aa5a-47ca-992a-0d7bdefa8d93")
+		)
+		(instances
+			(project "ESC3Phase"
+				(path "/346bb8fa-d8d5-4112-bc90-d433fe541041"
+					(reference "#FLG5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "+5V_LOGIC"
+		(at 160.02 30.48 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a503991f-c0a4-4b58-84b4-5bda462eba2a")
 	)
 	(sheet_instances
 		(path "/"
