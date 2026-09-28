@@ -16,7 +16,7 @@ KiCad project for a 3-phase brushless motor ESC.
 - [x] Schematic Rev B: full rebuild per the PowerLab rules; kicad-cli ERC 0 errors, netlist verified (see [hardware/ARCHITECTURE.md](hardware/ARCHITECTURE.md))
 - [x] Library fixes found during layout (exposed pads, mask margins, logo/QR graphics, ESP32 3D model): odtu/PowerLabKiCadLibraries#5 (merged)
 - [x] PCB Rev B: 4 layers, 100 × 90 mm; kicad-cli DRC 0 errors / 0 unconnected / 0 parity (see [hardware/ARCHITECTURE.md](hardware/ARCHITECTURE.md#pcb-rev-b))
-- [ ] Fab outputs (Gerber, drill, BOM, position file)
+- [x] Fab outputs: Gerber + drill zip, BOM, position file, assembly drawings in [hardware/fab](hardware/fab/README.md)
 
 ![PCB top](hardware/docs/ESC3Phase_top.png)
 

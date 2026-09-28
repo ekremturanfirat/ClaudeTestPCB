@@ -242,6 +242,7 @@ VREF, INA240, TMP235). Single `GND`.
 - **Hand soldering:** power pads connect solid to their pours. The screw terminals are THT with solid
   connections, so a larger soldering iron is needed.
 
-### Still to do
-- Fab outputs: Gerber, drill, BOM and position file.
-- Printed 1:1 footprint check.
+### Fab outputs
+Gerber + drill zip, BOM, position file and assembly drawings are in [fab/](fab/README.md). All share one
+origin, the board's bottom-left corner. Before ordering: check the Gerbers in a viewer, print the layout 1:1
+to check the footprints, and scan the QR code.
