@@ -14,8 +14,11 @@ KiCad project for a 3-phase brushless motor ESC.
 - [x] ESP32-WROOM-32E added to PowerLabKiCadLibraries (odtu/PowerLabKiCadLibraries#2, merged)
 - [x] Library additions + fixes (power symbols, mounting holes, fiducials, test pads, net ties, ESP32 footprint fix): odtu/PowerLabKiCadLibraries#3 (open)
 - [x] Schematic Rev B: full rebuild per the PowerLab rules; kicad-cli ERC 0 errors, netlist verified (see [hardware/ARCHITECTURE.md](hardware/ARCHITECTURE.md))
-- [ ] PCB layout (Rev B)
-- [ ] DRC clean, fab outputs
+- [x] Library fixes found during layout (exposed pads, mask margins, logo/QR graphics, ESP32 3D model): odtu/PowerLabKiCadLibraries#5 (open)
+- [x] PCB Rev B: 4 layers, 100 × 90 mm; kicad-cli DRC 0 errors / 0 unconnected / 0 parity (see [hardware/ARCHITECTURE.md](hardware/ARCHITECTURE.md#pcb-rev-b))
+- [ ] Fab outputs (Gerber, drill, BOM, position file)
+
+![PCB top](hardware/docs/ESC3Phase_top.png)
 
 ## Layout
 - `hardware/` — KiCad project

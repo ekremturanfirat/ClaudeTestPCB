@@ -141,20 +141,20 @@
       "rules": {
         "max_error": 0.005,
         "min_clearance": 0.2,
-        "min_connection": 0.0,
+        "min_connection": 0.2,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
-        "min_hole_to_hole": 0.25,
-        "min_microvia_diameter": 0.2,
-        "min_microvia_drill": 0.1,
+        "min_hole_to_hole": 0.4,
+        "min_microvia_diameter": 0.6,
+        "min_microvia_drill": 0.3,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
+        "min_text_height": 1.0,
+        "min_text_thickness": 0.15,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
-        "min_via_annular_width": 0.1,
+        "min_track_width": 0.15,
+        "min_via_annular_width": 0.15,
         "min_via_diameter": 0.6,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
@@ -258,128 +258,6 @@
   },
   "cvpcb": {
     "equivalence_files": []
-  },
-  "libraries": {
-    "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
-  },
-  "meta": {
-    "filename": "ESC3Phase.kicad_pro",
-    "version": 3
-  },
-  "net_settings": {
-    "classes": [
-      {
-        "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "Default",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2147483647,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.3,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "GND",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgb(0, 0, 255)",
-        "track_width": 0.5,
-        "tuning_profile": "",
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
-        "wire_width": 12
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.3,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "Power",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgb(255, 0, 0)",
-        "track_width": 0.5,
-        "tuning_profile": "",
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
-        "wire_width": 12
-      }
-    ],
-    "meta": {
-      "version": 5
-    },
-    "net_colors": null,
-    "netclass_assignments": null,
-    "netclass_patterns": [
-      {
-        "netclass": "GND",
-        "pattern": "*GND*"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "+*"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "-*"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "VBUS*"
-      }
-    ]
-  },
-  "pcbnew": {
-    "last_paths": {
-      "idf": "",
-      "netlist": "",
-      "plot": "",
-      "specctra_dsn": "",
-      "step": "",
-      "vrml": ""
-    },
-    "page_layout_descr_file": ""
-  },
-  "schematic": {
-    "bus_aliases": {},
-    "legacy_lib_dir": "",
-    "legacy_lib_list": [],
-    "top_level_sheets": [],
-    "page_layout_descr_file": "METUPowerLab_KiCadSchematicTemplate.kicad_wks"
-  },
-  "sheets": [],
-  "text_variables": {
-    "DESIGNER": "Ekrem Turan Firat",
-    "PROJECTNUMBER": "ESC3PHASE-001",
-    "PROJECT_NAME": "3-Phase BLDC ESC"
-  },
-  "tuning_profiles": {
-    "meta": {
-      "version": 0
-    },
-    "tuning_profiles_impedance_geometric": []
   },
   "erc": {
     "erc_exclusions": [],
@@ -604,5 +482,224 @@
       "unresolved_variable": "error",
       "wire_dangling": "error"
     }
+  },
+  "libraries": {
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
+  },
+  "meta": {
+    "filename": "ESC3Phase.kicad_pro",
+    "version": 3
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2147483647,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "GND",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgb(0, 0, 255)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 12
+      },
+      {
+        "clearance": 0.6,
+        "name": "HV",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "tuning_profile": "",
+        "via_diameter": 0.8,
+        "via_drill": 0.4
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgb(255, 0, 0)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 12
+      }
+    ],
+    "meta": {
+      "version": 5
+    },
+    "net_colors": null,
+    "netclass_assignments": null,
+    "netclass_patterns": [
+      {
+        "netclass": "HV",
+        "pattern": "VIN_RAW"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "+VBUS"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "+VBUS_EFUSE"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "+VBUS_PROT"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "PHASE_A"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "PHASE_B"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "PHASE_C"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "GHA"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "GHB"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "GHC"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/Gate Drive/VCP"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/Gate Drive/CPH"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/Gate Drive/CPL"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/DC-Bus Current Sensing/IBUS_SNS_P"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/DC-Bus Current Sensing/IBUS_SNS_N"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/Power Input & Protection/EFUSE_VDD"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/Power Input & Protection/REVPOL_GATE"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/Power Input & Protection/LM_VCAP"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/Power Supply 3.3 V/BUCK_SW"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/Power Supply 3.3 V/BUCK_BOOT"
+      },
+      {
+        "netclass": "GND",
+        "pattern": "*GND*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "-*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "VBUS*"
+      }
+    ]
+  },
+  "pcbnew": {
+    "last_paths": {
+      "idf": "",
+      "netlist": "",
+      "plot": "",
+      "specctra_dsn": "",
+      "step": "",
+      "vrml": ""
+    },
+    "page_layout_descr_file": ""
+  },
+  "schematic": {
+    "bus_aliases": {},
+    "legacy_lib_dir": "",
+    "legacy_lib_list": [],
+    "page_layout_descr_file": "METUPowerLab_KiCadSchematicTemplate.kicad_wks",
+    "top_level_sheets": [
+      {
+        "filename": "ESC3Phase.kicad_sch",
+        "name": "ESC3Phase",
+        "uuid": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  "sheets": [],
+  "text_variables": {
+    "DESIGNER": "Ekrem Turan Firat",
+    "PROJECTNUMBER": "ESC3PHASE-001",
+    "PROJECT_NAME": "3-Phase BLDC ESC"
+  },
+  "tuning_profiles": {
+    "meta": {
+      "version": 0
+    },
+    "tuning_profiles_impedance_geometric": []
   }
 }

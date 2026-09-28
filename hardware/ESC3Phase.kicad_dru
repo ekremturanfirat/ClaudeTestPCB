@@ -1,0 +1,51 @@
+(version 1)
+
+# METU PowerLab rules 3.3: nets that can reach 31-100 V (the 12-36 V bus, phases, gate/bootstrap/charge-pump
+# nets) are in net class HV with 0.6 mm clearance (IPC-2221B B2, outer layer, uncoated).
+#
+# Waivers (documented in hardware/ARCHITECTURE.md):
+#  1. Pad to pad: the parts' own pad geometry is below 0.6 mm (HV) / 0.3 mm (Power, GND) (0603/1206 caps across the bus, DRV8323 QFN
+#     0.5 mm pitch, TPS16890 LQFN, LM74700 SOT-23-6, MOSFET gate pin next to the source pins). Pads of
+#     different parts are placed >= 1.0 mm apart (hand-soldering rule 3.2), so this only relaxes pads that
+#     belong to one footprint.
+#  2. Inside the named HV_FANOUT_* rule areas (gate-driver cluster, eFuse, LM74700, MOSFET gate pins) tracks
+#     have to leave pins that are closer than the class clearance; there it falls back to the fab minimum.
+
+(rule "Pads of one part"
+    (condition "A.Type == 'Pad' && B.Type == 'Pad'")
+    (constraint clearance (min 0.2mm)))
+
+(rule "HV fan-out at fine-pitch parts"
+    (condition "(A.intersectsArea('HV_FANOUT_U6') || A.intersectsArea('HV_FANOUT_U3') || A.intersectsArea('HV_FANOUT_U2') || A.intersectsArea('HV_FANOUT_Q1') || A.intersectsArea('HV_FANOUT_U8') || A.intersectsArea('HV_FANOUT_U4') || A.intersectsArea('HV_FANOUT_Q2') || A.intersectsArea('HV_FANOUT_Q3') || A.intersectsArea('HV_FANOUT_Q4') || A.intersectsArea('HV_FANOUT_Q5') || A.intersectsArea('HV_FANOUT_Q6') || A.intersectsArea('HV_FANOUT_Q7'))")
+    (constraint clearance (min 0.2mm)))
+
+# Net ties are the Kelvin taps of the current shunts: their two pads are different nets by design.
+(rule "Net tie pads"
+    (condition "A.memberOfFootprint('NT*') || B.memberOfFootprint('NT*')")
+    (constraint clearance (min 0.2mm)))
+
+# Waiver 3: HV net pairs that never have more than ~12 V between them (IPC-2221B spacing depends on the
+# voltage between the two conductors): gate <-> its own phase (VGS), VCP <-> VM (charge pump +11 V),
+# buck BOOT <-> SW (5 V), LM74700 gate/VCAP <-> its input (<= 15 V), DC-shunt sense <-> the bus (< 0.1 V),
+# eFuse VDD filter <-> its input.
+(rule "Low-voltage HV pairs"
+    (condition "(A.NetName == 'GHA' && B.NetName == 'PHASE_A') || (A.NetName == 'PHASE_A' && B.NetName == 'GHA') || (A.NetName == 'GHB' && B.NetName == 'PHASE_B') || (A.NetName == 'PHASE_B' && B.NetName == 'GHB') || (A.NetName == 'GHC' && B.NetName == 'PHASE_C') || (A.NetName == 'PHASE_C' && B.NetName == 'GHC') || (A.NetName == '/Gate Drive/VCP' && B.NetName == '+VBUS_PROT') || (A.NetName == '+VBUS_PROT' && B.NetName == '/Gate Drive/VCP') || (A.NetName == '/Power Supply 3.3 V/BUCK_BOOT' && B.NetName == '/Power Supply 3.3 V/BUCK_SW') || (A.NetName == '/Power Supply 3.3 V/BUCK_SW' && B.NetName == '/Power Supply 3.3 V/BUCK_BOOT') || (A.NetName == '/Power Input & Protection/REVPOL_GATE' && B.NetName == 'VIN_RAW') || (A.NetName == 'VIN_RAW' && B.NetName == '/Power Input & Protection/REVPOL_GATE') || (A.NetName == '/Power Input & Protection/REVPOL_GATE' && B.NetName == '+VBUS') || (A.NetName == '+VBUS' && B.NetName == '/Power Input & Protection/REVPOL_GATE') || (A.NetName == '/Power Input & Protection/LM_VCAP' && B.NetName == 'VIN_RAW') || (A.NetName == 'VIN_RAW' && B.NetName == '/Power Input & Protection/LM_VCAP') || (A.NetName == '/Power Input & Protection/EFUSE_VDD' && B.NetName == '+VBUS') || (A.NetName == '+VBUS' && B.NetName == '/Power Input & Protection/EFUSE_VDD') || (A.NetName == '/DC-Bus Current Sensing/IBUS_SNS_P' && B.NetName == '+VBUS_EFUSE') || (A.NetName == '+VBUS_EFUSE' && B.NetName == '/DC-Bus Current Sensing/IBUS_SNS_P') || (A.NetName == '/DC-Bus Current Sensing/IBUS_SNS_N' && B.NetName == '+VBUS_PROT') || (A.NetName == '+VBUS_PROT' && B.NetName == '/DC-Bus Current Sensing/IBUS_SNS_N') || (A.NetName == '/DC-Bus Current Sensing/IBUS_SNS_P' && B.NetName == '/DC-Bus Current Sensing/IBUS_SNS_N') || (A.NetName == '/DC-Bus Current Sensing/IBUS_SNS_N' && B.NetName == '/DC-Bus Current Sensing/IBUS_SNS_P') || (A.NetName == '/DC-Bus Current Sensing/IBUS_SNS_P' && B.NetName == '+VBUS_PROT') || (A.NetName == '+VBUS_PROT' && B.NetName == '/DC-Bus Current Sensing/IBUS_SNS_P') || (A.NetName == '/DC-Bus Current Sensing/IBUS_SNS_N' && B.NetName == '+VBUS_EFUSE') || (A.NetName == '+VBUS_EFUSE' && B.NetName == '/DC-Bus Current Sensing/IBUS_SNS_N') || (A.NetName == '+VBUS_EFUSE' && B.NetName == '+VBUS_PROT') || (A.NetName == '+VBUS_PROT' && B.NetName == '+VBUS_EFUSE')")
+    (constraint clearance (min 0.2mm)))
+
+# Inner layers (4-layer board): IPC-2221B B1 internal conductors, 31-100 V -> 0.1 mm, so the fab minimum
+# (0.2 mm) applies there.
+(rule "HV inner layers"
+    (layer inner)
+    (condition "A.hasNetclass('HV') || B.hasNetclass('HV')")
+    (constraint clearance (min 0.2mm)))
+
+# Lab default track width 0.2 mm (rule 2.2); the board minimum is PCBWay's 0.15 mm floor, allowed only where
+# a fine-pitch pad forces a neck-down (the fan-out areas).
+(rule "Lab default track width"
+    (condition "A.Type == 'Track' && !(A.intersectsArea('HV_FANOUT_U6') || A.intersectsArea('HV_FANOUT_U3') || A.intersectsArea('HV_FANOUT_U2') || A.intersectsArea('HV_FANOUT_U8') || A.intersectsArea('HV_FANOUT_U4'))")
+    (constraint track_width (min 0.2mm)))
+
+# Small GND pads that also have their own via to the L2 plane: one thermal spoke to a fill is enough.
+(rule "GND thermal spokes"
+    (condition "A.NetName == 'GND'")
+    (constraint min_resolved_spokes 1))

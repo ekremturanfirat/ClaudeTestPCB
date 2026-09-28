@@ -135,6 +135,113 @@ VREF, INA240, TMP235). Single `GND`.
 | SP0115 on CAN | conducts at 1.4 V | 24 V TVS |
 | Descriptions in Value fields | breaks BOM, rule 1.8 | library values |
 
-## PCB
-Not started in Rev B yet (next step): fresh board from this netlist, placement per rule §3.2, pours for the
-power paths, Freerouting for signals, full DRC with kicad-cli.
+## PCB (Rev B)
+![Top](docs/ESC3Phase_top.png)
+
+### Verification (kicad-cli 10.0.5, zones refilled, schematic parity on)
+- **DRC: 0 errors, 0 unconnected, 0 parity issues.**
+- **Corners:** no track corner is sharper than 45° (rule 3.3). A script checks every track joint.
+- **2 warnings, both explained:** the ESP32 silk outline extends past the board edge. The antenna overhangs
+  the top edge on purpose, and silk off the board is simply not printed.
+
+### Board
+- **Size:** 100 × 90 mm, 1 mm corner radius, 4 × M3 NPTH holes, 3 fiducials.
+- **Layers (4, approved by the user for routing density and a solid ground reference):**
+
+  | Layer | Use |
+  |---|---|
+  | L1 | parts and signals |
+  | L2 | solid GND plane |
+  | L3 | signals, then a GND fill |
+  | L4 | signals, then a GND fill |
+
+- **Stackup:** 1.6 mm, 1 oz copper on all layers, FR-4, lead-free HASL, green mask and white silk. This is the
+  PCBWay standard 4-layer spec. The 4 layers themselves are the only surcharge.
+
+### Floor plan (rule 3.2)
+- **Top edge:**
+  - ESP32 module, with the antenna over the edge
+  - UART header J1
+  - expansion header J2
+  - CAN connector J8, with the SN65HVD230 transceiver, ESD diodes and split termination below it
+- **Left side:** the 3.3 V buck (LMR38020), then the INA240 with its DC-bus shunt R30.
+- **Bottom left:** input terminals J4 (GND) and J3 (VIN). Power flows up through the TVS, the
+  reverse-polarity FET Q1 with the LM74700 and the TPS16890 eFuse, then R30, into the bus.
+- **Right side:** the DRV8323 sits above three half-bridge columns at 16.25 mm pitch. Each column has the
+  high-side FET, the low-side FET, and a 2512 shunt with net-tie Kelvin taps.
+  - Hot-loop caps (10 µF + 100 nF) sit right above each high-side drain.
+  - Two 100 µF bulk caps sit at the left end of the bus.
+  - Phase terminals J5–J7 (A/B/C) are on the bottom edge.
+- **Decoupling:** every cap is at its IC pin. A placement checker enforces 1 mm pad-to-pad between parts and
+  the mounting-hole keepouts, because the library parts have no courtyards.
+
+### Copper
+- **Pours (L1):**
+  - `+VBUS_PROT`: a 7.5 mm band over all three drains, with a spur to the bulk caps
+  - phase node plus a ~5.5 mm lane to each terminal
+  - low-side source into each shunt
+  - `VIN_RAW`, `+VBUS` and `+VBUS_EFUSE` along the input chain
+- **GND:** L2 is solid; L1, L3 and L4 are filled. Every SMD GND pad has its own via to the plane. There are
+  stitching vias on a 5 mm grid and along the edges.
+- **Hand-routed DRV8323 gate drive.** Each gate runs as a pair with its own phase-sense return, with 0.6 mm to
+  everything else.
+  - Phase A: left pins → L1 → under the bus band on L4 → back up into the lane beside its FETs.
+  - Phase C: east on L1 above the band, then the same crossing.
+  - Phase B: its pins leave in the reverse order of its lane, so it runs on L4 and pops up with a via at each
+    target.
+  - The charge-pump, VCP and VM caps sit at their pins.
+- **Other routing:**
+  - Freerouting 2.4.1 routed the logic; a small grid router with exact clearances did the last four
+    connections.
+  - 90° corners were mitered to 45°.
+  - Router neck-downs were widened to the 0.2 mm lab default, except where a fine-pitch pad needs PCBWay's
+    0.15 mm floor. That applies to one segment.
+
+### 36 V clearance (rules 2.6 / 3.3) — `ESC3Phase.kicad_dru`
+- **Net class `HV`:** 0.6 mm clearance (IPC-2221B B2, outer layers, 31–100 V). It covers the bus nets
+  (`VIN_RAW`, `+VBUS*`), the phases, and the gate, bootstrap and charge-pump nets. Inner layers use 0.2 mm
+  (B1 allows 0.1 mm, so the fab minimum applies).
+- **Waivers (documented in the rules file):**
+  1. **Pads within one part.** The parts' own pad geometry is below 0.6 mm (0603 caps across the bus,
+     0.5 mm-pitch QFN). Pads of different parts are ≥ 1.0 mm apart.
+  2. **Fine-pitch fan-out areas (`HV_FANOUT_*` rule areas).** These cover the DRV8323 cluster, the eFuse,
+     the LM74700, the buck, the TMP235 and the MOSFET gate pins. The user said to ignore the ICs for this
+     rule.
+  3. **HV net pairs with ≤ ~12 V between them:** gate ↔ its own phase, VCP ↔ VM, BOOT ↔ SW, LM74700 gate/VCAP
+     ↔ input, shunt sense ↔ bus.
+
+### Silkscreen and board information (rule 3.6)
+- **Top:**
+  - reference designators, 1.0 mm, at 0° or 90°, placed so they never cross pads, parts or labels
+  - `+12-36V` / `GND` at the input
+  - `A` / `B` / `C` at the phases
+  - J2 pin names, and pin-1 marks on J1 and J8
+- **25 references on the assembly drawing only.** In the densest spots (the ESP32 caps, eFuse passives and CAN
+  ESD diodes) no legal 1.0 mm silk position exists, so these are on the F.Fab (assembly) layer only.
+- **Bottom:**
+  - METU PowerLab logo
+  - project, Rev B and date (text variables `${PROJECT_NAME}`, `${REVISION}`, `${ISSUE_DATE}`)
+  - designer, website and GitHub
+  - UART and CAN pinout
+  - the lab QR code, 13.3 mm, with the light modules printed so it reads with normal polarity on dark
+    mask. **Scan it on a real board or render.**
+
+### Library fixes made for this board — [PowerLabKiCadLibraries PR #5](https://github.com/odtu/PowerLabKiCadLibraries/pull/5)
+| Footprint | Fix |
+|---|---|
+| DRV8323, TPS16890 | Mask margin 0.1 → 0.05 mm. On 0.5 mm pitch this fixes the mask bridges. |
+| LMR38020 | The exposed pad was opened on both sides; it is now top only. |
+| LMR38020, TPS16890, ESP32 | Thermal vias now 0.6 mm (a 0.15 mm annular ring), open on the pad side and tented underneath. |
+| MOSFETs | Stray bottom paste removed. |
+| New | `METUPowerLab_Graphics` library (logo, QR code) and the ESP32 STEP model from Espressif (CC-BY-SA 4.0). |
+
+### Assembly notes
+- **Breakaway rails needed.** The antenna overhang and the edge-mounted connectors put parts within 3.5 mm of
+  the top and bottom edges. Machine assembly at PCBWay therefore needs breakaway rails, which are added during
+  panelization.
+- **Hand soldering:** power pads connect solid to their pours. The screw terminals are THT with solid
+  connections, so a larger soldering iron is needed.
+
+### Still to do
+- Fab outputs: Gerber, drill, BOM and position file.
+- Printed 1:1 footprint check.
