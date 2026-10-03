@@ -1,0 +1,5 @@
+ M footprints/METUPowerLab_CircuitProtections_eFuses.pretty/23-LQFN-CLIP_(VMA).kicad_mod
+ M footprints/METUPowerLab_Microcontrollers_ESP32.pretty/ESP32-WROOM-32E.kicad_mod
+ M footprints/METUPowerLab_MotorDrivers_BLDC.pretty/48-VQFN.kicad_mod
+?? 3dmodels/powerlab.3dshapes/Microcontrollers/
+?? footprints/METUPowerLab_Graphics.pretty/

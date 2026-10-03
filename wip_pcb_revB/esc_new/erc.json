@@ -1,0 +1,343 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-27T17:10:18",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a",
+            "violations": []
+        },
+        {
+            "path": "/Power Input & Protection/",
+            "uuid_path": "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/aefef383-0d2e-4e77-9d45-bafcc18f98e9",
+            "violations": [
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol J3 Pin 1 [1, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.2286,
+                                "y": 0.4826
+                            },
+                            "uuid": "3809e780-26e1-4517-a8da-c07d3f6aa50d"
+                        },
+                        {
+                            "description": "Symbol #FLG104 Pin 1 [Power output, Line]",
+                            "pos": {
+                                "x": 2.6416,
+                                "y": 1.2446
+                            },
+                            "uuid": "0e69e194-7093-4e10-8c3a-f54bac1ed65b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                },
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol J4 Pin 1 [1, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.2286,
+                                "y": 0.6858
+                            },
+                            "uuid": "8a6a754f-fda4-4ad0-8e26-17da4ff01f91"
+                        },
+                        {
+                            "description": "Symbol U6 Pin 45 [SW, Power output, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 1.27
+                            },
+                            "uuid": "37129d45-5f97-41e5-8750-f1b7ea9f062a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                }
+            ]
+        },
+        {
+            "path": "/Power Supply 3.3 V/",
+            "uuid_path": "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/6ca797b8-da4c-48ef-aca4-2b5df8e9aa87",
+            "violations": []
+        },
+        {
+            "path": "/DC-Bus Current Sensing/",
+            "uuid_path": "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/a3e4893f-786f-49b0-90c1-564c6e72b7a0",
+            "violations": []
+        },
+        {
+            "path": "/MCU Core/",
+            "uuid_path": "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/e031ba3b-7b14-4deb-ae72-621781acc6eb",
+            "violations": [
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol J1 Pin 1 [1, Bidirectional, Line]",
+                            "pos": {
+                                "x": 2.159,
+                                "y": 0.381
+                            },
+                            "uuid": "4dcda6b5-2e5e-49df-a680-db8f4968cbc2"
+                        },
+                        {
+                            "description": "Symbol #FLG230 Pin 1 [Power output, Line]",
+                            "pos": {
+                                "x": 2.286,
+                                "y": 0.508
+                            },
+                            "uuid": "61c14460-43a3-42bd-99a6-6dc9865b3918"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                },
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol J1 Pin 4 [4, Bidirectional, Line]",
+                            "pos": {
+                                "x": 2.159,
+                                "y": 0.4572
+                            },
+                            "uuid": "1271aa88-041d-40fd-8e52-b90ede207013"
+                        },
+                        {
+                            "description": "Symbol U6 Pin 45 [SW, Power output, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 1.27
+                            },
+                            "uuid": "37129d45-5f97-41e5-8750-f1b7ea9f062a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                },
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol J1 Pin Shield [Shield, Bidirectional, Line]",
+                            "pos": {
+                                "x": 2.159,
+                                "y": 0.508
+                            },
+                            "uuid": "a059ef2e-7ec2-4864-a346-2ccd1cf7498c"
+                        },
+                        {
+                            "description": "Symbol U6 Pin 45 [SW, Power output, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 1.27
+                            },
+                            "uuid": "37129d45-5f97-41e5-8750-f1b7ea9f062a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                },
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol J2 Pin 1 [1, Bidirectional, Line]",
+                            "pos": {
+                                "x": 2.159,
+                                "y": 0.762
+                            },
+                            "uuid": "549d8506-35ac-4552-923b-c3173d09055a"
+                        },
+                        {
+                            "description": "Symbol #FLG230 Pin 1 [Power output, Line]",
+                            "pos": {
+                                "x": 2.286,
+                                "y": 0.508
+                            },
+                            "uuid": "61c14460-43a3-42bd-99a6-6dc9865b3918"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                },
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol J2 Pin 4 [4, Bidirectional, Line]",
+                            "pos": {
+                                "x": 2.159,
+                                "y": 0.8382
+                            },
+                            "uuid": "48d35ee2-fa7b-443a-a2d3-c16bbadab5f0"
+                        },
+                        {
+                            "description": "Symbol U6 Pin 45 [SW, Power output, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 1.27
+                            },
+                            "uuid": "37129d45-5f97-41e5-8750-f1b7ea9f062a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                },
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol J2 Pin Shield [Shield, Bidirectional, Line]",
+                            "pos": {
+                                "x": 2.159,
+                                "y": 0.889
+                            },
+                            "uuid": "4a88ef1e-5258-4527-8123-f9c9fdcb47d3"
+                        },
+                        {
+                            "description": "Symbol U6 Pin 45 [SW, Power output, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 1.27
+                            },
+                            "uuid": "37129d45-5f97-41e5-8750-f1b7ea9f062a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                }
+            ]
+        },
+        {
+            "path": "/Gate Drive/",
+            "uuid_path": "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/5c64e14f-1470-413b-83d6-9d27d9cd51f8",
+            "violations": []
+        },
+        {
+            "path": "/Power Stage/",
+            "uuid_path": "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305",
+            "violations": []
+        },
+        {
+            "path": "/Power Stage/Half Bridge A/",
+            "uuid_path": "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305/50e3d450-d458-4de6-862f-83a5f3b2f172",
+            "violations": []
+        },
+        {
+            "path": "/Power Stage/Half Bridge B/",
+            "uuid_path": "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305/cd6f54a5-fcbb-49e1-9540-d817a9288536",
+            "violations": []
+        },
+        {
+            "path": "/Power Stage/Half Bridge C/",
+            "uuid_path": "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/d38208a5-f81d-49eb-8bf4-9d96bf344305/5298da95-a245-445f-af76-ff50ab07f470",
+            "violations": []
+        },
+        {
+            "path": "/Communication/",
+            "uuid_path": "/9ebb7f0c-7f9c-4be5-9065-804b80cbb84a/c4d1d09e-fdbc-49d2-a6d5-3bc0a15edd64",
+            "violations": [
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol J8 Pin 3 [3, Bidirectional, Line]",
+                            "pos": {
+                                "x": 2.3368,
+                                "y": 0.9652
+                            },
+                            "uuid": "91051681-4db4-4c0d-b2ed-d094b4ced8cd"
+                        },
+                        {
+                            "description": "Symbol U6 Pin 45 [SW, Power output, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 1.27
+                            },
+                            "uuid": "37129d45-5f97-41e5-8750-f1b7ea9f062a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                },
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol J8 Pin 4 [4, Bidirectional, Line]",
+                            "pos": {
+                                "x": 2.3368,
+                                "y": 0.9906
+                            },
+                            "uuid": "d9db658b-15b6-49f6-9e61-2a3fbf5cd790"
+                        },
+                        {
+                            "description": "Symbol U6 Pin 45 [SW, Power output, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 1.27
+                            },
+                            "uuid": "37129d45-5f97-41e5-8750-f1b7ea9f062a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                },
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol J8 Pin Shield [Shield, Bidirectional, Line]",
+                            "pos": {
+                                "x": 2.3368,
+                                "y": 1.0414
+                            },
+                            "uuid": "905d9b06-8f00-472e-bdbc-b8c7238d5d08"
+                        },
+                        {
+                            "description": "Symbol U6 Pin 45 [SW, Power output, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 1.27
+                            },
+                            "uuid": "37129d45-5f97-41e5-8750-f1b7ea9f062a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                }
+            ]
+        }
+    ],
+    "source": "ESC3Phase.kicad_sch"
+}

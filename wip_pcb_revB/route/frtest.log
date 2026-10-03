@@ -1,0 +1,16 @@
+2026-09-28 12:37:25.277 INFO   Freerouting v2.4.1 (build-date: 2026-09-03)
+2026-09-28 12:37:25.330 WARN   Couldn't get screen resolution. If you are running in a headless environment, disable the GUI by setting gui.enabled to false.
+2026-09-28 12:37:26.725 INFO   [6A17DA\5FE30C] Loading board file 'esc.dsn'...
+2026-09-28 12:37:26.867 INFO   [6A17DA\5FE30C] Job '6A17DA\5FE30C' started at 2026-09-28T09:37:26.866645600Z.
+2026-09-28 12:37:27.006 INFO   [6A17DA\5FE30C] Fanout stage started on board '998dceefa921ca7e023249198c77bd10' with 187 of 441 SMD pins needing fanout (22 already connected, 232 netless).
+2026-09-28 12:37:28.539 INFO   [6A17DA\5FE30C] Fanout pass #1 on board 'b97da4add9dcbe34427b4766364a05c6' completed in 1.48 seconds with 82 SMD pins fanouted, 95 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=100).
+2026-09-28 12:37:40.379 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net '/Power Input & Protection/EFUSE_EN' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-09-28 12:37:45.141 INFO   [6A17DA\5FE30C] Fanout pass #2 on board '5caf50b72fbbbe34cfe3ac04d0f0106a' completed in 16.56 seconds with 29 SMD pins fanouted, 118 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-09-28 12:37:47.649 INFO   [6A17DA\5FE30C] Fanout pass #3 on board '5caf50b72fbbbe34cfe3ac04d0f0106a' completed in 2.46 seconds with 25 SMD pins fanouted, 119 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=300).
+2026-09-28 12:37:47.752 INFO   [6A17DA\5FE30C] Fanout stage completed: started with 209 total SMD pins, completed in 20.72 seconds, escaped pins: 89/209 (42.6%), using 17.55 total CPU seconds, 83.02 GB total allocated, and 401.1 MB peak heap usage.
+2026-09-28 12:37:47.810 INFO   [6A17DA\5FE30C] Auto-routing stage started on board '5caf50b72fbbbe34cfe3ac04d0f0106a' for 75 unrouted items.
+2026-09-28 12:38:22.981 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net '+VBUS' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-09-28 12:39:08.368 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:39:08.536 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:39:09.137 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:39:13.662 WARN   Polyline: must contain at least 2 different points

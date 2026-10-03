@@ -1,0 +1,152 @@
+2026-09-28 12:14:14.184 INFO   Freerouting v2.4.1 (build-date: 2026-09-03)
+2026-09-28 12:14:14.261 WARN   Couldn't get screen resolution. If you are running in a headless environment, disable the GUI by setting gui.enabled to false.
+2026-09-28 12:14:15.656 INFO   [2296F5\A6E6C4] Loading board file 'esc.dsn'...
+2026-09-28 12:14:15.830 INFO   [2296F5\A6E6C4] Job '2296F5\A6E6C4' started at 2026-09-28T09:14:15.830875900Z.
+2026-09-28 12:14:16.650 INFO   [2296F5\A6E6C4] Fanout stage started on board 'b1bb3a0fb449a20496decd81d764a42c' with 303 of 441 SMD pins needing fanout (23 already connected, 115 netless).
+2026-09-28 12:14:22.213 INFO   [2296F5\A6E6C4] Fanout pass #1 on board 'f2f08703cf6f7dbedbca20d373534474' completed in 5.12 seconds with 99 SMD pins fanouted, 106 not routed, 0 insert errors, +2 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-09-28 12:14:26.522 INFO   [2296F5\A6E6C4] Fanout pass #2 on board '3f7c4e7f6050a3edbb494bd93750c58b' completed in 4.28 seconds with 31 SMD pins fanouted, 131 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-09-28 12:14:30.353 INFO   [2296F5\A6E6C4] Fanout pass #3 on board 'aa071f6eaff885036904a4627a29f1c1' completed in 3.82 seconds with 28 SMD pins fanouted, 130 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=300).
+2026-09-28 12:14:34.034 INFO   [2296F5\A6E6C4] Fanout pass #4 on board 'aa071f6eaff885036904a4627a29f1c1' completed in 3.66 seconds with 27 SMD pins fanouted, 130 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=400).
+2026-09-28 12:14:34.565 INFO   [2296F5\A6E6C4] Fanout stage completed: started with 326 total SMD pins, completed in 17.50 seconds, escaped pins: 181/326 (55.5%), using 17.88 total CPU seconds, 92.39 GB total allocated, and 550.3 MB peak heap usage.
+2026-09-28 12:14:34.587 INFO   [2296F5\A6E6C4] Auto-routing stage started on board 'aa071f6eaff885036904a4627a29f1c1' for 91 unrouted items.
+2026-09-28 12:14:55.085 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:14:55.197 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:14:55.929 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:14:57.499 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:15:15.117 INFO   [2296F5\A6E6C4] Auto-routing pass #1 on board 'aa071f6eaff885036904a4627a29f1c1' was completed in 39.36 seconds with score 432.42 (50 unrouted and 485 violations), using 56.17 CPU seconds and the job allocated 274.11 GB of memory so far.
+2026-09-28 12:15:32.451 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:15:32.537 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:15:32.713 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:15:34.771 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:15:46.167 INFO   [2296F5\A6E6C4] Auto-routing pass #2 on board 'f18bcd8dd8064cd95461cdb8c6a671b8' was completed in 29.90 seconds with score 471.03 (40 unrouted and 485 violations), using 86.05 CPU seconds and the job allocated 427.83 GB of memory so far.
+2026-09-28 12:16:06.595 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:16:07.323 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:16:07.556 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:16:09.374 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:16:21.910 INFO   [2296F5\A6E6C4] Auto-routing pass #3 on board 'fed48d49721b206f04aab11968f6a9be' was completed in 34.32 seconds with score 474.89 (39 unrouted and 485 violations), using 120.69 CPU seconds and the job allocated 578.53 GB of memory so far.
+2026-09-28 12:16:42.571 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:16:42.664 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:16:43.476 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:17:02.842 INFO   [2296F5\A6E6C4] Auto-routing pass #4 on board '9b795ec06b7af998f13a093b3af85c62' was completed in 39.36 seconds with score 482.61 (37 unrouted and 485 violations), using 160.00 CPU seconds and the job allocated 733.72 GB of memory so far.
+2026-09-28 12:17:19.511 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:17:19.609 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:17:19.786 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:17:35.572 INFO   [2296F5\A6E6C4] Auto-routing pass #5 on board 'c5d3e34f45fd491b4a4c490035ec3f69' was completed in 31.43 seconds with score 490.34 (35 unrouted and 485 violations), using 190.91 CPU seconds and the job allocated 875.12 GB of memory so far.
+2026-09-28 12:17:49.022 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:17:49.735 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:17:49.879 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:18:04.772 INFO   [2296F5\A6E6C4] Auto-routing pass #6 on board 'f21dbc10d1236e891e779345d5e6b2ee' was completed in 27.92 seconds with score 490.34 (35 unrouted and 485 violations), using 219.84 CPU seconds and the job allocated 1019.80 GB of memory so far.
+2026-09-28 12:18:17.534 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:18:18.288 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:18:18.428 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:18:33.360 INFO   [2296F5\A6E6C4] Auto-routing pass #7 on board 'd61f988811ad732f147967224afe0a2f' was completed in 27.37 seconds with score 490.34 (35 unrouted and 485 violations), using 246.69 CPU seconds and the job allocated 1155.65 GB of memory so far.
+2026-09-28 12:18:46.109 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:18:46.797 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:18:46.948 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:19:01.725 INFO   [2296F5\A6E6C4] Auto-routing pass #8 on board '6637a08e8b52ce9dd2fc57f9a60da299' was completed in 27.20 seconds with score 490.34 (35 unrouted and 485 violations), using 273.78 CPU seconds and the job allocated 1292.41 GB of memory so far.
+2026-09-28 12:19:16.828 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:19:17.550 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:19:17.708 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:19:36.489 INFO   [2296F5\A6E6C4] Auto-routing pass #9 on board 'd58f9f3b7b38f1cdf2fddfa453682063' was completed in 33.30 seconds with score 490.34 (35 unrouted and 485 violations), using 307.39 CPU seconds and the job allocated 1435.83 GB of memory so far.
+2026-09-28 12:19:52.612 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:19:53.458 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:19:53.622 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:20:10.639 INFO   [2296F5\A6E6C4] Auto-routing pass #10 on board '41c42d7e621dbeac1e2de302549ad091' was completed in 32.77 seconds with score 490.34 (35 unrouted and 485 violations), using 340.22 CPU seconds and the job allocated 1576.17 GB of memory so far.
+2026-09-28 12:20:25.849 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:20:26.606 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:20:26.766 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:20:43.828 INFO   [2296F5\A6E6C4] Auto-routing pass #11 on board '03873424e7cecaee9a8bc9c97e1ce7e3' was completed in 31.56 seconds with score 490.34 (35 unrouted and 485 violations), using 371.98 CPU seconds and the job allocated 1715.13 GB of memory so far.
+2026-09-28 12:21:00.284 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:21:01.042 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:21:01.252 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:21:20.421 INFO   [2296F5\A6E6C4] Auto-routing pass #12 on board '86e94b2f49c175d991925de2cdd19dd0' was completed in 34.66 seconds with score 490.34 (35 unrouted and 485 violations), using 406.27 CPU seconds and the job allocated 1855.71 GB of memory so far.
+2026-09-28 12:21:34.650 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:21:35.435 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:21:35.693 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:21:55.106 INFO   [2296F5\A6E6C4] Auto-routing pass #13 on board 'dc00b401e8c7cd1d013ad9c2d651983d' was completed in 33.48 seconds with score 490.34 (35 unrouted and 485 violations), using 439.66 CPU seconds and the job allocated 1997.88 GB of memory so far.
+2026-09-28 12:22:10.592 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:22:11.382 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:22:11.606 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:22:28.894 INFO   [2296F5\A6E6C4] Auto-routing pass #14 on board '354bbbc203277deee0fa7a7ea6ee1463' was completed in 32.45 seconds with score 490.34 (35 unrouted and 485 violations), using 471.58 CPU seconds and the job allocated 2134.23 GB of memory so far.
+2026-09-28 12:22:45.468 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:22:46.186 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:22:46.336 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:23:05.511 INFO   [2296F5\A6E6C4] Auto-routing pass #15 on board 'da9485937a7cad3c316222427db172bc' was completed in 35.13 seconds with score 490.34 (35 unrouted and 485 violations), using 507.05 CPU seconds and the job allocated 2277.11 GB of memory so far.
+2026-09-28 12:23:21.836 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:23:22.619 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:23:22.856 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:23:40.224 INFO   [2296F5\A6E6C4] Auto-routing pass #16 on board '01661255d89ae55e9fbe5e589801a927' was completed in 33.31 seconds with score 490.34 (35 unrouted and 485 violations), using 539.80 CPU seconds and the job allocated 2413.25 GB of memory so far.
+2026-09-28 12:23:52.789 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:23:53.502 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:23:53.657 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:24:08.415 INFO   [2296F5\A6E6C4] Auto-routing pass #17 on board '15d14791cce4fcceae47ccf6f70a1129' was completed in 27.01 seconds with score 490.34 (35 unrouted and 485 violations), using 566.73 CPU seconds and the job allocated 2551.28 GB of memory so far.
+2026-09-28 12:24:21.133 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:24:21.801 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:24:21.942 WARN   Polyline: must contain at least 2 different points
+2026-09-28 12:24:36.692 INFO   [2296F5\A6E6C4] Auto-routing pass #18 on board '05d43a5b11f9526551946fda06706012' was completed in 27.09 seconds with score 490.34 (35 unrouted and 485 violations), using 594.58 CPU seconds and the job allocated 2695.04 GB of memory so far.
+2026-09-28 12:24:36.757 INFO   [2296F5\A6E6C4] The router's best score (490.34) has not improved by more than 0.5 points since pass #8. Stopping the auto-router after 18 passes (35 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net 'GND' (15 unrouted connections):
+    - U6-2  ->  U6-1
+    - U6-47  ->  U6-48
+    - U6-45  ->  U6-44
+    - U6-44  ->  U6-43
+    - U6-34  ->  U6-35
+    - via  ->  C44-2
+    - via  ->  C45-2
+    - U6-45  ->  U6-47
+    - via  ->  U10-8
+    - U10-2  ->  via
+    - U6-1  ->  U6-48
+    - U6-43  ->  U6-Shield@3
+    - U6-Shield@10  ->  U6-27
+    - U6-35  ->  U6-Shield@8
+    - J8-3  ->  J8-4
+  Net '+3V3_A' (1 unrouted connection):
+    - C45-1  ->  U6-26
+  Net 'ISENSE_A' (1 unrouted connection):
+    - U6-25  ->  via
+  Net 'DRV_ENABLE' (1 unrouted connection):
+    - U6-33  ->  via
+  Net '+3V3_MCU' (2 unrouted connections):
+    - J1-1  ->  via
+    - J2-1  ->  R48-2
+  Net 'GHA' (1 unrouted connection):
+    - U6-8  ->  via
+  Net 'PHASE_A' (1 unrouted connection):
+    - U6-9  ->  via
+  Net 'GLA' (1 unrouted connection):
+    - U6-10  ->  via
+  Net 'GLB' (1 unrouted connection):
+    - U6-15  ->  via
+  Net 'PHASE_B' (1 unrouted connection):
+    - U6-16  ->  via
+  Net 'GHB' (1 unrouted connection):
+    - U6-17  ->  via
+  Net 'GHC' (1 unrouted connection):
+    - U6-18  ->  via
+  Net 'NFAULT' (1 unrouted connection):
+    - via  ->  U6-28
+  Net 'SPI_SDO' (1 unrouted connection):
+    - U6-29  ->  via
+  Net 'SPI_SDI' (1 unrouted connection):
+    - via  ->  U6-30
+  Net 'SPI_SCLK' (1 unrouted connection):
+    - U6-31  ->  via
+  Net 'SPI_NSCS' (1 unrouted connection):
+    - U6-32  ->  via
+  Net 'PWM_CH' (1 unrouted connection):
+    - R44-1  ->  U6-41
+  Net 'PWM_CL' (1 unrouted connection):
+    - U6-42  ->  via
+  Net '/Power Input & Protection/EFUSE_ILIM' (1 unrouted connection):
+    - U3-1  ->  R18-1
+2026-09-28 12:24:37.882 INFO   [2296F5\A6E6C4] Auto-routing stage completed: started with 160 unrouted nets, completed in 621.42 seconds, final score: 490.34 (35 unrouted and 485 violations), using 595.56 total CPU seconds, 2701.89 GB total allocated, and 916.7 MB peak heap usage.
+2026-09-28 12:24:38.457 INFO   [2296F5\A6E6C4] Optimization stage started on board '8a2be0a473e90bf3d766365f64466f2d' with score 490.34 (35 unrouted and 485 violations).
+2026-09-28 12:25:38.366 INFO   [2296F5\A6E6C4] Stopping optimization pass #1 early after 50 consecutive items could not be improved.
+2026-09-28 12:25:38.987 INFO   [2296F5\A6E6C4] Optimizer pass #1 on board '07fa1eea0cf81dadfa0d3e7c6a6111da' was completed in 58.71 seconds with the score of 490.34 (35 unrouted and 485 violations).
+2026-09-28 12:25:39.678 INFO   [2296F5\A6E6C4] Stopping optimizer because the improvement in this pass (0.0000%) is below the threshold (1.00%).
+2026-09-28 12:25:40.324 INFO   [2296F5\A6E6C4] Optimization stage completed: started with score 490.34 (35 unrouted and 485 violations), completed in 61.23 seconds, final score: 490.34 (35 unrouted and 485 violations), using 59.36 total CPU seconds, 408.90 GB total allocated, and 636.6 MB peak heap usage.
+2026-09-28 12:25:40.341 INFO   [2296F5\A6E6C4] Job '2296F5\A6E6C4' finished with state: COMPLETED (elapsed: 11 minutes 24.51 seconds, finished at UTC: 2026-09-28T09:25:40.340291500Z).
+2026-09-28 12:25:40.427 INFO   Saving output file 'C:\Users\ekrem\AppData\Local\Temp\claude\C--Users-ekrem-Desktop-ClaudeTestPCB\730e7982-d46e-4ec5-9047-03a6fff31108\scratchpad\route\esc6.ses' (SES)...
+2026-09-28 12:25:40.433 INFO   Successfully saved output file 'C:\Users\ekrem\AppData\Local\Temp\claude\C--Users-ekrem-Desktop-ClaudeTestPCB\730e7982-d46e-4ec5-9047-03a6fff31108\scratchpad\route\esc6.ses' (61051 bytes).

@@ -1,0 +1,11 @@
+2026-09-28 12:54:48.816 INFO   Freerouting v2.4.1 (build-date: 2026-09-03)
+2026-09-28 12:54:48.871 WARN   Couldn't get screen resolution. If you are running in a headless environment, disable the GUI by setting gui.enabled to false.
+2026-09-28 12:54:50.265 INFO   [877B44\0EBB6D] Loading board file 'esc.dsn'...
+2026-09-28 12:54:50.394 INFO   [877B44\0EBB6D] Job '877B44\0EBB6D' started at 2026-09-28T09:54:50.393315700Z.
+2026-09-28 12:54:51.112 INFO   [877B44\0EBB6D] Fanout stage started on board '7ea1c539218d1bd0dfd42e4efc575084' with 326 of 441 SMD pins needing fanout (25 already connected, 90 netless).
+2026-09-28 12:54:55.844 INFO   [877B44\0EBB6D] Fanout pass #1 on board 'cd4ed8241b54f52f36450fa27b1655ae' completed in 4.34 seconds with 102 SMD pins fanouted, 115 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=100).
+2026-09-28 12:55:05.629 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net '/Power Input & Protection/EFUSE_EN' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-09-28 12:55:08.203 INFO   [877B44\0EBB6D] Fanout pass #2 on board 'a8d35cbe51d94b37943333a9bc2c540a' completed in 12.34 seconds with 37 SMD pins fanouted, 135 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-09-28 12:55:11.323 INFO   [877B44\0EBB6D] Fanout pass #3 on board 'a8d35cbe51d94b37943333a9bc2c540a' completed in 3.11 seconds with 30 SMD pins fanouted, 134 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=300).
+2026-09-28 12:55:11.806 INFO   [877B44\0EBB6D] Fanout stage completed: started with 351 total SMD pins, completed in 20.32 seconds, escaped pins: 197/351 (56.1%), using 20.73 total CPU seconds, 139.62 GB total allocated, and 606.1 MB peak heap usage.
+2026-09-28 12:55:11.830 INFO   [877B44\0EBB6D] Auto-routing stage started on board 'a8d35cbe51d94b37943333a9bc2c540a' for 92 unrouted items.

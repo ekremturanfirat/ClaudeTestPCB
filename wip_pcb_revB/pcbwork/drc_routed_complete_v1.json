@@ -1,0 +1,244 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-28T18:54:19",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [],
+    "source": "ESC3Phase.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [PHASE_A] on In2.Cu, length 10.3500 mm",
+                    "pos": {
+                        "x": 111.5,
+                        "y": 107.2
+                    },
+                    "uuid": "3d1acca1-4363-42aa-8ea1-12ad06a7620b"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.2000 mm; actual 0.1871 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Track [DRV_ENABLE] on F.Cu, length 0.9106 mm",
+                    "pos": {
+                        "x": 119.769,
+                        "y": 72.3339
+                    },
+                    "uuid": "267b5136-fd66-4f62-9b9a-6346d5f6ed20"
+                },
+                {
+                    "description": "Track [DRV_ENABLE] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 119.2,
+                        "y": 72.5
+                    },
+                    "uuid": "46762eaa-b5cd-40cc-a44d-1eee0fdad46e"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.2000 mm; actual 0.1378 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 136.999999,
+                        "y": 64.004999
+                    },
+                    "uuid": "a4b23c25-dff9-43c0-814b-02cb74d4a515"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 0.5922 mm",
+                    "pos": {
+                        "x": 137.325,
+                        "y": 64.5
+                    },
+                    "uuid": "9bbe1310-8c06-49a1-8b61-4cfe1b54dc3d"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.2000 mm; actual 0.1017 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad Shield [GND] of U4 on F.Cu",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 78.325
+                    },
+                    "uuid": "7bdbc1e5-2c72-4e74-aa27-8b18a926d1f1"
+                },
+                {
+                    "description": "Zone 'GND top' [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 50.3,
+                        "y": 50.3
+                    },
+                    "uuid": "daa62dc2-8d29-4b66-81fc-2eb661684426"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.2000 mm; actual 0.1017 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad Shield [GND] of U4 on F.Cu",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 78.325
+                    },
+                    "uuid": "7bdbc1e5-2c72-4e74-aa27-8b18a926d1f1"
+                },
+                {
+                    "description": "Zone 'GND top' [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 50.3,
+                        "y": 50.3
+                    },
+                    "uuid": "daa62dc2-8d29-4b66-81fc-2eb661684426"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.2000 mm; actual 0.1017 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad Shield [GND] of U4 on F.Cu",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 78.325
+                    },
+                    "uuid": "7bdbc1e5-2c72-4e74-aa27-8b18a926d1f1"
+                },
+                {
+                    "description": "Zone 'GND top' [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 50.3,
+                        "y": 50.3
+                    },
+                    "uuid": "daa62dc2-8d29-4b66-81fc-2eb661684426"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.2000 mm; actual 0.1017 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad Shield [GND] of U4 on F.Cu",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 78.325
+                    },
+                    "uuid": "7bdbc1e5-2c72-4e74-aa27-8b18a926d1f1"
+                },
+                {
+                    "description": "Zone 'GND top' [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 50.3,
+                        "y": 50.3
+                    },
+                    "uuid": "daa62dc2-8d29-4b66-81fc-2eb661684426"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 51.0,
+                        "y": 50.0
+                    },
+                    "uuid": "5131ee95-accf-4db0-85c0-81de27f76544"
+                },
+                {
+                    "description": "Rectangle of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 78.5,
+                        "y": 43.465
+                    },
+                    "uuid": "1960226a-c9bd-4fc3-a4cc-254093cdbb5d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Padstack is questionable (SMD pad has copper and mask layers on different sides of the board)",
+            "items": [
+                {
+                    "description": "Pad Shield [GND] of U4 on F.Cu",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 78.325
+                    },
+                    "uuid": "7bdbc1e5-2c72-4e74-aa27-8b18a926d1f1"
+                }
+            ],
+            "severity": "warning",
+            "type": "padstack"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Rectangle of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 78.5,
+                        "y": 43.465
+                    },
+                    "uuid": "1960226a-c9bd-4fc3-a4cc-254093cdbb5d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

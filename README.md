@@ -1,4 +1,4 @@
-# ClaudeTestPCB — 3-Phase BLDC ESC (ESP32-WROOM-32E)
+# PCBDesignWClaude — 3-Phase BLDC ESC (ESP32-WROOM-32E)
 
 KiCad project for a 3-phase brushless motor ESC.
 
